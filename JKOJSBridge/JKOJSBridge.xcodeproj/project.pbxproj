@@ -1,0 +1,808 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55479199256DFA3D00A293DC /* JKOJSBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55479198256DFA3D00A293DC /* JKOJSBridge.swift */; };
+		554791A5256E070E00A293DC /* miniAppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554791A4256E070E00A293DC /* miniAppLauncher.swift */; };
+		554791B0256E58FB00A293DC /* JKOMiniAppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554791AF256E58FB00A293DC /* JKOMiniAppContainerViewController.swift */; };
+		554791B5256F8D2000A293DC /* PackagingTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554791B4256F8D2000A293DC /* PackagingTestViewController.swift */; };
+		55736E4C25664EDF00F8FBE5 /* DemoUserHTML.html in Resources */ = {isa = PBXBuildFile; fileRef = 55736E4B25664EDF00F8FBE5 /* DemoUserHTML.html */; };
+		55736E62256B6EE300F8FBE5 /* JKOJSFunctionObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736E61256B6EE200F8FBE5 /* JKOJSFunctionObserver.swift */; };
+		55736E77256B708800F8FBE5 /* JKOJSBridgeWebViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736E76256B708800F8FBE5 /* JKOJSBridgeWebViewDSL.swift */; };
+		55736E80256B70E100F8FBE5 /* JKOJSBridgeWebExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736E7F256B70E100F8FBE5 /* JKOJSBridgeWebExtensions.swift */; };
+		55736E87256BA42000F8FBE5 /* JKOJSWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736E86256BA41F00F8FBE5 /* JKOJSWorker.swift */; };
+		55736E8F256BC19D00F8FBE5 /* AnyExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736E8E256BC19C00F8FBE5 /* AnyExport.swift */; };
+		55736E94256CB2F100F8FBE5 /* JKOBridgeConsoler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736E93256CB2F100F8FBE5 /* JKOBridgeConsoler.swift */; };
+		55736E9C256CDACC00F8FBE5 /* JKOMiniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736E9B256CDACC00F8FBE5 /* JKOMiniApp.swift */; };
+		55736EAA256CF50500F8FBE5 /* JKOJSWorker+NativeFrameworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736EA9256CF50500F8FBE5 /* JKOJSWorker+NativeFrameworks.swift */; };
+		55736EB6256D021E00F8FBE5 /* JKBAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736EB5256D021E00F8FBE5 /* JKBAccount.swift */; };
+		55736EBC256D023C00F8FBE5 /* JSB_JKOAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736EBB256D023C00F8FBE5 /* JSB_JKOAccount.swift */; };
+		55736EC4256D026700F8FBE5 /* JKBNativeFrameworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736EC3256D026700F8FBE5 /* JKBNativeFrameworkProtocol.swift */; };
+		55736ECC256D100900F8FBE5 /* JKBJSBridgeRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736ECB256D100900F8FBE5 /* JKBJSBridgeRuntime.swift */; };
+		55FBB05C2564F29B00A9F12E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBB05B2564F29B00A9F12E /* AppDelegate.swift */; };
+		55FBB05E2564F29B00A9F12E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBB05D2564F29B00A9F12E /* SceneDelegate.swift */; };
+		55FBB0602564F29B00A9F12E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBB05F2564F29B00A9F12E /* ViewController.swift */; };
+		55FBB0632564F29B00A9F12E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB0612564F29B00A9F12E /* Main.storyboard */; };
+		55FBB0652564F29F00A9F12E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB0642564F29F00A9F12E /* Assets.xcassets */; };
+		55FBB0682564F29F00A9F12E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB0662564F29F00A9F12E /* LaunchScreen.storyboard */; };
+		55FBB0732564F29F00A9F12E /* JKOJSBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBB0722564F29F00A9F12E /* JKOJSBridgeTests.swift */; };
+		55FBB07E2564F29F00A9F12E /* JKOJSBridgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBB07D2564F29F00A9F12E /* JKOJSBridgeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55FBB06F2564F29F00A9F12E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55FBB0502564F29B00A9F12E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55FBB0572564F29B00A9F12E;
+			remoteInfo = JKOJSBridge;
+		};
+		55FBB07A2564F29F00A9F12E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55FBB0502564F29B00A9F12E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55FBB0572564F29B00A9F12E;
+			remoteInfo = JKOJSBridge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		55479198256DFA3D00A293DC /* JKOJSBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOJSBridge.swift; sourceTree = "<group>"; };
+		554791A4256E070E00A293DC /* miniAppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniAppLauncher.swift; sourceTree = "<group>"; };
+		554791AF256E58FB00A293DC /* JKOMiniAppContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOMiniAppContainerViewController.swift; sourceTree = "<group>"; };
+		554791B4256F8D2000A293DC /* PackagingTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagingTestViewController.swift; sourceTree = "<group>"; };
+		55736E4B25664EDF00F8FBE5 /* DemoUserHTML.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = DemoUserHTML.html; sourceTree = "<group>"; };
+		55736E5A256B650800F8FBE5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		55736E5B256B674300F8FBE5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		55736E5D256B6AF700F8FBE5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		55736E61256B6EE200F8FBE5 /* JKOJSFunctionObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOJSFunctionObserver.swift; sourceTree = "<group>"; };
+		55736E76256B708800F8FBE5 /* JKOJSBridgeWebViewDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOJSBridgeWebViewDSL.swift; sourceTree = "<group>"; };
+		55736E7F256B70E100F8FBE5 /* JKOJSBridgeWebExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOJSBridgeWebExtensions.swift; sourceTree = "<group>"; };
+		55736E86256BA41F00F8FBE5 /* JKOJSWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOJSWorker.swift; sourceTree = "<group>"; };
+		55736E8E256BC19C00F8FBE5 /* AnyExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyExport.swift; sourceTree = "<group>"; };
+		55736E93256CB2F100F8FBE5 /* JKOBridgeConsoler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOBridgeConsoler.swift; sourceTree = "<group>"; };
+		55736E9B256CDACC00F8FBE5 /* JKOMiniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOMiniApp.swift; sourceTree = "<group>"; };
+		55736EA9256CF50500F8FBE5 /* JKOJSWorker+NativeFrameworks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JKOJSWorker+NativeFrameworks.swift"; sourceTree = "<group>"; };
+		55736EB5256D021E00F8FBE5 /* JKBAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBAccount.swift; sourceTree = "<group>"; };
+		55736EBB256D023C00F8FBE5 /* JSB_JKOAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSB_JKOAccount.swift; sourceTree = "<group>"; };
+		55736EC3256D026700F8FBE5 /* JKBNativeFrameworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBNativeFrameworkProtocol.swift; sourceTree = "<group>"; };
+		55736ECB256D100900F8FBE5 /* JKBJSBridgeRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBJSBridgeRuntime.swift; sourceTree = "<group>"; };
+		55FBB0582564F29B00A9F12E /* JKOJSBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKOJSBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55FBB05B2564F29B00A9F12E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55FBB05D2564F29B00A9F12E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		55FBB05F2564F29B00A9F12E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55FBB0622564F29B00A9F12E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55FBB0642564F29F00A9F12E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55FBB0672564F29F00A9F12E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55FBB0692564F29F00A9F12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55FBB06E2564F29F00A9F12E /* JKOJSBridgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKOJSBridgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55FBB0722564F29F00A9F12E /* JKOJSBridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOJSBridgeTests.swift; sourceTree = "<group>"; };
+		55FBB0742564F29F00A9F12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55FBB0792564F29F00A9F12E /* JKOJSBridgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKOJSBridgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55FBB07D2564F29F00A9F12E /* JKOJSBridgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOJSBridgeUITests.swift; sourceTree = "<group>"; };
+		55FBB07F2564F29F00A9F12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55FBB0552564F29B00A9F12E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FBB06B2564F29F00A9F12E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FBB0762564F29F00A9F12E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55479197256DF93900A293DC /* JKBJKOJSBridge */ = {
+			isa = PBXGroup;
+			children = (
+				55479198256DFA3D00A293DC /* JKOJSBridge.swift */,
+			);
+			path = JKBJKOJSBridge;
+			sourceTree = "<group>";
+		};
+		554791A3256E06CE00A293DC /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				55736E5B256B674300F8FBE5 /* README.md */,
+				554791A4256E070E00A293DC /* miniAppLauncher.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		55736E57256B627F00F8FBE5 /* miniAppFramework */ = {
+			isa = PBXGroup;
+			children = (
+				554791A3256E06CE00A293DC /* Launch */,
+				55736EA6256CF1CA00F8FBE5 /* Runtime */,
+				55736EA7256CF1F300F8FBE5 /* JKBNativeFrameworks */,
+			);
+			path = miniAppFramework;
+			sourceTree = "<group>";
+		};
+		55736E58256B642400F8FBE5 /* Packaging */ = {
+			isa = PBXGroup;
+			children = (
+				55736E5A256B650800F8FBE5 /* README.md */,
+			);
+			path = Packaging;
+			sourceTree = "<group>";
+		};
+		55736E59256B64A000F8FBE5 /* MonitorLogger */ = {
+			isa = PBXGroup;
+			children = (
+				55736E93256CB2F100F8FBE5 /* JKOBridgeConsoler.swift */,
+			);
+			path = MonitorLogger;
+			sourceTree = "<group>";
+		};
+		55736E5C256B6A8600F8FBE5 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				55736E5E256B6E3300F8FBE5 /* JSBridge */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		55736E5E256B6E3300F8FBE5 /* JSBridge */ = {
+			isa = PBXGroup;
+			children = (
+				55736E85256BA3F900F8FBE5 /* Worker */,
+				55736E69256B700100F8FBE5 /* BridgeFunctions */,
+				55736E60256B6E8A00F8FBE5 /* EventListens */,
+			);
+			path = JSBridge;
+			sourceTree = "<group>";
+		};
+		55736E60256B6E8A00F8FBE5 /* EventListens */ = {
+			isa = PBXGroup;
+			children = (
+				55736E61256B6EE200F8FBE5 /* JKOJSFunctionObserver.swift */,
+			);
+			path = EventListens;
+			sourceTree = "<group>";
+		};
+		55736E69256B700100F8FBE5 /* BridgeFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				55736E7E256B70C500F8FBE5 /* Extensions */,
+			);
+			path = BridgeFunctions;
+			sourceTree = "<group>";
+		};
+		55736E75256B706800F8FBE5 /* DSLs */ = {
+			isa = PBXGroup;
+			children = (
+				55736E76256B708800F8FBE5 /* JKOJSBridgeWebViewDSL.swift */,
+			);
+			path = DSLs;
+			sourceTree = "<group>";
+		};
+		55736E7E256B70C500F8FBE5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55736E7F256B70E100F8FBE5 /* JKOJSBridgeWebExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		55736E85256BA3F900F8FBE5 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				55736E86256BA41F00F8FBE5 /* JKOJSWorker.swift */,
+				55736E8E256BC19C00F8FBE5 /* AnyExport.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		55736EA6256CF1CA00F8FBE5 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				55736E5D256B6AF700F8FBE5 /* README.md */,
+				55736ECB256D100900F8FBE5 /* JKBJSBridgeRuntime.swift */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
+		55736EA7256CF1F300F8FBE5 /* JKBNativeFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55736EA9256CF50500F8FBE5 /* JKOJSWorker+NativeFrameworks.swift */,
+				55736EC3256D026700F8FBE5 /* JKBNativeFrameworkProtocol.swift */,
+				55479197256DF93900A293DC /* JKBJKOJSBridge */,
+				55736EB1256CFDF200F8FBE5 /* JKBAccount */,
+			);
+			path = JKBNativeFrameworks;
+			sourceTree = "<group>";
+		};
+		55736EB1256CFDF200F8FBE5 /* JKBAccount */ = {
+			isa = PBXGroup;
+			children = (
+				55736EB5256D021E00F8FBE5 /* JKBAccount.swift */,
+				55736EBA256D022B00F8FBE5 /* Interface */,
+			);
+			path = JKBAccount;
+			sourceTree = "<group>";
+		};
+		55736EBA256D022B00F8FBE5 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				55736EBB256D023C00F8FBE5 /* JSB_JKOAccount.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		55FBB04F2564F29B00A9F12E = {
+			isa = PBXGroup;
+			children = (
+				55FBB05A2564F29B00A9F12E /* JKOJSBridge */,
+				55FBB0712564F29F00A9F12E /* JKOJSBridgeTests */,
+				55FBB07C2564F29F00A9F12E /* JKOJSBridgeUITests */,
+				55FBB0592564F29B00A9F12E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55FBB0592564F29B00A9F12E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55FBB0582564F29B00A9F12E /* JKOJSBridge.app */,
+				55FBB06E2564F29F00A9F12E /* JKOJSBridgeTests.xctest */,
+				55FBB0792564F29F00A9F12E /* JKOJSBridgeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55FBB05A2564F29B00A9F12E /* JKOJSBridge */ = {
+			isa = PBXGroup;
+			children = (
+				55FBB05B2564F29B00A9F12E /* AppDelegate.swift */,
+				55FBB05D2564F29B00A9F12E /* SceneDelegate.swift */,
+				55FBB05F2564F29B00A9F12E /* ViewController.swift */,
+				554791B4256F8D2000A293DC /* PackagingTestViewController.swift */,
+				554791AF256E58FB00A293DC /* JKOMiniAppContainerViewController.swift */,
+				55736E4B25664EDF00F8FBE5 /* DemoUserHTML.html */,
+				55FBB0612564F29B00A9F12E /* Main.storyboard */,
+				55FBB08E2564F2BF00A9F12E /* JSBridge */,
+				55FBB0642564F29F00A9F12E /* Assets.xcassets */,
+				55FBB0662564F29F00A9F12E /* LaunchScreen.storyboard */,
+				55FBB0692564F29F00A9F12E /* Info.plist */,
+			);
+			path = JKOJSBridge;
+			sourceTree = "<group>";
+		};
+		55FBB0712564F29F00A9F12E /* JKOJSBridgeTests */ = {
+			isa = PBXGroup;
+			children = (
+				55FBB0722564F29F00A9F12E /* JKOJSBridgeTests.swift */,
+				55FBB0742564F29F00A9F12E /* Info.plist */,
+			);
+			path = JKOJSBridgeTests;
+			sourceTree = "<group>";
+		};
+		55FBB07C2564F29F00A9F12E /* JKOJSBridgeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				55FBB07D2564F29F00A9F12E /* JKOJSBridgeUITests.swift */,
+				55FBB07F2564F29F00A9F12E /* Info.plist */,
+			);
+			path = JKOJSBridgeUITests;
+			sourceTree = "<group>";
+		};
+		55FBB08E2564F2BF00A9F12E /* JSBridge */ = {
+			isa = PBXGroup;
+			children = (
+				55736E9B256CDACC00F8FBE5 /* JKOMiniApp.swift */,
+				55736E75256B706800F8FBE5 /* DSLs */,
+				55736E59256B64A000F8FBE5 /* MonitorLogger */,
+				55736E58256B642400F8FBE5 /* Packaging */,
+				55736E57256B627F00F8FBE5 /* miniAppFramework */,
+				55736E5C256B6A8600F8FBE5 /* Foundation */,
+			);
+			path = JSBridge;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55FBB0572564F29B00A9F12E /* JKOJSBridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55FBB0822564F29F00A9F12E /* Build configuration list for PBXNativeTarget "JKOJSBridge" */;
+			buildPhases = (
+				55FBB0542564F29B00A9F12E /* Sources */,
+				55FBB0552564F29B00A9F12E /* Frameworks */,
+				55FBB0562564F29B00A9F12E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JKOJSBridge;
+			productName = JKOJSBridge;
+			productReference = 55FBB0582564F29B00A9F12E /* JKOJSBridge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55FBB06D2564F29F00A9F12E /* JKOJSBridgeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55FBB0852564F29F00A9F12E /* Build configuration list for PBXNativeTarget "JKOJSBridgeTests" */;
+			buildPhases = (
+				55FBB06A2564F29F00A9F12E /* Sources */,
+				55FBB06B2564F29F00A9F12E /* Frameworks */,
+				55FBB06C2564F29F00A9F12E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55FBB0702564F29F00A9F12E /* PBXTargetDependency */,
+			);
+			name = JKOJSBridgeTests;
+			productName = JKOJSBridgeTests;
+			productReference = 55FBB06E2564F29F00A9F12E /* JKOJSBridgeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		55FBB0782564F29F00A9F12E /* JKOJSBridgeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55FBB0882564F29F00A9F12E /* Build configuration list for PBXNativeTarget "JKOJSBridgeUITests" */;
+			buildPhases = (
+				55FBB0752564F29F00A9F12E /* Sources */,
+				55FBB0762564F29F00A9F12E /* Frameworks */,
+				55FBB0772564F29F00A9F12E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55FBB07B2564F29F00A9F12E /* PBXTargetDependency */,
+			);
+			name = JKOJSBridgeUITests;
+			productName = JKOJSBridgeUITests;
+			productReference = 55FBB0792564F29F00A9F12E /* JKOJSBridgeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55FBB0502564F29B00A9F12E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					55FBB0572564F29B00A9F12E = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					55FBB06D2564F29F00A9F12E = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 55FBB0572564F29B00A9F12E;
+					};
+					55FBB0782564F29F00A9F12E = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 55FBB0572564F29B00A9F12E;
+					};
+				};
+			};
+			buildConfigurationList = 55FBB0532564F29B00A9F12E /* Build configuration list for PBXProject "JKOJSBridge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55FBB04F2564F29B00A9F12E;
+			productRefGroup = 55FBB0592564F29B00A9F12E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55FBB0572564F29B00A9F12E /* JKOJSBridge */,
+				55FBB06D2564F29F00A9F12E /* JKOJSBridgeTests */,
+				55FBB0782564F29F00A9F12E /* JKOJSBridgeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55FBB0562564F29B00A9F12E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55736E4C25664EDF00F8FBE5 /* DemoUserHTML.html in Resources */,
+				55FBB0682564F29F00A9F12E /* LaunchScreen.storyboard in Resources */,
+				55FBB0652564F29F00A9F12E /* Assets.xcassets in Resources */,
+				55FBB0632564F29B00A9F12E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FBB06C2564F29F00A9F12E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FBB0772564F29F00A9F12E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55FBB0542564F29B00A9F12E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55FBB0602564F29B00A9F12E /* ViewController.swift in Sources */,
+				55736ECC256D100900F8FBE5 /* JKBJSBridgeRuntime.swift in Sources */,
+				55736E94256CB2F100F8FBE5 /* JKOBridgeConsoler.swift in Sources */,
+				55736EC4256D026700F8FBE5 /* JKBNativeFrameworkProtocol.swift in Sources */,
+				55736E77256B708800F8FBE5 /* JKOJSBridgeWebViewDSL.swift in Sources */,
+				554791A5256E070E00A293DC /* miniAppLauncher.swift in Sources */,
+				554791B0256E58FB00A293DC /* JKOMiniAppContainerViewController.swift in Sources */,
+				55736EBC256D023C00F8FBE5 /* JSB_JKOAccount.swift in Sources */,
+				55736E80256B70E100F8FBE5 /* JKOJSBridgeWebExtensions.swift in Sources */,
+				55FBB05C2564F29B00A9F12E /* AppDelegate.swift in Sources */,
+				55736E62256B6EE300F8FBE5 /* JKOJSFunctionObserver.swift in Sources */,
+				55736EAA256CF50500F8FBE5 /* JKOJSWorker+NativeFrameworks.swift in Sources */,
+				55736EB6256D021E00F8FBE5 /* JKBAccount.swift in Sources */,
+				55736E9C256CDACC00F8FBE5 /* JKOMiniApp.swift in Sources */,
+				554791B5256F8D2000A293DC /* PackagingTestViewController.swift in Sources */,
+				55FBB05E2564F29B00A9F12E /* SceneDelegate.swift in Sources */,
+				55736E87256BA42000F8FBE5 /* JKOJSWorker.swift in Sources */,
+				55479199256DFA3D00A293DC /* JKOJSBridge.swift in Sources */,
+				55736E8F256BC19D00F8FBE5 /* AnyExport.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FBB06A2564F29F00A9F12E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55FBB0732564F29F00A9F12E /* JKOJSBridgeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FBB0752564F29F00A9F12E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55FBB07E2564F29F00A9F12E /* JKOJSBridgeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55FBB0702564F29F00A9F12E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55FBB0572564F29B00A9F12E /* JKOJSBridge */;
+			targetProxy = 55FBB06F2564F29F00A9F12E /* PBXContainerItemProxy */;
+		};
+		55FBB07B2564F29F00A9F12E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55FBB0572564F29B00A9F12E /* JKOJSBridge */;
+			targetProxy = 55FBB07A2564F29F00A9F12E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55FBB0612564F29B00A9F12E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55FBB0622564F29B00A9F12E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55FBB0662564F29F00A9F12E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55FBB0672564F29F00A9F12E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55FBB0802564F29F00A9F12E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55FBB0812564F29F00A9F12E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55FBB0832564F29F00A9F12E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FJ8SB6J9BM;
+				INFOPLIST_FILE = JKOJSBridge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chiehchun.lee.com.JKOJSBridge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55FBB0842564F29F00A9F12E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FJ8SB6J9BM;
+				INFOPLIST_FILE = JKOJSBridge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chiehchun.lee.com.JKOJSBridge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		55FBB0862564F29F00A9F12E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FJ8SB6J9BM;
+				INFOPLIST_FILE = JKOJSBridgeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chiehchun.lee.com.JKOJSBridgeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKOJSBridge.app/JKOJSBridge";
+			};
+			name = Debug;
+		};
+		55FBB0872564F29F00A9F12E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FJ8SB6J9BM;
+				INFOPLIST_FILE = JKOJSBridgeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chiehchun.lee.com.JKOJSBridgeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKOJSBridge.app/JKOJSBridge";
+			};
+			name = Release;
+		};
+		55FBB0892564F29F00A9F12E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FJ8SB6J9BM;
+				INFOPLIST_FILE = JKOJSBridgeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chiehchun.lee.com.JKOJSBridgeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JKOJSBridge;
+			};
+			name = Debug;
+		};
+		55FBB08A2564F29F00A9F12E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FJ8SB6J9BM;
+				INFOPLIST_FILE = JKOJSBridgeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chiehchun.lee.com.JKOJSBridgeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JKOJSBridge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55FBB0532564F29B00A9F12E /* Build configuration list for PBXProject "JKOJSBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55FBB0802564F29F00A9F12E /* Debug */,
+				55FBB0812564F29F00A9F12E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55FBB0822564F29F00A9F12E /* Build configuration list for PBXNativeTarget "JKOJSBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55FBB0832564F29F00A9F12E /* Debug */,
+				55FBB0842564F29F00A9F12E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55FBB0852564F29F00A9F12E /* Build configuration list for PBXNativeTarget "JKOJSBridgeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55FBB0862564F29F00A9F12E /* Debug */,
+				55FBB0872564F29F00A9F12E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55FBB0882564F29F00A9F12E /* Build configuration list for PBXNativeTarget "JKOJSBridgeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55FBB0892564F29F00A9F12E /* Debug */,
+				55FBB08A2564F29F00A9F12E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55FBB0502564F29B00A9F12E /* Project object */;
+}
