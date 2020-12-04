@@ -9,3 +9,6 @@ import Foundation
 func JKB_log(_ msg : String) {
     print("【JKB】\(msg)")
 }
+func JKB_userlog(_ msg : String) {
+    print("【JKB_USER】\(msg)")
+}

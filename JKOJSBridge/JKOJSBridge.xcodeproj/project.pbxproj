@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55289D2B2579EE7C00E094E8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 55289D2A2579EE7C00E094E8 /* README.md */; };
 		55479199256DFA3D00A293DC /* JKOJSBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55479198256DFA3D00A293DC /* JKOJSBridge.swift */; };
 		554791A5256E070E00A293DC /* miniAppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554791A4256E070E00A293DC /* miniAppLauncher.swift */; };
 		554791B0256E58FB00A293DC /* JKOMiniAppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554791AF256E58FB00A293DC /* JKOMiniAppContainerViewController.swift */; };
 		554791B5256F8D2000A293DC /* PackagingTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554791B4256F8D2000A293DC /* PackagingTestViewController.swift */; };
-		55736E4C25664EDF00F8FBE5 /* DemoUserHTML.html in Resources */ = {isa = PBXBuildFile; fileRef = 55736E4B25664EDF00F8FBE5 /* DemoUserHTML.html */; };
+		55736E4C25664EDF00F8FBE5 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 55736E4B25664EDF00F8FBE5 /* index.html */; };
 		55736E62256B6EE300F8FBE5 /* JKOJSFunctionObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736E61256B6EE200F8FBE5 /* JKOJSFunctionObserver.swift */; };
 		55736E77256B708800F8FBE5 /* JKOJSBridgeWebViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736E76256B708800F8FBE5 /* JKOJSBridgeWebViewDSL.swift */; };
 		55736E80256B70E100F8FBE5 /* JKOJSBridgeWebExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736E7F256B70E100F8FBE5 /* JKOJSBridgeWebExtensions.swift */; };
@@ -24,6 +25,14 @@
 		55736EBC256D023C00F8FBE5 /* JSB_JKOAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736EBB256D023C00F8FBE5 /* JSB_JKOAccount.swift */; };
 		55736EC4256D026700F8FBE5 /* JKBNativeFrameworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736EC3256D026700F8FBE5 /* JKBNativeFrameworkProtocol.swift */; };
 		55736ECC256D100900F8FBE5 /* JKBJSBridgeRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736ECB256D100900F8FBE5 /* JKBJSBridgeRuntime.swift */; };
+		55E572D2257665C4002B13BA /* JKBMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E572D1257665C4002B13BA /* JKBMonitor.swift */; };
+		55E572DC2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E572DB2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift */; };
+		55E572E12578B918002B13BA /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = 55E572E02578B918002B13BA /* app.js */; };
+		55E572EF2578CF59002B13BA /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 55E572EE2578CF59002B13BA /* index.js */; };
+		55E572F72578E65F002B13BA /* app.json in Resources */ = {isa = PBXBuildFile; fileRef = 55E572F62578E65F002B13BA /* app.json */; };
+		55E572FF2578E6B3002B13BA /* app.css in Resources */ = {isa = PBXBuildFile; fileRef = 55E572FE2578E6B3002B13BA /* app.css */; };
+		55E573042578EC58002B13BA /* index.css in Resources */ = {isa = PBXBuildFile; fileRef = 55E573032578EC58002B13BA /* index.css */; };
+		55E573092578ECCB002B13BA /* index.json in Resources */ = {isa = PBXBuildFile; fileRef = 55E573082578ECCB002B13BA /* index.json */; };
 		55FBB05C2564F29B00A9F12E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBB05B2564F29B00A9F12E /* AppDelegate.swift */; };
 		55FBB05E2564F29B00A9F12E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBB05D2564F29B00A9F12E /* SceneDelegate.swift */; };
 		55FBB0602564F29B00A9F12E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBB05F2564F29B00A9F12E /* ViewController.swift */; };
@@ -52,11 +61,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55289D2A2579EE7C00E094E8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		55289D362579EF0900E094E8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		55479198256DFA3D00A293DC /* JKOJSBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOJSBridge.swift; sourceTree = "<group>"; };
 		554791A4256E070E00A293DC /* miniAppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniAppLauncher.swift; sourceTree = "<group>"; };
 		554791AF256E58FB00A293DC /* JKOMiniAppContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOMiniAppContainerViewController.swift; sourceTree = "<group>"; };
 		554791B4256F8D2000A293DC /* PackagingTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagingTestViewController.swift; sourceTree = "<group>"; };
-		55736E4B25664EDF00F8FBE5 /* DemoUserHTML.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = DemoUserHTML.html; sourceTree = "<group>"; };
+		55736E4B25664EDF00F8FBE5 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		55736E5A256B650800F8FBE5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		55736E5B256B674300F8FBE5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		55736E5D256B6AF700F8FBE5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -72,6 +83,14 @@
 		55736EBB256D023C00F8FBE5 /* JSB_JKOAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSB_JKOAccount.swift; sourceTree = "<group>"; };
 		55736EC3256D026700F8FBE5 /* JKBNativeFrameworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBNativeFrameworkProtocol.swift; sourceTree = "<group>"; };
 		55736ECB256D100900F8FBE5 /* JKBJSBridgeRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBJSBridgeRuntime.swift; sourceTree = "<group>"; };
+		55E572D1257665C4002B13BA /* JKBMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBMonitor.swift; sourceTree = "<group>"; };
+		55E572DB2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOMiniAppLifeCycleHandler.swift; sourceTree = "<group>"; };
+		55E572E02578B918002B13BA /* app.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
+		55E572EE2578CF59002B13BA /* index.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		55E572F62578E65F002B13BA /* app.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = app.json; sourceTree = "<group>"; };
+		55E572FE2578E6B3002B13BA /* app.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = app.css; sourceTree = "<group>"; };
+		55E573032578EC58002B13BA /* index.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = index.css; sourceTree = "<group>"; };
+		55E573082578ECCB002B13BA /* index.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = index.json; sourceTree = "<group>"; };
 		55FBB0582564F29B00A9F12E /* JKOJSBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKOJSBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55FBB05B2564F29B00A9F12E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55FBB05D2564F29B00A9F12E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,28 +132,199 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		55479197256DF93900A293DC /* JKBJKOJSBridge */ = {
+		55289D082578FF9800E094E8 /* JKOMiniApp */ = {
+			isa = PBXGroup;
+			children = (
+				55736E9B256CDACC00F8FBE5 /* JKOMiniApp.swift */,
+				554791AF256E58FB00A293DC /* JKOMiniAppContainerViewController.swift */,
+				55E573142578F48F002B13BA /* Utils */,
+				55E573112578F1F3002B13BA /* miniAppApplication */,
+				55E573102578F1E2002B13BA /* miniAppRuntime */,
+				55FBB08E2564F2BF00A9F12E /* miniAppCore */,
+			);
+			path = JKOMiniApp;
+			sourceTree = "<group>";
+		};
+		55289D222579EC9200E094E8 /* GlobalLayer */ = {
+			isa = PBXGroup;
+			children = (
+				55289D292579EE5300E094E8 /* Packaging */,
+				55E572D92576803B002B13BA /* LifeCycles */,
+				55289D252579ED1400E094E8 /* Config */,
+				55289D262579ED1D00E094E8 /* Apearance */,
+			);
+			path = GlobalLayer;
+			sourceTree = "<group>";
+		};
+		55289D232579ECAF00E094E8 /* CrossPageLayer */ = {
+			isa = PBXGroup;
+			children = (
+				55289D322579EEDC00E094E8 /* Mixin */,
+				55289D272579EDBE00E094E8 /* Router */,
+			);
+			path = CrossPageLayer;
+			sourceTree = "<group>";
+		};
+		55289D242579ECB600E094E8 /* PageLayer */ = {
+			isa = PBXGroup;
+			children = (
+				55289D3C2579EF9A00E094E8 /* Apearance */,
+				55289D3B2579EF9300E094E8 /* Config */,
+				55289D3A2579EF8900E094E8 /* LIfeCycle */,
+				55289D392579EF7900E094E8 /* Packaging */,
+			);
+			path = PageLayer;
+			sourceTree = "<group>";
+		};
+		55289D252579ED1400E094E8 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		55289D262579ED1D00E094E8 /* Apearance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Apearance;
+			sourceTree = "<group>";
+		};
+		55289D272579EDBE00E094E8 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				55289D382579EF4200E094E8 /* ActionHandler */,
+				55289D372579EF2F00E094E8 /* StackManager */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		55289D282579EE2C00E094E8 /* GlobalData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GlobalData;
+			sourceTree = "<group>";
+		};
+		55289D292579EE5300E094E8 /* Packaging */ = {
+			isa = PBXGroup;
+			children = (
+				55289D2A2579EE7C00E094E8 /* README.md */,
+			);
+			path = Packaging;
+			sourceTree = "<group>";
+		};
+		55289D322579EEDC00E094E8 /* Mixin */ = {
+			isa = PBXGroup;
+			children = (
+				55289D362579EF0900E094E8 /* README.md */,
+				55289D352579EEF800E094E8 /* Data */,
+				55289D342579EEF200E094E8 /* Component */,
+				55289D332579EEEC00E094E8 /* Function */,
+			);
+			path = Mixin;
+			sourceTree = "<group>";
+		};
+		55289D332579EEEC00E094E8 /* Function */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Function;
+			sourceTree = "<group>";
+		};
+		55289D342579EEF200E094E8 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		55289D352579EEF800E094E8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		55289D372579EF2F00E094E8 /* StackManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StackManager;
+			sourceTree = "<group>";
+		};
+		55289D382579EF4200E094E8 /* ActionHandler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ActionHandler;
+			sourceTree = "<group>";
+		};
+		55289D392579EF7900E094E8 /* Packaging */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Packaging;
+			sourceTree = "<group>";
+		};
+		55289D3A2579EF8900E094E8 /* LIfeCycle */ = {
+			isa = PBXGroup;
+			children = (
+				55289D3E2579EFC000E094E8 /* EventLifeCycle */,
+				55289D3D2579EFB300E094E8 /* PagingLifeCycle */,
+			);
+			path = LIfeCycle;
+			sourceTree = "<group>";
+		};
+		55289D3B2579EF9300E094E8 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		55289D3C2579EF9A00E094E8 /* Apearance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Apearance;
+			sourceTree = "<group>";
+		};
+		55289D3D2579EFB300E094E8 /* PagingLifeCycle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PagingLifeCycle;
+			sourceTree = "<group>";
+		};
+		55289D3E2579EFC000E094E8 /* EventLifeCycle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EventLifeCycle;
+			sourceTree = "<group>";
+		};
+		55479197256DF93900A293DC /* JKBDom */ = {
 			isa = PBXGroup;
 			children = (
 				55479198256DFA3D00A293DC /* JKOJSBridge.swift */,
 			);
-			path = JKBJKOJSBridge;
+			path = JKBDom;
 			sourceTree = "<group>";
 		};
-		554791A3256E06CE00A293DC /* Launch */ = {
+		554791A3256E06CE00A293DC /* Launcher */ = {
 			isa = PBXGroup;
 			children = (
 				55736E5B256B674300F8FBE5 /* README.md */,
 				554791A4256E070E00A293DC /* miniAppLauncher.swift */,
 			);
-			path = Launch;
+			path = Launcher;
 			sourceTree = "<group>";
 		};
 		55736E57256B627F00F8FBE5 /* miniAppFramework */ = {
 			isa = PBXGroup;
 			children = (
-				554791A3256E06CE00A293DC /* Launch */,
-				55736EA6256CF1CA00F8FBE5 /* Runtime */,
+				55736EA6256CF1CA00F8FBE5 /* Message */,
 				55736EA7256CF1F300F8FBE5 /* JKBNativeFrameworks */,
 			);
 			path = miniAppFramework;
@@ -143,6 +333,7 @@
 		55736E58256B642400F8FBE5 /* Packaging */ = {
 			isa = PBXGroup;
 			children = (
+				55E572E52578CD99002B13BA /* ExampleCode */,
 				55736E5A256B650800F8FBE5 /* README.md */,
 			);
 			path = Packaging;
@@ -215,13 +406,13 @@
 			path = Worker;
 			sourceTree = "<group>";
 		};
-		55736EA6256CF1CA00F8FBE5 /* Runtime */ = {
+		55736EA6256CF1CA00F8FBE5 /* Message */ = {
 			isa = PBXGroup;
 			children = (
 				55736E5D256B6AF700F8FBE5 /* README.md */,
 				55736ECB256D100900F8FBE5 /* JKBJSBridgeRuntime.swift */,
 			);
-			path = Runtime;
+			path = Message;
 			sourceTree = "<group>";
 		};
 		55736EA7256CF1F300F8FBE5 /* JKBNativeFrameworks */ = {
@@ -229,8 +420,6 @@
 			children = (
 				55736EA9256CF50500F8FBE5 /* JKOJSWorker+NativeFrameworks.swift */,
 				55736EC3256D026700F8FBE5 /* JKBNativeFrameworkProtocol.swift */,
-				55479197256DF93900A293DC /* JKBJKOJSBridge */,
-				55736EB1256CFDF200F8FBE5 /* JKBAccount */,
 			);
 			path = JKBNativeFrameworks;
 			sourceTree = "<group>";
@@ -250,6 +439,83 @@
 				55736EBB256D023C00F8FBE5 /* JSB_JKOAccount.swift */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		55E572D02576659D002B13BA /* JKBMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				55E572D1257665C4002B13BA /* JKBMonitor.swift */,
+			);
+			path = JKBMonitor;
+			sourceTree = "<group>";
+		};
+		55E572D92576803B002B13BA /* LifeCycles */ = {
+			isa = PBXGroup;
+			children = (
+				55E572DB2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift */,
+				55289D282579EE2C00E094E8 /* GlobalData */,
+			);
+			path = LifeCycles;
+			sourceTree = "<group>";
+		};
+		55E572E52578CD99002B13BA /* ExampleCode */ = {
+			isa = PBXGroup;
+			children = (
+				55E572E02578B918002B13BA /* app.js */,
+				55E572F62578E65F002B13BA /* app.json */,
+				55E572FE2578E6B3002B13BA /* app.css */,
+				55E572E92578CDC3002B13BA /* Pages */,
+			);
+			path = ExampleCode;
+			sourceTree = "<group>";
+		};
+		55E572E92578CDC3002B13BA /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				55E572EA2578CDE3002B13BA /* MainPage */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		55E572EA2578CDE3002B13BA /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				55736E4B25664EDF00F8FBE5 /* index.html */,
+				55E572EE2578CF59002B13BA /* index.js */,
+				55E573032578EC58002B13BA /* index.css */,
+				55E573082578ECCB002B13BA /* index.json */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		55E573102578F1E2002B13BA /* miniAppRuntime */ = {
+			isa = PBXGroup;
+			children = (
+				55289D222579EC9200E094E8 /* GlobalLayer */,
+				55289D232579ECAF00E094E8 /* CrossPageLayer */,
+				55289D242579ECB600E094E8 /* PageLayer */,
+			);
+			path = miniAppRuntime;
+			sourceTree = "<group>";
+		};
+		55E573112578F1F3002B13BA /* miniAppApplication */ = {
+			isa = PBXGroup;
+			children = (
+				55E572D02576659D002B13BA /* JKBMonitor */,
+				55479197256DF93900A293DC /* JKBDom */,
+				55736EB1256CFDF200F8FBE5 /* JKBAccount */,
+			);
+			path = miniAppApplication;
+			sourceTree = "<group>";
+		};
+		55E573142578F48F002B13BA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				55736E58256B642400F8FBE5 /* Packaging */,
+				554791A3256E06CE00A293DC /* Launcher */,
+				55736E59256B64A000F8FBE5 /* MonitorLogger */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		55FBB04F2564F29B00A9F12E = {
@@ -279,10 +545,8 @@
 				55FBB05D2564F29B00A9F12E /* SceneDelegate.swift */,
 				55FBB05F2564F29B00A9F12E /* ViewController.swift */,
 				554791B4256F8D2000A293DC /* PackagingTestViewController.swift */,
-				554791AF256E58FB00A293DC /* JKOMiniAppContainerViewController.swift */,
-				55736E4B25664EDF00F8FBE5 /* DemoUserHTML.html */,
 				55FBB0612564F29B00A9F12E /* Main.storyboard */,
-				55FBB08E2564F2BF00A9F12E /* JSBridge */,
+				55289D082578FF9800E094E8 /* JKOMiniApp */,
 				55FBB0642564F29F00A9F12E /* Assets.xcassets */,
 				55FBB0662564F29F00A9F12E /* LaunchScreen.storyboard */,
 				55FBB0692564F29F00A9F12E /* Info.plist */,
@@ -308,17 +572,14 @@
 			path = JKOJSBridgeUITests;
 			sourceTree = "<group>";
 		};
-		55FBB08E2564F2BF00A9F12E /* JSBridge */ = {
+		55FBB08E2564F2BF00A9F12E /* miniAppCore */ = {
 			isa = PBXGroup;
 			children = (
-				55736E9B256CDACC00F8FBE5 /* JKOMiniApp.swift */,
 				55736E75256B706800F8FBE5 /* DSLs */,
-				55736E59256B64A000F8FBE5 /* MonitorLogger */,
-				55736E58256B642400F8FBE5 /* Packaging */,
 				55736E57256B627F00F8FBE5 /* miniAppFramework */,
 				55736E5C256B6A8600F8FBE5 /* Foundation */,
 			);
-			path = JSBridge;
+			path = miniAppCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,10 +685,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55736E4C25664EDF00F8FBE5 /* DemoUserHTML.html in Resources */,
+				55E573092578ECCB002B13BA /* index.json in Resources */,
+				55E572F72578E65F002B13BA /* app.json in Resources */,
+				55289D2B2579EE7C00E094E8 /* README.md in Resources */,
+				55E572E12578B918002B13BA /* app.js in Resources */,
+				55736E4C25664EDF00F8FBE5 /* index.html in Resources */,
 				55FBB0682564F29F00A9F12E /* LaunchScreen.storyboard in Resources */,
+				55E572EF2578CF59002B13BA /* index.js in Resources */,
 				55FBB0652564F29F00A9F12E /* Assets.xcassets in Resources */,
 				55FBB0632564F29B00A9F12E /* Main.storyboard in Resources */,
+				55E572FF2578E6B3002B13BA /* app.css in Resources */,
+				55E573042578EC58002B13BA /* index.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +726,7 @@
 				55736EC4256D026700F8FBE5 /* JKBNativeFrameworkProtocol.swift in Sources */,
 				55736E77256B708800F8FBE5 /* JKOJSBridgeWebViewDSL.swift in Sources */,
 				554791A5256E070E00A293DC /* miniAppLauncher.swift in Sources */,
+				55E572D2257665C4002B13BA /* JKBMonitor.swift in Sources */,
 				554791B0256E58FB00A293DC /* JKOMiniAppContainerViewController.swift in Sources */,
 				55736EBC256D023C00F8FBE5 /* JSB_JKOAccount.swift in Sources */,
 				55736E80256B70E100F8FBE5 /* JKOJSBridgeWebExtensions.swift in Sources */,
@@ -470,6 +739,7 @@
 				55FBB05E2564F29B00A9F12E /* SceneDelegate.swift in Sources */,
 				55736E87256BA42000F8FBE5 /* JKOJSWorker.swift in Sources */,
 				55479199256DFA3D00A293DC /* JKOJSBridge.swift in Sources */,
+				55E572DC2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift in Sources */,
 				55736E8F256BC19D00F8FBE5 /* AnyExport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

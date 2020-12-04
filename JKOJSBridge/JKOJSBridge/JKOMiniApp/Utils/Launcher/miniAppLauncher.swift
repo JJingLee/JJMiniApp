@@ -12,6 +12,7 @@ public class miniAppLauncher : NSObject {
     //frameworks
     private var jkbAccount = JKBAccount()
     private var jkbJsBridge = JKBJSBridgeFramework()
+    private var jkbMonitor = JKBMonitorFramework()
     init(miniApp:JKOMiniApp) {
         super.init()
         self.miniApp = miniApp
@@ -36,6 +37,7 @@ public class miniAppLauncher : NSObject {
         miniApp?.worker.importNativeFrameworks([
             self.jkbAccount,
             self.jkbJsBridge,
+            self.jkbMonitor,
         ])
         JKB_log("native frameworks launch done")
     }
