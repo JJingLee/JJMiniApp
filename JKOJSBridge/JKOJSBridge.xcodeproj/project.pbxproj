@@ -12,6 +12,8 @@
 		554791A5256E070E00A293DC /* miniAppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554791A4256E070E00A293DC /* miniAppLauncher.swift */; };
 		554791B0256E58FB00A293DC /* JKOMiniAppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554791AF256E58FB00A293DC /* JKOMiniAppContainerViewController.swift */; };
 		554791B5256F8D2000A293DC /* PackagingTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554791B4256F8D2000A293DC /* PackagingTestViewController.swift */; };
+		5568B52F2580BC0B002A941C /* AppLifeCycle.js in Resources */ = {isa = PBXBuildFile; fileRef = 5568B52E2580BC0B002A941C /* AppLifeCycle.js */; };
+		5568B5342580BC57002A941C /* FileFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5568B5332580BC57002A941C /* FileFetcher.swift */; };
 		55736E4C25664EDF00F8FBE5 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 55736E4B25664EDF00F8FBE5 /* index.html */; };
 		55736E62256B6EE300F8FBE5 /* JKOJSFunctionObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736E61256B6EE200F8FBE5 /* JKOJSFunctionObserver.swift */; };
 		55736E77256B708800F8FBE5 /* JKOJSBridgeWebViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736E76256B708800F8FBE5 /* JKOJSBridgeWebViewDSL.swift */; };
@@ -83,6 +85,8 @@
 		554791A4256E070E00A293DC /* miniAppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniAppLauncher.swift; sourceTree = "<group>"; };
 		554791AF256E58FB00A293DC /* JKOMiniAppContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOMiniAppContainerViewController.swift; sourceTree = "<group>"; };
 		554791B4256F8D2000A293DC /* PackagingTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagingTestViewController.swift; sourceTree = "<group>"; };
+		5568B52E2580BC0B002A941C /* AppLifeCycle.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = AppLifeCycle.js; sourceTree = "<group>"; };
+		5568B5332580BC57002A941C /* FileFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileFetcher.swift; sourceTree = "<group>"; };
 		55736E4B25664EDF00F8FBE5 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		55736E5A256B650800F8FBE5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		55736E5B256B674300F8FBE5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -477,6 +481,7 @@
 		5584A6C42580A59F003196CD /* Resource Manager */ = {
 			isa = PBXGroup;
 			children = (
+				5568B5332580BC57002A941C /* FileFetcher.swift */,
 			);
 			path = "Resource Manager";
 			sourceTree = "<group>";
@@ -493,6 +498,7 @@
 			isa = PBXGroup;
 			children = (
 				55E572DB2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift */,
+				5568B52E2580BC0B002A941C /* AppLifeCycle.js */,
 				55289D282579EE2C00E094E8 /* GlobalData */,
 			);
 			path = LifeCycles;
@@ -732,6 +738,7 @@
 				55736E4C25664EDF00F8FBE5 /* index.html in Resources */,
 				55FBB0682564F29F00A9F12E /* LaunchScreen.storyboard in Resources */,
 				55E572EF2578CF59002B13BA /* index.js in Resources */,
+				5568B52F2580BC0B002A941C /* AppLifeCycle.js in Resources */,
 				55FBB0652564F29F00A9F12E /* Assets.xcassets in Resources */,
 				55FBB0632564F29B00A9F12E /* Main.storyboard in Resources */,
 				55E572FF2578E6B3002B13BA /* app.css in Resources */,
@@ -771,6 +778,7 @@
 				55736EBC256D023C00F8FBE5 /* JSB_JKOAccount.swift in Sources */,
 				55736E80256B70E100F8FBE5 /* JKOJSBridgeWebExtensions.swift in Sources */,
 				55FBB05C2564F29B00A9F12E /* AppDelegate.swift in Sources */,
+				5568B5342580BC57002A941C /* FileFetcher.swift in Sources */,
 				55736E62256B6EE300F8FBE5 /* JKOJSFunctionObserver.swift in Sources */,
 				55736EAA256CF50500F8FBE5 /* JKOJSWorker+NativeFrameworks.swift in Sources */,
 				55736EB6256D021E00F8FBE5 /* JKBAccount.swift in Sources */,

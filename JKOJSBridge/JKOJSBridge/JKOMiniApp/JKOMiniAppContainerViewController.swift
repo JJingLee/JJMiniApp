@@ -27,16 +27,16 @@ class JKOMiniAppContainerViewController: UIViewController {
         launchMiniApp()
         loadUserAppConfigs()
         loadPackage()
-        miniApp?.lifeCycleHandler?.callOnLaunch()
+        miniApp?.lifeCycleHandler.callOnLaunch()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         JKOMiniApp.currentActiveMiniApp = self.miniApp
-        miniApp?.lifeCycleHandler?.callOnShow()
+        miniApp?.lifeCycleHandler.callOnShow()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        miniApp?.lifeCycleHandler?.callOnHide()
+        miniApp?.lifeCycleHandler.callOnHide()
     }
 
     private func configWebView() {

@@ -12,103 +12,22 @@ public class JKOMiniAppLifeCycleHandler : NSObject {
     init(miniApp:JKOMiniApp) {
         super.init()
         self.miniApp = miniApp
-        let ApplifeCycle = JKOMiniAppLifeCycleJSScripts.appLifeCycleCoreJS()
+        let ApplifeCycle = Bundle.main.fetchJSScript(with: "AppLifeCycle") ?? ""
         miniApp.worker.evaluateJS(ApplifeCycle)
     }
     public func configAppID(_ appID : String) {
-        let produceApp = JKOMiniAppLifeCycleJSScripts.initialAppLifeCycle(with:appID)
-        miniApp?.worker.evaluateJS(produceApp)
+        _ = miniApp?.worker.callJSFunction("initialAppLifeCycle", with: [appID])
     }
     public func callOnLaunch() {
-        let callOnlaunch = JKOMiniAppLifeCycleJSScripts.callOnlaunchScript()
-        miniApp?.worker.evaluateJS(callOnlaunch)
+        _ = miniApp?.worker.callJSFunction("onLaunch", with: [appID])
     }
     public func callOnShow() {
-        let callOnShow = JKOMiniAppLifeCycleJSScripts.callOnShowScript()
-        miniApp?.worker.evaluateJS(callOnShow)
+        _ = miniApp?.worker.callJSFunction("onShow", with: [appID])
     }
     public func callOnHide() {
-        let callOnHide = JKOMiniAppLifeCycleJSScripts.callOnHideScript()
-        miniApp?.worker.evaluateJS(callOnHide)
+        _ = miniApp?.worker.callJSFunction("onHide", with: [appID])
     }
     public func callOnError() {
-        let callOnError = JKOMiniAppLifeCycleJSScripts.callOnErrorScript()
-        miniApp?.worker.evaluateJS(callOnError)
-    }
-}
-enum JKOMiniAppLifeCycleJSScripts {
-    static func appLifeCycleCoreJS()->String {
-        return """
-            class ApplifeCycle {
-              constructor(id) {
-                this.appId = id
-              }
-
-              onLaunch(onLaunchClosure) {
-                this.onLaunch = onLaunchClosure;
-                return this;
-              }
-              onShow(onShowClosure) {
-                this.onShow = onShowClosure;
-                return this;
-              }
-              onHide(onHideClosure) {
-                this.onHide = onHideClosure;
-                return this;
-              }
-              onError(onErrorClosure) {
-                this.onError = onErrorClosure;
-                return this;
-              }
-
-
-              native_onLaunch() {
-                if (typeof this.onLaunch === 'function'){
-                    this.onLaunch();
-                  }
-              }
-              native_onShow() {
-                if (typeof this.onShow === 'function'){
-                    this.onShow();
-                  }
-              }
-              native_onHide() {
-                if (typeof this.onHide === 'function'){
-                    this.onHide();
-                  }
-              }
-              native_onError() {
-                if (typeof this.onError === 'function'){
-                    this.onError();
-                  }
-              }
-
-            };
-        """
-    }
-    static func initialAppLifeCycle(with appID : String)->String {
-        return """
-            var miniapp = new ApplifeCycle("\(appID)");
-        """
-    }
-    static func callOnlaunchScript()->String {
-        return """
-            miniapp.native_onLaunch()
-        """
-    }
-    static func callOnShowScript()->String {
-        return """
-            miniapp.native_onShow()
-        """
-    }
-    static func callOnHideScript()->String {
-        return """
-            miniapp.native_onHide()
-        """
-    }
-    static func callOnErrorScript()->String {
-        return """
-            miniapp.native_onError()
-        """
+        _ = miniApp?.worker.callJSFunction("onError", with: [appID])
     }
 }
