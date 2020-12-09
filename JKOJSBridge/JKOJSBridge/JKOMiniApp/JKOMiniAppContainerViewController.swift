@@ -19,7 +19,6 @@ class JKOMiniAppContainerViewController: UIViewController {
 
     var webView = WKWebView()
     var miniApp : JKOMiniApp?
-    public var appLifeCycleHandler : JKOMiniAppLifeCycleHandler?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,16 +27,16 @@ class JKOMiniAppContainerViewController: UIViewController {
         launchMiniApp()
         loadUserAppConfigs()
         loadPackage()
-        appLifeCycleHandler?.callOnLaunch()
+        miniApp?.lifeCycleHandler?.callOnLaunch()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         JKOMiniApp.currentActiveMiniApp = self.miniApp
-        appLifeCycleHandler?.callOnShow()
+        miniApp?.lifeCycleHandler?.callOnShow()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        appLifeCycleHandler?.callOnHide()
+        miniApp?.lifeCycleHandler?.callOnHide()
     }
 
     private func configWebView() {
@@ -48,8 +47,6 @@ class JKOMiniAppContainerViewController: UIViewController {
     //MARK: - launch
     private func launchMiniApp() {
         let _miniApp = webView.jko_jsbridge.asMiniApp()
-        appLifeCycleHandler = JKOMiniAppLifeCycleHandler(miniApp: _miniApp)
-        appLifeCycleHandler?.configAppID(appID)
         miniApp = _miniApp
         miniApp?.launchMiniAppFrameworks(with: appID)
     }

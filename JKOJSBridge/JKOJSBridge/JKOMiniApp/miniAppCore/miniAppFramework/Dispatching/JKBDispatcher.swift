@@ -1,5 +1,5 @@
 //
-//  JKBJSBridgeRuntime.swift
+//  JKBDispatcher.swift
 //  JKOJSBridge
 //
 //  Created by chiehchun.lee on 2020/11/24.
@@ -8,7 +8,7 @@
 import Foundation
 import WebKit
 
-public class JKBJSBridgeRuntime: NSObject {
+public class JKBDispatcher: NSObject {
     var webView : WKWebView
     var worker : JKOJSWorker
 

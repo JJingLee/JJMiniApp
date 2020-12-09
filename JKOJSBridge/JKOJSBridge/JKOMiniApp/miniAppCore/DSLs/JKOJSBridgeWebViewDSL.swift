@@ -13,7 +13,7 @@ import WebKit
  // Launch --> inject framework JS
  webView.jko_jsbridge.registJSScript(script)
 
- // Runtime --> listening
+ // dispatcher --> listening
  webView.jko_jsbridge.addHandler(with: "clickHandler") { (data) in print("clickHandler : \(data)") }
 
 */

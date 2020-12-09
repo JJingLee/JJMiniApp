@@ -19,18 +19,18 @@ public class miniAppLauncher : NSObject {
     }
     public func launchMiniAppFrameworks() {
         JKB_log("start launching frameworks...")
-        importJKBJSBridgeRuntime()
+        importJKBDispatcher()
         importNativeFrameworks()
     }
-    public func importJKBJSBridgeRuntime() {
-        JKB_log("launching runtime...")
+    public func importJKBDispatcher() {
+        JKB_log("launching dispatcher...")
         guard let _miniApp = self.miniApp else {
-            JKB_log("<!> runtime launch failed")
+            JKB_log("<!> dispatcher launch failed")
             return
         }
-        _miniApp.runtime = JKBJSBridgeRuntime(webview:_miniApp.webView, worker:_miniApp.worker)
-        _miniApp.runtime?.importCallFunctionAbility()
-        JKB_log("runtime launch done")
+        _miniApp.dispatcher = JKBDispatcher(webview:_miniApp.webView, worker:_miniApp.worker)
+        _miniApp.dispatcher?.importCallFunctionAbility()
+        JKB_log("dispatcher launch done")
     }
     private func importNativeFrameworks() {
         JKB_log("launching native frameworks...")

@@ -19,7 +19,7 @@ public class JKOMiniApp : NSObject {
 
     //MARK: Kernel
     public var worker = JKOJSWorker.default  //jscore
-    public var runtime : JKBJSBridgeRuntime? //WebKit
+    public var dispatcher : JKBDispatcher? //WebKit
 
     //MARK: Utils
     private lazy var launcher = miniAppLauncher(miniApp: self)
@@ -31,5 +31,9 @@ public class JKOMiniApp : NSObject {
     public func launchMiniAppFrameworks(with appID : String) {
         self.appID = appID
         launcher.launchMiniAppFrameworks()
+    }
+    private func configLifeCycleHandler() {
+        lifeCycleHandler = JKOMiniAppLifeCycleHandler(miniApp: self)
+        lifeCycleHandler?.configAppID(appID)
     }
 }

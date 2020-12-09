@@ -1,4 +1,4 @@
-#  RunTime
+#  Dispatching
 |*events***|---listen--->| __________ |---call--->| ____________ |
 | ___________________ | *JSBridge*| ________ | *Frameworks* |
 |*lifeCycle*|<--update--| __________ |<--back--| ____________ |
