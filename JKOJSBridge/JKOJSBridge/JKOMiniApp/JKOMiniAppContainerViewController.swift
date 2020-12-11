@@ -14,68 +14,74 @@ onShow
 onHide
 onError
  */
-let appID : String = "1"
-class JKOMiniAppContainerViewController: UIViewController {
 
-    var webView = WKWebView()
-    var miniApp : JKOMiniApp?
+public class JKOMiniAppContainerViewController: UIViewController {
+    var renderer = JKOMiniAppRenderer()
+    var dispatcher : JKBDispatcher =  JKBDispatcher()
+    var logicHandler = JKOMiniAppLogicHandler()
+    var nativeFrameworks : [JKBNativeFrameworkProtocol] = [
+        JKBAccount(),
+        JKBJSBridgeFramework(),
+        JKBMonitorFramework(),
+    ]
+    var appID : String?
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        configWebView()
-        launchMiniApp()
-        loadUserAppConfigs()
-        loadPackage()
-        miniApp?.lifeCycleHandler.callOnLaunch()
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        JKOMiniApp.currentActiveMiniApp = self.miniApp
-        miniApp?.lifeCycleHandler.callOnShow()
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        miniApp?.lifeCycleHandler.callOnHide()
-    }
+        configRenderer()
+        configLogicHandler()
 
-    private func configWebView() {
-        self.view.addSubview(webView)
-        webView.frame = self.view.bounds
-    }
 
-    //MARK: - launch
-    private func launchMiniApp() {
-        let _miniApp = webView.jko_jsbridge.asMiniApp()
-        miniApp = _miniApp
-        miniApp?.launchMiniAppFrameworks(with: appID)
-    }
+        //binding
+        dispatcher.bindRenderer(renderer)
+        dispatcher.bindCallFunctionHandler(logicHandler)
 
-    //MARK: - Packaging
-    private func loadUserAppConfigs() {
-        loadLocalToWorker(forResource: "app", withExtension: "js")
-    }
-    private func loadPackage() {
-        //HTML+CSS
-        loadLocalToWeb(forResource: "index", withExtension: "html")
-
-        //JS
-        loadLocalToWorker(forResource: "index", withExtension: "js")
-    }
-
-    private func loadLocalToWeb(forResource resource: String, withExtension extensionType: String){
-        let url = Bundle.main.url(forResource: resource, withExtension: extensionType)!
-        webView.loadFileURL(url, allowingReadAccessTo: url)
-        let request = URLRequest(url: url)
-        webView.load(request)
-    }
-    private func loadLocalToWorker(forResource resource: String, withExtension extensionType: String){
-        let fileURL = Bundle.main.url(forResource: resource, withExtension: extensionType)!
-        do {
-            let fileText = try String(contentsOf: fileURL, encoding: .utf8)
-        miniApp?.worker.evaluateJS(fileText)
+        //app stuff
+        logicHandler.appLoadFrameworks(nativeFrameworks)
+        if let userAppJS = JKOUserSourceLoader.shared.globalAppJS() {
+            logicHandler.appLoadJS(userAppJS)
         }
-        catch {/* error handling here */}
+
+        //page stuff
+        logicHandler.pageLoadFrameworks(nativeFrameworks)
+        if let firstPageHTML = JKOUserSourceLoader.shared.getPageHTML(with: "index") {
+            renderer.render(with:firstPageHTML)
+        }
+
+        if let firstPageJS = JKOUserSourceLoader.shared.getPageJS(with: "index") {
+            logicHandler.pageLoadJS(firstPageJS)
+        }
+
+        logicHandler.appLifeCycleHandler.callOnLaunch()
+    }
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        JKOMiniAppContainerManager.currentActiveMiniApp = self
+        logicHandler.appLifeCycleHandler.callOnShow()
+    }
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        logicHandler.appLifeCycleHandler.callOnHide()
+    }
+
+    private func configRenderer() {
+        renderer.toggleRenderer { (renderView) in
+            self.view.addSubview(renderView)
+            renderView.translatesAutoresizingMaskIntoConstraints = false
+            self.view.addConstraints([
+                renderView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+                renderView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+                renderView.topAnchor.constraint(equalTo: self.view.topAnchor),
+                renderView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            ])
+        }
+    }
+    private func configLogicHandler() {
+        guard let _appID = appID else {return}
+        let firstPageID = "pageID"
+        logicHandler.activeAppWorker(with: _appID)
+        logicHandler.activePageWorker(with: _appID, pageID: firstPageID)
     }
 
 }

@@ -9,8 +9,6 @@ import UIKit
 import WebKit
 
 class ViewController: UIViewController {
-    var webView = WKWebView()
-    var miniApp : JKOMiniApp?
     lazy var button : UIButton = {
         let btn = UIButton()
         btn.setTitle("miniapp", for: .normal)
@@ -30,6 +28,7 @@ class ViewController: UIViewController {
         self.view.addSubview(button)
     }
     @objc func gotoMiniApp() {
+        miniappContainer.appID = "appID"
         self.navigationController?.pushViewController(miniappContainer, animated: true)
     }
 

@@ -45,7 +45,7 @@ public class JKOJSBridgeWebViewDSL:NSObject {
     }
 
     //MARK: - MiniApp
-    public func asMiniApp()->JKOMiniApp {
-        return JKOMiniApp(webview: webView)
-    }
+//    public func asMiniApp()->JKOMiniApp {
+//        return JKOMiniApp(webview: webView)
+//    }
 }

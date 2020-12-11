@@ -8,37 +8,47 @@
 import Foundation
 
 public class miniAppLauncher : NSObject {
-    private weak var miniApp : JKOMiniApp?
-    //frameworks
-    private var jkbAccount = JKBAccount()
-    private var jkbJsBridge = JKBJSBridgeFramework()
-    private var jkbMonitor = JKBMonitorFramework()
-    init(miniApp:JKOMiniApp) {
+    private weak var logicHandler : JKOMiniAppLogicHandler?
+    private weak var dispatcher : JKBDispatcher?
+    private var nativeFrameworks : [JKBNativeFrameworkProtocol]?
+    private weak var renderer : JKOMiniAppRenderer?
+    
+    init(logicHandler : JKOMiniAppLogicHandler,
+         dispatcher : JKBDispatcher,
+         renderer : JKOMiniAppRenderer,
+         nativeFrameworks : [JKBNativeFrameworkProtocol]) {
         super.init()
-        self.miniApp = miniApp
+        self.logicHandler = logicHandler
+        self.dispatcher = dispatcher
+        self.nativeFrameworks = nativeFrameworks
+        self.renderer = renderer
     }
-    public func launchMiniAppFrameworks() {
+    public func start() {
         JKB_log("start launching frameworks...")
-        importJKBDispatcher()
-        importNativeFrameworks()
+        
     }
-    public func importJKBDispatcher() {
-        JKB_log("launching dispatcher...")
-        guard let _miniApp = self.miniApp else {
-            JKB_log("<!> dispatcher launch failed")
-            return
-        }
-        _miniApp.dispatcher = JKBDispatcher(webview:_miniApp.webView, worker:_miniApp.worker)
-        _miniApp.dispatcher?.importCallFunctionAbility()
-        JKB_log("dispatcher launch done")
-    }
-    private func importNativeFrameworks() {
-        JKB_log("launching native frameworks...")
-        miniApp?.worker.importNativeFrameworks([
-            self.jkbAccount,
-            self.jkbJsBridge,
-            self.jkbMonitor,
-        ])
-        JKB_log("native frameworks launch done")
-    }
+//    public func launchMiniAppFrameworks() {
+//        JKB_log("start launching frameworks...")
+//        importJKBDispatcher()
+//        importNativeFrameworks()
+//    }
+//    public func importJKBDispatcher() {
+//        JKB_log("launching dispatcher...")
+////        guard let _logicHandler = self.logicHandler else {
+////            JKB_log("<!> dispatcher launch failed")
+////            return
+////        }
+////        _logicHandler.dispatcher = JKBDispatcher(webview:_logicHandler.webView, worker:_logicHandler.appWorker)
+////        _logicHandler.dispatcher?.importCallFunctionAbility()
+//        JKB_log("dispatcher launch done")
+//    }
+//    private func importNativeFrameworks() {
+//        JKB_log("launching native frameworks...")
+//        logicHandler?.appWorker.importNativeFrameworks([
+//            self.jkbAccount,
+//            self.jkbJsBridge,
+//            self.jkbMonitor,
+//        ])
+//        JKB_log("native frameworks launch done")
+//    }
 }

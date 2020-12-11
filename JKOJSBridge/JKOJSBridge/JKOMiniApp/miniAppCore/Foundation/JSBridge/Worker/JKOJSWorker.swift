@@ -8,7 +8,7 @@ import Foundation
 import JavaScriptCore
 
 public class JKOJSWorker {
-    static let `default` = JKOJSWorker()
+//    static let `default` = JKOJSWorker()
     public let jsVM = JSVirtualMachine()
     lazy var context : JSContext? = {
         let contxt = JSContext(virtualMachine: jsVM)
