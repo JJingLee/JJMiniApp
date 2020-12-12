@@ -8,25 +8,81 @@
 import Foundation
 
 public class miniAppLauncher : NSObject {
+    var appID : String?
+    var firstPageID : String?
     private weak var logicHandler : JKOMiniAppLogicHandler?
     private weak var dispatcher : JKBDispatcher?
-    private var nativeFrameworks : [JKBNativeFrameworkProtocol]?
     private weak var renderer : JKOMiniAppRenderer?
+    private weak var container : JKOMiniAppContainerViewController?
+    private var nativeFrameworks : [JKBNativeFrameworkProtocol]?
     
-    init(logicHandler : JKOMiniAppLogicHandler,
+    init(appID : String,
+         firstPageID : String,
+         container : JKOMiniAppContainerViewController,
+         logicHandler : JKOMiniAppLogicHandler,
          dispatcher : JKBDispatcher,
          renderer : JKOMiniAppRenderer,
          nativeFrameworks : [JKBNativeFrameworkProtocol]) {
         super.init()
+        self.appID = appID
+        self.firstPageID = firstPageID
+        self.container = container
         self.logicHandler = logicHandler
         self.dispatcher = dispatcher
         self.nativeFrameworks = nativeFrameworks
         self.renderer = renderer
     }
-    public func start() {
+    public func launch() {
         JKB_log("start launching frameworks...")
-        
+        configRenderer()
+        dataDispatchBinding()
+        activeAppLifeCycle()
+        activePageLifeCycle()
+
+        appLoadNativeFramework()
+        pageLoadNativeFramework()
     }
+
+    private func configRenderer() {
+        renderer?.toggleRenderer { [weak self](renderView) in
+            guard let _container = self?.container else {return}
+            _container.view.addSubview(renderView)
+            renderView.translatesAutoresizingMaskIntoConstraints = false
+            _container.view.addConstraints([
+                renderView.leftAnchor.constraint(equalTo: _container.view.leftAnchor),
+                renderView.rightAnchor.constraint(equalTo: _container.view.rightAnchor),
+                renderView.topAnchor.constraint(equalTo: _container.view.topAnchor),
+                renderView.bottomAnchor.constraint(equalTo: _container.view.bottomAnchor),
+            ])
+        }
+    }
+    private func activeAppLifeCycle() {
+        guard let _appID = appID else {return}
+        logicHandler?.activeAppWorker(with: _appID)
+    }
+    private func activePageLifeCycle() {
+        guard let _appID = appID else {return}
+        guard let firstPageID = firstPageID else {return}
+        logicHandler?.activePageWorker(with: _appID, pageID: firstPageID)
+    }
+
+    private func dataDispatchBinding() {
+        guard let _dispatcher = dispatcher else { return }
+        guard let _logicHandler = logicHandler else { return }
+        guard let _renderer = renderer else { return }
+        _dispatcher.bindRenderer(_renderer)
+        _dispatcher.bindCallFunctionHandler(_logicHandler)
+    }
+
+    private func appLoadNativeFramework() {
+        guard let _nativeFrameworks = nativeFrameworks else { return }
+        logicHandler?.appLoadFrameworks(_nativeFrameworks)
+    }
+    private func pageLoadNativeFramework() {
+        guard let _nativeFrameworks = nativeFrameworks else { return }
+        logicHandler?.pageLoadFrameworks(_nativeFrameworks)
+    }
+
 //    public func launchMiniAppFrameworks() {
 //        JKB_log("start launching frameworks...")
 //        importJKBDispatcher()

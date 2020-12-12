@@ -25,36 +25,30 @@ public class JKOMiniAppContainerViewController: UIViewController {
         JKBMonitorFramework(),
     ]
     var appID : String?
+    let firstPageID = "index"
+
+    var launcher : miniAppLauncher?
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        configRenderer()
-        configLogicHandler()
 
+        launcher = miniAppLauncher(appID: appID ?? "",
+                                   firstPageID: firstPageID,
+                                   container: self,
+                                   logicHandler: logicHandler,
+                                   dispatcher: dispatcher,
+                                   renderer: renderer,
+                                   nativeFrameworks: nativeFrameworks)
+        launcher?.launch()
 
-        //binding
-        dispatcher.bindRenderer(renderer)
-        dispatcher.bindCallFunctionHandler(logicHandler)
-
-        //app stuff
-        logicHandler.appLoadFrameworks(nativeFrameworks)
-        if let userAppJS = JKOUserSourceLoader.shared.globalAppJS() {
-            logicHandler.appLoadJS(userAppJS)
-        }
-
-        //page stuff
-        logicHandler.pageLoadFrameworks(nativeFrameworks)
-        if let firstPageHTML = JKOUserSourceLoader.shared.getPageHTML(with: "index") {
-            renderer.render(with:firstPageHTML)
-        }
-
-        if let firstPageJS = JKOUserSourceLoader.shared.getPageJS(with: "index") {
-            logicHandler.pageLoadJS(firstPageJS)
-        }
-
+        //user stuffs
+        JKOUserSourceLoader.shared.loadUserAppJS(to:logicHandler)
+        JKOUserSourceLoader.shared.loadUserPage("index",to:renderer)
+        JKOUserSourceLoader.shared.loadUserPageJS("index",to:logicHandler)
+        
         logicHandler.appLifeCycleHandler.callOnLaunch()
     }
+
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         JKOMiniAppContainerManager.currentActiveMiniApp = self
@@ -63,25 +57,6 @@ public class JKOMiniAppContainerViewController: UIViewController {
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         logicHandler.appLifeCycleHandler.callOnHide()
-    }
-
-    private func configRenderer() {
-        renderer.toggleRenderer { (renderView) in
-            self.view.addSubview(renderView)
-            renderView.translatesAutoresizingMaskIntoConstraints = false
-            self.view.addConstraints([
-                renderView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
-                renderView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-                renderView.topAnchor.constraint(equalTo: self.view.topAnchor),
-                renderView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            ])
-        }
-    }
-    private func configLogicHandler() {
-        guard let _appID = appID else {return}
-        let firstPageID = "pageID"
-        logicHandler.activeAppWorker(with: _appID)
-        logicHandler.activePageWorker(with: _appID, pageID: firstPageID)
     }
 
 }

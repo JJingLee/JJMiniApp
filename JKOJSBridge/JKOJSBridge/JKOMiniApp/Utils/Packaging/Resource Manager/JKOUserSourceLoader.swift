@@ -18,4 +18,19 @@ public class JKOUserSourceLoader : NSObject {
     public func getPageJS(with route:String)->String? {
         return Bundle.main.fetchJSScript(with: route)
     }
+    public func loadUserAppJS(to logicHandler : JKOMiniAppLogicHandler) {
+        if let userAppJS = globalAppJS() {
+            logicHandler.appLoadJS(userAppJS)
+        }
+    }
+    public func loadUserPage(_ pageRoute:String,to renderer:JKOMiniAppRenderer) {
+        if let pageHTML = getPageHTML(with: pageRoute) {
+            renderer.render(with:pageHTML)
+        }
+    }
+    public func loadUserPageJS(_ pageRoute:String,to logicHandler : JKOMiniAppLogicHandler) {
+        if let pageJS = getPageJS(with: pageRoute) {
+            logicHandler.pageLoadJS(pageJS)
+        }
+    }
 }
