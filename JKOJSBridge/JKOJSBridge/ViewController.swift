@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         self.view.addSubview(button)
     }
     @objc func gotoMiniApp() {
+        miniappContainer = JKOMiniAppContainerViewController()
         miniappContainer.appID = "appID"
         self.navigationController?.pushViewController(miniappContainer, animated: true)
     }

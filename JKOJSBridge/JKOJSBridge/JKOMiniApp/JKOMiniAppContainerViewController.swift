@@ -23,11 +23,13 @@ public class JKOMiniAppContainerViewController: UIViewController {
         JKBAccount(),
         JKBJSBridgeFramework(),
         JKBMonitorFramework(),
+        JKBRouterFramework()
     ]
     var appID : String?
     let firstPageID = "index"
 
     var launcher : miniAppLauncher?
+    lazy var pageRouter = JKOMiniAppPageRouter(renderer, logicHandler)
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,22 +43,19 @@ public class JKOMiniAppContainerViewController: UIViewController {
                                    nativeFrameworks: nativeFrameworks)
         launcher?.launch()
 
-        //user stuffs
-        JKOUserSourceLoader.shared.loadUserAppJS(to:logicHandler)
-        JKOUserSourceLoader.shared.loadUserPage("index",to:renderer)
-        JKOUserSourceLoader.shared.loadUserPageJS("index",to:logicHandler)
-        
-        logicHandler.appLifeCycleHandler.callOnLaunch()
+        pageRouter.initialize()
+
+        logicHandler.appOnLaunch()
     }
 
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         JKOMiniAppContainerManager.currentActiveMiniApp = self
-        logicHandler.appLifeCycleHandler.callOnShow()
+        logicHandler.appOnShow()
     }
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        logicHandler.appLifeCycleHandler.callOnHide()
+        logicHandler.appOnHide()
     }
 
 }

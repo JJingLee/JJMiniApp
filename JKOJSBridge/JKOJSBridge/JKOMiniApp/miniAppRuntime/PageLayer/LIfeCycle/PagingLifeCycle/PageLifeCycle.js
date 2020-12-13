@@ -1,6 +1,6 @@
 class PagelifeCycle {
     constructor(appid, pageid) {
-        this.appId = id
+        this.appId = appid
         this.pageId = pageid
     }
 
@@ -53,29 +53,29 @@ class PagelifeCycle {
 
 };
 
-var page;
+var Page;
 
-function JKInitialPageLifeCycle(appID) {
-    page = new PagelifeCycle(appID);
+function JKInitialPageLifeCycle(appID,pageId) {
+    Page = new PagelifeCycle(appID,pageId);
 }
 
 function JKPageOnLoad() {
-    miniapp.native_onLoad()
+    Page.native_onLoad()
 }
 
 function JKPageOnShow() {
-    miniapp.native_onShow()
+    Page.native_onShow()
 }
 
 function JKPageOnReady() {
-    miniapp.native_onReady()
+    Page.native_onReady()
 }
 
 function JKPageOnHide() {
-    miniapp.native_onHide()
+    Page.native_onHide()
 }
 
 function JKPageOnError() {
-    miniapp.native_onError()
+    Page.native_onError()
 }
 

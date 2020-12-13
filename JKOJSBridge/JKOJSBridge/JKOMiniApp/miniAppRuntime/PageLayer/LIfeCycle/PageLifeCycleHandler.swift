@@ -13,31 +13,26 @@ public class PageLifeCycleHandler : NSObject {
     init(worker:JKOJSWorker) {
         super.init()
         self.worker = worker
-        let ApplifeCycle = Bundle.main.fetchJSScript(with: "PagelifeCycle") ?? ""
-        worker.evaluateJS(ApplifeCycle)
+        let PageLifeCycle = Bundle.main.fetchJSScript(with: "PageLifeCycle") ?? ""
+        worker.evaluateJS(PageLifeCycle)
     }
     public func configAppID(_ appID : String, _ pageID : String) {
         _ = worker?.callJSFunction("JKInitialPageLifeCycle", with: [appID, pageID])
         self.appID = appID
     }
     public func callOnLoad() {
-        guard let appID = self.appID else {return}
-        _ = worker?.callJSFunction("JKPageOnLoad", with: [appID])
+        _ = worker?.callJSFunction("JKPageOnLoad", with: [])
     }
     public func callOnShow() {
-        guard let appID = self.appID else {return}
-        _ = worker?.callJSFunction("JKPageOnShow", with: [appID])
+        _ = worker?.callJSFunction("JKPageOnShow", with: [])
     }
     public func callOnReady() {
-        guard let appID = self.appID else {return}
-        _ = worker?.callJSFunction("JKPageOnReady", with: [appID])
+        _ = worker?.callJSFunction("JKPageOnReady", with: [])
     }
     public func callOnHide() {
-        guard let appID = self.appID else {return}
-        _ = worker?.callJSFunction("JKPageOnHide", with: [appID])
+        _ = worker?.callJSFunction("JKPageOnHide", with: [])
     }
     public func callOnError() {
-        guard let appID = self.appID else {return}
-        _ = worker?.callJSFunction("JKPageOnError", with: [appID])
+        _ = worker?.callJSFunction("JKPageOnError", with: [])
     }
 }

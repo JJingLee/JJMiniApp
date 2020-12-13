@@ -7,8 +7,16 @@
 
 import Foundation
 
+public protocol JKOUserSourceLoaderRendererProtocol : NSObject {
+    func render(with htmlURL : URL)
+}
+
+public protocol JKOUserSourceLoaderLogicHandlerProtocol : NSObject {
+    func appLoadJS(_ js : String)
+    func pageLoadJS(_ js : String)
+}
+
 public class JKOUserSourceLoader : NSObject {
-    public static let shared = JKOUserSourceLoader()
     public func globalAppJS()->String? {
         return Bundle.main.fetchJSScript(with: "app")
     }
@@ -18,17 +26,17 @@ public class JKOUserSourceLoader : NSObject {
     public func getPageJS(with route:String)->String? {
         return Bundle.main.fetchJSScript(with: route)
     }
-    public func loadUserAppJS(to logicHandler : JKOMiniAppLogicHandler) {
+    public func loadUserAppJS(to logicHandler : JKOUserSourceLoaderLogicHandlerProtocol) {
         if let userAppJS = globalAppJS() {
             logicHandler.appLoadJS(userAppJS)
         }
     }
-    public func loadUserPage(_ pageRoute:String,to renderer:JKOMiniAppRenderer) {
+    public func loadUserPage(_ pageRoute:String,to renderer:JKOUserSourceLoaderRendererProtocol) {
         if let pageHTML = getPageHTML(with: pageRoute) {
             renderer.render(with:pageHTML)
         }
     }
-    public func loadUserPageJS(_ pageRoute:String,to logicHandler : JKOMiniAppLogicHandler) {
+    public func loadUserPageJS(_ pageRoute:String,to logicHandler : JKOUserSourceLoaderLogicHandlerProtocol) {
         if let pageJS = getPageJS(with: pageRoute) {
             logicHandler.pageLoadJS(pageJS)
         }

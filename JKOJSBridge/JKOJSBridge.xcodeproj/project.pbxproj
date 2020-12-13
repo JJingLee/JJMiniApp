@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		55289D2B2579EE7C00E094E8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 55289D2A2579EE7C00E094E8 /* README.md */; };
+		552DE97B2584FEA300F66F9C /* JKOMiniAppRenderer+CallFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552DE97A2584FEA300F66F9C /* JKOMiniAppRenderer+CallFunction.swift */; };
+		552DE9802584FF0000F66F9C /* JKOMiniAppRenderer+UpdateDoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552DE97F2584FF0000F66F9C /* JKOMiniAppRenderer+UpdateDoms.swift */; };
+		552DE98825850CBB00F66F9C /* JKOMiniAppPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552DE98725850CBB00F66F9C /* JKOMiniAppPageRouter.swift */; };
+		552DE98E2585137500F66F9C /* index2.html in Resources */ = {isa = PBXBuildFile; fileRef = 552DE98D2585137500F66F9C /* index2.html */; };
+		552DE993258513B000F66F9C /* index2.js in Resources */ = {isa = PBXBuildFile; fileRef = 552DE992258513B000F66F9C /* index2.js */; };
+		552DE9982585182300F66F9C /* JKOMiniAppRenderer+UserSourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552DE9972585182300F66F9C /* JKOMiniAppRenderer+UserSourceLoader.swift */; };
+		552DE99E258518ED00F66F9C /* JKOMiniAppLogicHandler+UserSourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552DE99D258518ED00F66F9C /* JKOMiniAppLogicHandler+UserSourceLoader.swift */; };
+		552DE9A62585194900F66F9C /* JKOMiniAppLogicHandler+CallFunctionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552DE9A52585194900F66F9C /* JKOMiniAppLogicHandler+CallFunctionHandler.swift */; };
 		55479199256DFA3D00A293DC /* JKOJSBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55479198256DFA3D00A293DC /* JKOJSBridge.swift */; };
 		554791A5256E070E00A293DC /* miniAppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554791A4256E070E00A293DC /* miniAppLauncher.swift */; };
 		554791B0256E58FB00A293DC /* JKOMiniAppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554791AF256E58FB00A293DC /* JKOMiniAppContainerViewController.swift */; };
@@ -19,6 +27,7 @@
 		5568B54625835CCE002A941C /* JKOMiniAppRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5568B54525835CCE002A941C /* JKOMiniAppRenderer.swift */; };
 		5568B5532583878B002A941C /* JKOMiniAppContainerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5568B5522583878B002A941C /* JKOMiniAppContainerManager.swift */; };
 		5568B55825838B14002A941C /* JKOUserSourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5568B55725838B14002A941C /* JKOUserSourceLoader.swift */; };
+		5568B55E2584FD83002A941C /* callFunctionEventPoster.js in Resources */ = {isa = PBXBuildFile; fileRef = 5568B55D2584FD83002A941C /* callFunctionEventPoster.js */; };
 		55736E4C25664EDF00F8FBE5 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 55736E4B25664EDF00F8FBE5 /* index.html */; };
 		55736E62256B6EE300F8FBE5 /* JKOJSFunctionObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736E61256B6EE200F8FBE5 /* JKOJSFunctionObserver.swift */; };
 		55736E77256B708800F8FBE5 /* JKOJSBridgeWebViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736E76256B708800F8FBE5 /* JKOJSBridgeWebViewDSL.swift */; };
@@ -32,6 +41,8 @@
 		55736EBC256D023C00F8FBE5 /* JSB_JKOAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736EBB256D023C00F8FBE5 /* JSB_JKOAccount.swift */; };
 		55736EC4256D026700F8FBE5 /* JKBNativeFrameworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736EC3256D026700F8FBE5 /* JKBNativeFrameworkProtocol.swift */; };
 		55736ECC256D100900F8FBE5 /* JKBDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736ECB256D100900F8FBE5 /* JKBDispatcher.swift */; };
+		55CCE3C9258618EC00E2F565 /* JKOMiniAppLogicHandler+LifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE3C8258618EC00E2F565 /* JKOMiniAppLogicHandler+LifeCycle.swift */; };
+		55CCE3CF25864D5700E2F565 /* JKBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE3CE25864D5700E2F565 /* JKBRouter.swift */; };
 		55E572D2257665C4002B13BA /* JKBMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E572D1257665C4002B13BA /* JKBMonitor.swift */; };
 		55E572DC2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E572DB2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift */; };
 		55E572E12578B918002B13BA /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = 55E572E02578B918002B13BA /* app.js */; };
@@ -86,6 +97,14 @@
 		55289D502579F6ED00E094E8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		55289D512579F6FC00E094E8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		55289D522579F71100E094E8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		552DE97A2584FEA300F66F9C /* JKOMiniAppRenderer+CallFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JKOMiniAppRenderer+CallFunction.swift"; sourceTree = "<group>"; };
+		552DE97F2584FF0000F66F9C /* JKOMiniAppRenderer+UpdateDoms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JKOMiniAppRenderer+UpdateDoms.swift"; sourceTree = "<group>"; };
+		552DE98725850CBB00F66F9C /* JKOMiniAppPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOMiniAppPageRouter.swift; sourceTree = "<group>"; };
+		552DE98D2585137500F66F9C /* index2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index2.html; sourceTree = "<group>"; };
+		552DE992258513B000F66F9C /* index2.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index2.js; sourceTree = "<group>"; };
+		552DE9972585182300F66F9C /* JKOMiniAppRenderer+UserSourceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JKOMiniAppRenderer+UserSourceLoader.swift"; sourceTree = "<group>"; };
+		552DE99D258518ED00F66F9C /* JKOMiniAppLogicHandler+UserSourceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JKOMiniAppLogicHandler+UserSourceLoader.swift"; sourceTree = "<group>"; };
+		552DE9A52585194900F66F9C /* JKOMiniAppLogicHandler+CallFunctionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JKOMiniAppLogicHandler+CallFunctionHandler.swift"; sourceTree = "<group>"; };
 		55479198256DFA3D00A293DC /* JKOJSBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOJSBridge.swift; sourceTree = "<group>"; };
 		554791A4256E070E00A293DC /* miniAppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniAppLauncher.swift; sourceTree = "<group>"; };
 		554791AF256E58FB00A293DC /* JKOMiniAppContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOMiniAppContainerViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +116,7 @@
 		5568B54525835CCE002A941C /* JKOMiniAppRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOMiniAppRenderer.swift; sourceTree = "<group>"; };
 		5568B5522583878B002A941C /* JKOMiniAppContainerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOMiniAppContainerManager.swift; sourceTree = "<group>"; };
 		5568B55725838B14002A941C /* JKOUserSourceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOUserSourceLoader.swift; sourceTree = "<group>"; };
+		5568B55D2584FD83002A941C /* callFunctionEventPoster.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = callFunctionEventPoster.js; sourceTree = "<group>"; };
 		55736E4B25664EDF00F8FBE5 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		55736E5A256B650800F8FBE5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		55736E5B256B674300F8FBE5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -113,6 +133,8 @@
 		55736EBB256D023C00F8FBE5 /* JSB_JKOAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSB_JKOAccount.swift; sourceTree = "<group>"; };
 		55736EC3256D026700F8FBE5 /* JKBNativeFrameworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBNativeFrameworkProtocol.swift; sourceTree = "<group>"; };
 		55736ECB256D100900F8FBE5 /* JKBDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBDispatcher.swift; sourceTree = "<group>"; };
+		55CCE3C8258618EC00E2F565 /* JKOMiniAppLogicHandler+LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JKOMiniAppLogicHandler+LifeCycle.swift"; sourceTree = "<group>"; };
+		55CCE3CE25864D5700E2F565 /* JKBRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBRouter.swift; sourceTree = "<group>"; };
 		55E572D1257665C4002B13BA /* JKBMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBMonitor.swift; sourceTree = "<group>"; };
 		55E572DB2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOMiniAppLifeCycleHandler.swift; sourceTree = "<group>"; };
 		55E572E02578B918002B13BA /* app.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
@@ -165,9 +187,7 @@
 		55289D082578FF9800E094E8 /* JKOMiniApp */ = {
 			isa = PBXGroup;
 			children = (
-				55736E9B256CDACC00F8FBE5 /* JKOMiniAppLogicHandler.swift */,
 				554791AF256E58FB00A293DC /* JKOMiniAppContainerViewController.swift */,
-				5568B54525835CCE002A941C /* JKOMiniAppRenderer.swift */,
 				55E573142578F48F002B13BA /* Utils */,
 				55E573112578F1F3002B13BA /* miniAppApplication */,
 				55E573102578F1E2002B13BA /* miniAppRuntime */,
@@ -299,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				55289D492579F5DD00E094E8 /* README.md */,
+				552DE98725850CBB00F66F9C /* JKOMiniAppPageRouter.swift */,
 			);
 			path = ActionHandler;
 			sourceTree = "<group>";
@@ -354,6 +375,26 @@
 			path = EventLifeCycle;
 			sourceTree = "<group>";
 		};
+		552DE98C2585134B00F66F9C /* iconPage */ = {
+			isa = PBXGroup;
+			children = (
+				552DE98D2585137500F66F9C /* index2.html */,
+				552DE992258513B000F66F9C /* index2.js */,
+			);
+			path = iconPage;
+			sourceTree = "<group>";
+		};
+		552DE99C258518BB00F66F9C /* logicHandler */ = {
+			isa = PBXGroup;
+			children = (
+				55736E9B256CDACC00F8FBE5 /* JKOMiniAppLogicHandler.swift */,
+				55CCE3C8258618EC00E2F565 /* JKOMiniAppLogicHandler+LifeCycle.swift */,
+				552DE99D258518ED00F66F9C /* JKOMiniAppLogicHandler+UserSourceLoader.swift */,
+				552DE9A52585194900F66F9C /* JKOMiniAppLogicHandler+CallFunctionHandler.swift */,
+			);
+			path = logicHandler;
+			sourceTree = "<group>";
+		};
 		55479197256DF93900A293DC /* JKBDom */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,9 +412,23 @@
 			path = Launcher;
 			sourceTree = "<group>";
 		};
+		5568B55C2584FCE5002A941C /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				5568B54525835CCE002A941C /* JKOMiniAppRenderer.swift */,
+				552DE9972585182300F66F9C /* JKOMiniAppRenderer+UserSourceLoader.swift */,
+				552DE97F2584FF0000F66F9C /* JKOMiniAppRenderer+UpdateDoms.swift */,
+				552DE97A2584FEA300F66F9C /* JKOMiniAppRenderer+CallFunction.swift */,
+				5568B55D2584FD83002A941C /* callFunctionEventPoster.js */,
+			);
+			path = Renderer;
+			sourceTree = "<group>";
+		};
 		55736E57256B627F00F8FBE5 /* miniAppFramework */ = {
 			isa = PBXGroup;
 			children = (
+				552DE99C258518BB00F66F9C /* logicHandler */,
+				5568B55C2584FCE5002A941C /* Renderer */,
 				55736EA6256CF1CA00F8FBE5 /* Dispatching */,
 				55736EA7256CF1F300F8FBE5 /* JKBNativeFrameworks */,
 			);
@@ -501,6 +556,14 @@
 			path = "Resource Manager";
 			sourceTree = "<group>";
 		};
+		55CCE3CD258649B500E2F565 /* JKBRouter */ = {
+			isa = PBXGroup;
+			children = (
+				55CCE3CE25864D5700E2F565 /* JKBRouter.swift */,
+			);
+			path = JKBRouter;
+			sourceTree = "<group>";
+		};
 		55E572D02576659D002B13BA /* JKBMonitor */ = {
 			isa = PBXGroup;
 			children = (
@@ -533,6 +596,7 @@
 		55E572E92578CDC3002B13BA /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				552DE98C2585134B00F66F9C /* iconPage */,
 				55E572EA2578CDE3002B13BA /* MainPage */,
 			);
 			path = Pages;
@@ -562,6 +626,7 @@
 		55E573112578F1F3002B13BA /* miniAppApplication */ = {
 			isa = PBXGroup;
 			children = (
+				55CCE3CD258649B500E2F565 /* JKBRouter */,
 				55E572D02576659D002B13BA /* JKBMonitor */,
 				55479197256DF93900A293DC /* JKBDom */,
 				55736EB1256CFDF200F8FBE5 /* JKBAccount */,
@@ -752,6 +817,7 @@
 				55E572E12578B918002B13BA /* app.js in Resources */,
 				55736E4C25664EDF00F8FBE5 /* index.html in Resources */,
 				5568B5392580C846002A941C /* PageLifeCycle.js in Resources */,
+				5568B55E2584FD83002A941C /* callFunctionEventPoster.js in Resources */,
 				55FBB0682564F29F00A9F12E /* LaunchScreen.storyboard in Resources */,
 				55E572EF2578CF59002B13BA /* index.js in Resources */,
 				5568B52F2580BC0B002A941C /* AppLifeCycle.js in Resources */,
@@ -759,6 +825,8 @@
 				55FBB0632564F29B00A9F12E /* Main.storyboard in Resources */,
 				55E572FF2578E6B3002B13BA /* app.css in Resources */,
 				55E573042578EC58002B13BA /* index.css in Resources */,
+				552DE993258513B000F66F9C /* index2.js in Resources */,
+				552DE98E2585137500F66F9C /* index2.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,26 +854,34 @@
 				55FBB0602564F29B00A9F12E /* ViewController.swift in Sources */,
 				55736ECC256D100900F8FBE5 /* JKBDispatcher.swift in Sources */,
 				55736E94256CB2F100F8FBE5 /* JKOBridgeConsoler.swift in Sources */,
+				552DE99E258518ED00F66F9C /* JKOMiniAppLogicHandler+UserSourceLoader.swift in Sources */,
 				55736EC4256D026700F8FBE5 /* JKBNativeFrameworkProtocol.swift in Sources */,
 				55736E77256B708800F8FBE5 /* JKOJSBridgeWebViewDSL.swift in Sources */,
+				552DE98825850CBB00F66F9C /* JKOMiniAppPageRouter.swift in Sources */,
 				5568B55825838B14002A941C /* JKOUserSourceLoader.swift in Sources */,
 				554791A5256E070E00A293DC /* miniAppLauncher.swift in Sources */,
 				55E572D2257665C4002B13BA /* JKBMonitor.swift in Sources */,
 				554791B0256E58FB00A293DC /* JKOMiniAppContainerViewController.swift in Sources */,
 				55736EBC256D023C00F8FBE5 /* JSB_JKOAccount.swift in Sources */,
+				552DE9982585182300F66F9C /* JKOMiniAppRenderer+UserSourceLoader.swift in Sources */,
 				55736E80256B70E100F8FBE5 /* JKOJSBridgeWebExtensions.swift in Sources */,
 				55FBB05C2564F29B00A9F12E /* AppDelegate.swift in Sources */,
+				552DE97B2584FEA300F66F9C /* JKOMiniAppRenderer+CallFunction.swift in Sources */,
 				5568B5342580BC57002A941C /* FileFetcher.swift in Sources */,
 				55736E62256B6EE300F8FBE5 /* JKOJSFunctionObserver.swift in Sources */,
 				5568B5532583878B002A941C /* JKOMiniAppContainerManager.swift in Sources */,
 				55736EAA256CF50500F8FBE5 /* JKOJSWorker+NativeFrameworks.swift in Sources */,
+				552DE9A62585194900F66F9C /* JKOMiniAppLogicHandler+CallFunctionHandler.swift in Sources */,
 				55736EB6256D021E00F8FBE5 /* JKBAccount.swift in Sources */,
 				55736E9C256CDACC00F8FBE5 /* JKOMiniAppLogicHandler.swift in Sources */,
 				554791B5256F8D2000A293DC /* PackagingTestViewController.swift in Sources */,
 				55FBB05E2564F29B00A9F12E /* SceneDelegate.swift in Sources */,
 				55736E87256BA42000F8FBE5 /* JKOJSWorker.swift in Sources */,
 				5568B53E25821270002A941C /* PageLifeCycleHandler.swift in Sources */,
+				55CCE3C9258618EC00E2F565 /* JKOMiniAppLogicHandler+LifeCycle.swift in Sources */,
 				5568B54625835CCE002A941C /* JKOMiniAppRenderer.swift in Sources */,
+				552DE9802584FF0000F66F9C /* JKOMiniAppRenderer+UpdateDoms.swift in Sources */,
+				55CCE3CF25864D5700E2F565 /* JKBRouter.swift in Sources */,
 				55479199256DFA3D00A293DC /* JKOJSBridge.swift in Sources */,
 				55E572DC2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift in Sources */,
 				55736E8F256BC19D00F8FBE5 /* AnyExport.swift in Sources */,
