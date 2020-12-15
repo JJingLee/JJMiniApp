@@ -439,7 +439,6 @@
 			isa = PBXGroup;
 			children = (
 				5584A6C42580A59F003196CD /* Resource Manager */,
-				55E572E52578CD99002B13BA /* ExampleCode */,
 				55736E5A256B650800F8FBE5 /* README.md */,
 			);
 			path = Packaging;
@@ -582,7 +581,7 @@
 			path = LifeCycles;
 			sourceTree = "<group>";
 		};
-		55E572E52578CD99002B13BA /* ExampleCode */ = {
+		55E572E52578CD99002B13BA /* Playground */ = {
 			isa = PBXGroup;
 			children = (
 				55E572E02578B918002B13BA /* app.js */,
@@ -590,7 +589,7 @@
 				55E572FE2578E6B3002B13BA /* app.css */,
 				55E572E92578CDC3002B13BA /* Pages */,
 			);
-			path = ExampleCode;
+			path = Playground;
 			sourceTree = "<group>";
 		};
 		55E572E92578CDC3002B13BA /* Pages */ = {
@@ -672,6 +671,7 @@
 				55FBB05F2564F29B00A9F12E /* ViewController.swift */,
 				554791B4256F8D2000A293DC /* PackagingTestViewController.swift */,
 				55FBB0612564F29B00A9F12E /* Main.storyboard */,
+				55E572E52578CD99002B13BA /* Playground */,
 				55289D082578FF9800E094E8 /* JKOMiniApp */,
 				55FBB0642564F29F00A9F12E /* Assets.xcassets */,
 				55FBB0662564F29F00A9F12E /* LaunchScreen.storyboard */,
