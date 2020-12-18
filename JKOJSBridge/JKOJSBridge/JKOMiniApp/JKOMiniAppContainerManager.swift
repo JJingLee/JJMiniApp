@@ -8,5 +8,9 @@
 import Foundation
 
 public class JKOMiniAppContainerManager: NSObject {
-    public static var currentActiveMiniApp : JKOMiniAppContainerViewController? = nil
+    static public let shared = JKOMiniAppContainerManager()
+    public var currentActiveMiniApp : JKOMiniAppContainerViewController? = nil
+    public func miniApp(by appID:String)->JKOMiniAppContainerViewController? {
+        return currentActiveMiniApp//TODO:Manage by ID
+    }
 }

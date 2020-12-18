@@ -12,10 +12,10 @@ import Foundation
 }
 @objc public class JKBRouter : NSObject,JKBRouterProtocol {
     public static func navigateTo(_ route : String) {
-        JKOMiniAppContainerManager.currentActiveMiniApp?.pageRouter.navigateTo(route)
+        JKOMiniAppContainerManager.shared.currentActiveMiniApp?.pageRouter.navigateTo(route)
     }
     public static func navigateBack() {
-        JKOMiniAppContainerManager.currentActiveMiniApp?.pageRouter.navigateBack()
+        JKOMiniAppContainerManager.shared.currentActiveMiniApp?.pageRouter.navigateBack()
     }
 }
 public class JKBRouterFramework : NSObject, JKBNativeFrameworkProtocol {

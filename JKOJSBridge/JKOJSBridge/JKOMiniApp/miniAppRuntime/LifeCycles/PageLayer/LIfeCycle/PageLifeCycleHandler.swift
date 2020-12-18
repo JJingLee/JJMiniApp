@@ -13,10 +13,13 @@ public class PageLifeCycleHandler : NSObject {
     init(worker:JKOJSWorker) {
         super.init()
         self.worker = worker
+        importAppLifeCycle()
         let PageLifeCycle = Bundle.main.fetchJSScript(with: "PageLifeCycle") ?? ""
         worker.evaluateJS(PageLifeCycle)
+
     }
     public func configAppID(_ appID : String, _ pageID : String) {
+        _ = worker?.callJSFunction("initialAppLifeCycle", with: [appID])
         _ = worker?.callJSFunction("JKInitialPageLifeCycle", with: [appID, pageID])
         self.appID = appID
     }
@@ -34,5 +37,10 @@ public class PageLifeCycleHandler : NSObject {
     }
     public func callOnError() {
         _ = worker?.callJSFunction("JKPageOnError", with: [])
+    }
+
+    private func importAppLifeCycle() {
+        let ApplifeCycle = Bundle.main.fetchJSScript(with: "AppLifeCycle") ?? ""
+        worker?.evaluateJS(ApplifeCycle)
     }
 }

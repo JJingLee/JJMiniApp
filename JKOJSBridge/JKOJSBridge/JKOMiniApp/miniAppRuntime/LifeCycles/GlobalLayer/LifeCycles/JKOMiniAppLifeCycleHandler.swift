@@ -21,19 +21,15 @@ public class JKOMiniAppLifeCycleHandler : NSObject {
         self.appID = appID
     }
     public func callOnLaunch() {
-        guard let appID = self.appID else {return}
-        _ = worker?.callJSFunction("onLaunch", with: [appID])
+        _ = worker?.callJSFunction("onLaunch", with: [])
     }
     public func callOnShow() {
-        guard let appID = self.appID else {return}
-        _ = worker?.callJSFunction("onShow", with: [appID])
+        _ = worker?.callJSFunction("onShow", with: [])
     }
     public func callOnHide() {
-        guard let appID = self.appID else {return}
-        _ = worker?.callJSFunction("onHide", with: [appID])
+        _ = worker?.callJSFunction("onHide", with: [])
     }
     public func callOnError() {
-        guard let appID = self.appID else {return}
-        _ = worker?.callJSFunction("onError", with: [appID])
+        _ = worker?.callJSFunction("onError", with: [])
     }
 }

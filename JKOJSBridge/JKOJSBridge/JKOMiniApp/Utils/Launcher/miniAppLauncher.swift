@@ -14,12 +14,14 @@ public class miniAppLauncher : NSObject {
     private weak var dispatcher : JKBDispatcher?
     private weak var renderer : JKOMiniAppRenderer?
     private weak var container : JKOMiniAppContainerViewController?
+    private weak var dataBinder : DataBindingHandler?
     private var nativeFrameworks : [JKBNativeFrameworkProtocol]?
     
     init(appID : String,
          firstPageID : String,
          container : JKOMiniAppContainerViewController,
          logicHandler : JKOMiniAppLogicHandler,
+         dataBinder : DataBindingHandler,
          dispatcher : JKBDispatcher,
          renderer : JKOMiniAppRenderer,
          nativeFrameworks : [JKBNativeFrameworkProtocol]) {
@@ -31,16 +33,19 @@ public class miniAppLauncher : NSObject {
         self.dispatcher = dispatcher
         self.nativeFrameworks = nativeFrameworks
         self.renderer = renderer
+        self.dataBinder = dataBinder
     }
     public func launch() {
         JKB_log("start launching frameworks...")
         configRenderer()
         dataDispatchBinding()
-        activeAppLifeCycle()
-        activePageLifeCycle()
+        addDataBinderToLogicHandler()
 
         appLoadNativeFramework()
         pageLoadNativeFramework()
+
+        activeAppLifeCycle()
+        activePageLifeCycle()
     }
 
     private func configRenderer() {
@@ -55,6 +60,10 @@ public class miniAppLauncher : NSObject {
                 renderView.bottomAnchor.constraint(equalTo: _container.view.bottomAnchor),
             ])
         }
+    }
+    private func addDataBinderToLogicHandler() {
+        guard let _dataBinder = dataBinder else { return }
+        logicHandler?.bindGlobalData(to: _dataBinder)
     }
     private func activeAppLifeCycle() {
         guard let _appID = appID else {return}

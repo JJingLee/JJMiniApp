@@ -7,7 +7,7 @@
 import Foundation
 import JavaScriptCore
 
-public class JKOJSWorker {
+public class JKOJSWorker : NSObject {
 //    static let `default` = JKOJSWorker()
     public let jsVM = JSVirtualMachine()
     lazy var context : JSContext? = {
@@ -27,5 +27,16 @@ public class JKOJSWorker {
         guard let _context = context else {return nil}
         guard let function = _context.objectForKeyedSubscript(functionName)else {return nil}
         return function.call(withArguments: arguments)
+    }
+}
+
+extension JKOJSWorker : miniAppDataBindingObserver {
+    public func updateData(_ data: Any?) {
+        guard let _data = data else {return}
+        _ = self.callJSFunction("updateGlobalData", with: [_data])
+    }
+    public func getGlobalData() ->Any? {
+        guard let value = self.callJSFunction("getGlobalData", with: [])?.toDictionary() else {return nil}
+        return value
     }
 }

@@ -16,6 +16,7 @@ onError
  */
 
 public class JKOMiniAppContainerViewController: UIViewController {
+    var dataBinder : DataBindingHandler = DataBindingHandler()
     var renderer = JKOMiniAppRenderer()
     var dispatcher : JKBDispatcher =  JKBDispatcher()
     var logicHandler = JKOMiniAppLogicHandler()
@@ -23,13 +24,15 @@ public class JKOMiniAppContainerViewController: UIViewController {
         JKBAccount(),
         JKBJSBridgeFramework(),
         JKBMonitorFramework(),
-        JKBRouterFramework()
+        JKBRouterFramework(),
+        JKBStorageFramework(),
     ]
+    let sourceProvider : JKOUserSourceLoader = JKOUserSourceLoader()
     var appID : String?
     let firstPageID = "index"
 
     var launcher : miniAppLauncher?
-    lazy var pageRouter = JKOMiniAppPageRouter(renderer, logicHandler)
+    lazy var pageRouter = JKOMiniAppPageRouter(renderer, logicHandler, sourceProvider)
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,19 +41,22 @@ public class JKOMiniAppContainerViewController: UIViewController {
                                    firstPageID: firstPageID,
                                    container: self,
                                    logicHandler: logicHandler,
+                                   dataBinder: dataBinder,
                                    dispatcher: dispatcher,
                                    renderer: renderer,
                                    nativeFrameworks: nativeFrameworks)
         launcher?.launch()
 
+        sourceProvider.loadUserAppJS(to:logicHandler)
+        logicHandler.appOnLaunch()
+
         pageRouter.initialize()
 
-        logicHandler.appOnLaunch()
     }
 
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        JKOMiniAppContainerManager.currentActiveMiniApp = self
+        JKOMiniAppContainerManager.shared.currentActiveMiniApp = self
         logicHandler.appOnShow()
     }
     public override func viewWillDisappear(_ animated: Bool) {

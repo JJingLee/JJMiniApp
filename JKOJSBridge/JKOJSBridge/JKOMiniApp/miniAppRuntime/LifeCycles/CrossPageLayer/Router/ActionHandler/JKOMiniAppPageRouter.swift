@@ -8,25 +8,26 @@
 import Foundation
 
 public class JKOMiniAppPageRouter: NSObject {
-    let sourceProvider : JKOUserSourceLoader = JKOUserSourceLoader() //TODO : SourceLoader should bind appid
+    private weak var sourceProvider : JKOUserSourceLoader? //TODO : SourceLoader should bind appid
     private weak var _renderer : JKOMiniAppRenderer?
     private weak var _logicHandler : JKOMiniAppLogicHandler?
     private lazy var stackManager = JKOMiniAppPageStacksManager(count: 1)
     init(_ renderer : JKOMiniAppRenderer,
-         _ logicHandler : JKOMiniAppLogicHandler) {
+         _ logicHandler : JKOMiniAppLogicHandler,
+         _ sourceProvider : JKOUserSourceLoader) {
         _renderer = renderer
         _logicHandler = logicHandler
+        self.sourceProvider = sourceProvider
     }
 
     //initialize
     public func initialize() {
         guard let logicHandler = _logicHandler else {return}
         guard let renderer = _renderer else { return }
-        sourceProvider.loadUserAppJS(to:logicHandler)
 
         let firstRoute = "index"
-        sourceProvider.loadUserPage(firstRoute,to:renderer)
-        sourceProvider.loadUserPageJS(firstRoute,to:logicHandler)
+        sourceProvider?.loadUserPage(firstRoute,to:renderer)
+        sourceProvider?.loadUserPageJS(firstRoute,to:logicHandler)
         //keep stack
         stackManager.pushPage(JKOMiniAppStackPageStruct(pageRoute: firstRoute))
 
@@ -47,8 +48,8 @@ public class JKOMiniAppPageRouter: NSObject {
         logicHandler.refreshPageWorker(with:logicHandler.appID,pageID: route)
 
         //renderer open new page
-        sourceProvider.loadUserPage(route,to:renderer)
-        sourceProvider.loadUserPageJS(route,to:logicHandler)
+        sourceProvider?.loadUserPage(route,to:renderer)
+        sourceProvider?.loadUserPageJS(route,to:logicHandler)
 
         //renderer notify newPage onShow
         logicHandler.pageOnLoad()
@@ -75,8 +76,8 @@ public class JKOMiniAppPageRouter: NSObject {
         logicHandler.refreshPageWorker(with:logicHandler.appID,pageID: lastRouteName)
 
         //renderer open new page
-        sourceProvider.loadUserPage(lastRouteName,to:renderer)
-        sourceProvider.loadUserPageJS(lastRouteName,to:logicHandler)
+        sourceProvider?.loadUserPage(lastRouteName,to:renderer)
+        sourceProvider?.loadUserPageJS(lastRouteName,to:logicHandler)
 
         //render notify newPage onShow
         logicHandler.pageOnShow()

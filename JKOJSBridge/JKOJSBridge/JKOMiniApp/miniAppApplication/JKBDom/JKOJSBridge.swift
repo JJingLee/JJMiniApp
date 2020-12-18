@@ -11,7 +11,7 @@ import Foundation
 }
 @objc public class JKBDom : NSObject,JKBDomProtocol {
     public class func updateComponent(_ componentKey : String, _ context : String) {
-        JKOMiniAppContainerManager.currentActiveMiniApp?.dispatcher.updateComponentValue(componentKey: componentKey, context: context)
+        JKOMiniAppContainerManager.shared.currentActiveMiniApp?.dispatcher.updateComponentValue(componentKey: componentKey, context: context)
     }
 }
 public class JKBJSBridgeFramework : NSObject, JKBNativeFrameworkProtocol {
