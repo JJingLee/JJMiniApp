@@ -15,7 +15,6 @@ public class JKMAPageWorker : JKOJSWorker {
         callInit()
         listensToGlobalData()
     }
-
     private func callInit() {
         _ = self.callJSFunction("JKInitialPageLifeCycle", with: [appID, pageID])
     }
@@ -35,41 +34,3 @@ public class JKMAPageWorker : JKOJSWorker {
         _ = self.callJSFunction("JKPageOnError", with: [])
     }
 }
-//public class PageLifeCycleHandler : NSObject {
-//    private var appID : String?
-//    private weak var worker : JKOJSWorker?
-//    init(worker:JKOJSWorker) {
-//        super.init()
-//        self.worker = worker
-////        importAppLifeCycle()
-//        let PageLifeCycle = Bundle.main.fetchJSScript(with: "PageLifeCycle") ?? ""
-//        worker.evaluateJS(PageLifeCycle)
-//
-//    }
-//    public func configAppID(_ pageID : String) {
-//        guard let _appID = worker?.appID else {return}
-//        self.appID = _appID
-//        _ = worker?.callJSFunction("initialAppLifeCycle", with: [_appID])
-//        _ = worker?.callJSFunction("JKInitialPageLifeCycle", with: [_appID, pageID])
-//    }
-//    public func callOnLoad() {
-//        _ = worker?.callJSFunction("JKPageOnLoad", with: [])
-//    }
-//    public func callOnShow() {
-//        _ = worker?.callJSFunction("JKPageOnShow", with: [])
-//    }
-//    public func callOnReady() {
-//        _ = worker?.callJSFunction("JKPageOnReady", with: [])
-//    }
-//    public func callOnHide() {
-//        _ = worker?.callJSFunction("JKPageOnHide", with: [])
-//    }
-//    public func callOnError() {
-//        _ = worker?.callJSFunction("JKPageOnError", with: [])
-//    }
-//
-//    private func importAppLifeCycle() {
-//        let ApplifeCycle = Bundle.main.fetchJSScript(with: "AppLifeCycle") ?? ""
-//        worker?.evaluateJS(ApplifeCycle)
-//    }
-//}

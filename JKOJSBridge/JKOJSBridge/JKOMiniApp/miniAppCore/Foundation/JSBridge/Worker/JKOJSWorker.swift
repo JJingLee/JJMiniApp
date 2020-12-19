@@ -35,38 +35,3 @@ public class JKOJSWorker : NSObject {
         return function.call(withArguments: arguments)
     }
 }
-
-extension JKOJSWorker : miniAppDataBindingObserver {
-    static let kHasImportedAppLifeCycle = "kHasImportedAppLifeCycle"
-    func hasImportedAppLifeCycle()->Bool {
-        return objc_getAssociatedObject(self, JKOJSWorker.kHasImportedAppLifeCycle) != nil
-    }
-    func setImportedAppLifeCycle() {
-        objc_setAssociatedObject(self, JKOJSWorker.kHasImportedAppLifeCycle, true, objc_AssociationPolicy.OBJC_ASSOCIATION_ASSIGN)
-    }
-
-    public func listensToGlobalData() {
-        //import
-//        let moduleHandler = JKBCodeModuleHandler(worker: self)
-        if hasImportedAppLifeCycle()==false {
-            moduleHandler.launchFile("AppLifeCycle")
-            setImportedAppLifeCycle()
-        }
-        //bind
-        let binder = DataBinderHandlerManager.dataBinder(appID: appID)
-        binder.addObserver(self, with: JKO_GlobalDataKey_20201217(appID))
-        //init
-        _ = self.callJSFunction("initialAppLifeCycle", with: [appID])
-    }
-    public func updateGlobalData(_ data:Any?) {
-        updateData(data)
-    }
-    public func updateData(_ data: Any?) {
-        guard let _data = data else {return}
-        _ = self.callJSFunction("updateGlobalData", with: [_data])
-    }
-    public func getGlobalData() ->Any? {
-        guard let value = self.callJSFunction("getGlobalData", with: [])?.toDictionary() else {return nil}
-        return value
-    }
-}

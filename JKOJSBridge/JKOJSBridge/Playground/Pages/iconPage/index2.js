@@ -5,6 +5,7 @@ Page.onLoad(()=>{
     JKMonitor.log("index2 change data to :"+miniapp._globalData.name);
 }).onShow(()=>{
     JKMonitor.log("index2 onShow");
+    JKMonitor.log("myData : "+JKBStorage.getStorage(miniapp.appId,"myData"))
 }).onHide(()=>{
     JKMonitor.log("index2 onHide");
 });

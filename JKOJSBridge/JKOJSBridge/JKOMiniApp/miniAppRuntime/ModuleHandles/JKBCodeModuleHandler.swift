@@ -22,8 +22,6 @@ public class JKBCodeModuleHandler : NSObject {
     public init(worker : JKOJSWorker) {
         targetWorker = worker
     }
-
-//TODO : cycle import problem & dataProxy <--> AppLifeCycle
     public func launchFile(_ fileName : String) {
         guard let jsCode = Bundle.main.fetchJSScript(with: fileName) else {return}
         launchCode(jsCode)
@@ -59,9 +57,6 @@ public class JKBCodeModuleHandler : NSObject {
             else {
                 self.launchFile(frameWorkName) //file js, keep loop until there is no more module need to be imported.
             }
-
-
-
             return frameWorkName
         }
         return nil

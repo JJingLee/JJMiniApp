@@ -1,5 +1,5 @@
 //
-//  JKOMiniAppLifeCycleHandler.swift
+//  JKOMAAppWorker.swift
 //  JKOJSBridge
 //
 //  Created by chiehchun.lee on 2020/12/1.
@@ -14,7 +14,7 @@ public class JKOMAAppWorker : JKOJSWorker {
         bindToGlobalDataBinder()
     }
     private func bindToGlobalDataBinder() {
-        let binder = DataBinderHandlerManager.dataBinder(appID: appID)
+        let binder = DataBinderHandlerManager.shared.dataBinder(appID: appID)
         binder.addObserver(self, with: JKO_GlobalDataKey_20201217(appID))
     }
     private func callInit() {

@@ -15,6 +15,8 @@ Page.onLoad(()=>{
 }).onShow(()=>{
     JKMonitor.log("index1 onShow");
     JKMonitor.log("index1 data :"+miniapp._globalData.name);
+    JKMonitor.log("myData : "+JKBStorage.getStorage(miniapp.appId,"myData"))
+    JKBStorage.setStorage(miniapp.appId,"myData","good2")
 }).onHide(()=>{
     JKMonitor.log("index1 onHide");
 });

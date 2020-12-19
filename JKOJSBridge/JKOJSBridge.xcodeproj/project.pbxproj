@@ -49,8 +49,9 @@
 		55CCE3EB258B04F700E2F565 /* DataBindingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE3EA258B04F700E2F565 /* DataBindingHandler.swift */; };
 		55CF3894258DED4400B18DC6 /* DataBinderHandlerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CF3893258DED4400B18DC6 /* DataBinderHandlerManager.swift */; };
 		55CF389F258E4E6D00B18DC6 /* JKOMiniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CF389E258E4E6D00B18DC6 /* JKOMiniApp.swift */; };
+		55CF38A7258E5E3D00B18DC6 /* JKOJSWorker+GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CF38A6258E5E3D00B18DC6 /* JKOJSWorker+GlobalData.swift */; };
 		55E572D2257665C4002B13BA /* JKBMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E572D1257665C4002B13BA /* JKBMonitor.swift */; };
-		55E572DC2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E572DB2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift */; };
+		55E572DC2576805B002B13BA /* JKOMAAppWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E572DB2576805B002B13BA /* JKOMAAppWorker.swift */; };
 		55E572E12578B918002B13BA /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = 55E572E02578B918002B13BA /* app.js */; };
 		55E572EF2578CF59002B13BA /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 55E572EE2578CF59002B13BA /* index.js */; };
 		55E572F72578E65F002B13BA /* app.json in Resources */ = {isa = PBXBuildFile; fileRef = 55E572F62578E65F002B13BA /* app.json */; };
@@ -148,8 +149,9 @@
 		55CCE3EA258B04F700E2F565 /* DataBindingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBindingHandler.swift; sourceTree = "<group>"; };
 		55CF3893258DED4400B18DC6 /* DataBinderHandlerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBinderHandlerManager.swift; sourceTree = "<group>"; };
 		55CF389E258E4E6D00B18DC6 /* JKOMiniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOMiniApp.swift; sourceTree = "<group>"; };
+		55CF38A6258E5E3D00B18DC6 /* JKOJSWorker+GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JKOJSWorker+GlobalData.swift"; sourceTree = "<group>"; };
 		55E572D1257665C4002B13BA /* JKBMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBMonitor.swift; sourceTree = "<group>"; };
-		55E572DB2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOMiniAppLifeCycleHandler.swift; sourceTree = "<group>"; };
+		55E572DB2576805B002B13BA /* JKOMAAppWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOMAAppWorker.swift; sourceTree = "<group>"; };
 		55E572E02578B918002B13BA /* app.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
 		55E572EE2578CF59002B13BA /* index.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
 		55E572F62578E65F002B13BA /* app.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = app.json; sourceTree = "<group>"; };
@@ -585,6 +587,7 @@
 				55CCE3E5258B04E000E2F565 /* DataProxy.js */,
 				55CCE3EA258B04F700E2F565 /* DataBindingHandler.swift */,
 				55CF3893258DED4400B18DC6 /* DataBinderHandlerManager.swift */,
+				55CF38A6258E5E3D00B18DC6 /* JKOJSWorker+GlobalData.swift */,
 			);
 			path = Dao;
 			sourceTree = "<group>";
@@ -610,7 +613,7 @@
 		55E572D92576803B002B13BA /* LifeCycles */ = {
 			isa = PBXGroup;
 			children = (
-				55E572DB2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift */,
+				55E572DB2576805B002B13BA /* JKOMAAppWorker.swift */,
 				5568B52E2580BC0B002A941C /* AppLifeCycle.js */,
 				55289D282579EE2C00E094E8 /* GlobalData */,
 			);
@@ -910,6 +913,7 @@
 				55CCE3EB258B04F700E2F565 /* DataBindingHandler.swift in Sources */,
 				55E572D2257665C4002B13BA /* JKBMonitor.swift in Sources */,
 				55CCE3E0258AEEF400E2F565 /* constants.swift in Sources */,
+				55CF38A7258E5E3D00B18DC6 /* JKOJSWorker+GlobalData.swift in Sources */,
 				554791B0256E58FB00A293DC /* JKOMiniAppContainerViewController.swift in Sources */,
 				55736EBC256D023C00F8FBE5 /* JSB_JKOAccount.swift in Sources */,
 				552DE9982585182300F66F9C /* JKOMiniAppRenderer+UserSourceLoader.swift in Sources */,
@@ -934,7 +938,7 @@
 				552DE9802584FF0000F66F9C /* JKOMiniAppRenderer+UpdateDoms.swift in Sources */,
 				55CCE3CF25864D5700E2F565 /* JKBRouter.swift in Sources */,
 				55479199256DFA3D00A293DC /* JKOJSBridge.swift in Sources */,
-				55E572DC2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift in Sources */,
+				55E572DC2576805B002B13BA /* JKOMAAppWorker.swift in Sources */,
 				55736E8F256BC19D00F8FBE5 /* AnyExport.swift in Sources */,
 				55CF3894258DED4400B18DC6 /* DataBinderHandlerManager.swift in Sources */,
 			);
