@@ -23,7 +23,7 @@
 		5568B52F2580BC0B002A941C /* AppLifeCycle.js in Resources */ = {isa = PBXBuildFile; fileRef = 5568B52E2580BC0B002A941C /* AppLifeCycle.js */; };
 		5568B5342580BC57002A941C /* FileFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5568B5332580BC57002A941C /* FileFetcher.swift */; };
 		5568B5392580C846002A941C /* PageLifeCycle.js in Resources */ = {isa = PBXBuildFile; fileRef = 5568B5382580C846002A941C /* PageLifeCycle.js */; };
-		5568B53E25821270002A941C /* PageLifeCycleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5568B53D25821270002A941C /* PageLifeCycleHandler.swift */; };
+		5568B53E25821270002A941C /* JKMAPageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5568B53D25821270002A941C /* JKMAPageWorker.swift */; };
 		5568B54625835CCE002A941C /* JKOMiniAppRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5568B54525835CCE002A941C /* JKOMiniAppRenderer.swift */; };
 		5568B5532583878B002A941C /* JKOMiniAppContainerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5568B5522583878B002A941C /* JKOMiniAppContainerManager.swift */; };
 		5568B55825838B14002A941C /* JKOUserSourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5568B55725838B14002A941C /* JKOUserSourceLoader.swift */; };
@@ -45,8 +45,9 @@
 		55CCE3CF25864D5700E2F565 /* JKBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE3CE25864D5700E2F565 /* JKBRouter.swift */; };
 		55CCE3D82588A16000E2F565 /* JKBStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE3D72588A16000E2F565 /* JKBStorage.swift */; };
 		55CCE3E0258AEEF400E2F565 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE3DF258AEEF300E2F565 /* constants.swift */; };
-		55CCE3E6258B04E000E2F565 /* DataBinder.js in Resources */ = {isa = PBXBuildFile; fileRef = 55CCE3E5258B04E000E2F565 /* DataBinder.js */; };
+		55CCE3E6258B04E000E2F565 /* DataProxy.js in Resources */ = {isa = PBXBuildFile; fileRef = 55CCE3E5258B04E000E2F565 /* DataProxy.js */; };
 		55CCE3EB258B04F700E2F565 /* DataBindingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE3EA258B04F700E2F565 /* DataBindingHandler.swift */; };
+		55CF3894258DED4400B18DC6 /* DataBinderHandlerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CF3893258DED4400B18DC6 /* DataBinderHandlerManager.swift */; };
 		55E572D2257665C4002B13BA /* JKBMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E572D1257665C4002B13BA /* JKBMonitor.swift */; };
 		55E572DC2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E572DB2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift */; };
 		55E572E12578B918002B13BA /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = 55E572E02578B918002B13BA /* app.js */; };
@@ -117,7 +118,7 @@
 		5568B52E2580BC0B002A941C /* AppLifeCycle.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = AppLifeCycle.js; sourceTree = "<group>"; };
 		5568B5332580BC57002A941C /* FileFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileFetcher.swift; sourceTree = "<group>"; };
 		5568B5382580C846002A941C /* PageLifeCycle.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = PageLifeCycle.js; sourceTree = "<group>"; };
-		5568B53D25821270002A941C /* PageLifeCycleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLifeCycleHandler.swift; sourceTree = "<group>"; };
+		5568B53D25821270002A941C /* JKMAPageWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKMAPageWorker.swift; sourceTree = "<group>"; };
 		5568B54525835CCE002A941C /* JKOMiniAppRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOMiniAppRenderer.swift; sourceTree = "<group>"; };
 		5568B5522583878B002A941C /* JKOMiniAppContainerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOMiniAppContainerManager.swift; sourceTree = "<group>"; };
 		5568B55725838B14002A941C /* JKOUserSourceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOUserSourceLoader.swift; sourceTree = "<group>"; };
@@ -142,8 +143,9 @@
 		55CCE3CE25864D5700E2F565 /* JKBRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBRouter.swift; sourceTree = "<group>"; };
 		55CCE3D72588A16000E2F565 /* JKBStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBStorage.swift; sourceTree = "<group>"; };
 		55CCE3DF258AEEF300E2F565 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
-		55CCE3E5258B04E000E2F565 /* DataBinder.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = DataBinder.js; sourceTree = "<group>"; };
+		55CCE3E5258B04E000E2F565 /* DataProxy.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = DataProxy.js; sourceTree = "<group>"; };
 		55CCE3EA258B04F700E2F565 /* DataBindingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBindingHandler.swift; sourceTree = "<group>"; };
+		55CF3893258DED4400B18DC6 /* DataBinderHandlerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBinderHandlerManager.swift; sourceTree = "<group>"; };
 		55E572D1257665C4002B13BA /* JKBMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBMonitor.swift; sourceTree = "<group>"; };
 		55E572DB2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOMiniAppLifeCycleHandler.swift; sourceTree = "<group>"; };
 		55E572E02578B918002B13BA /* app.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
@@ -337,7 +339,7 @@
 		55289D3A2579EF8900E094E8 /* LIfeCycle */ = {
 			isa = PBXGroup;
 			children = (
-				5568B53D25821270002A941C /* PageLifeCycleHandler.swift */,
+				5568B53D25821270002A941C /* JKMAPageWorker.swift */,
 				55289D3E2579EFC000E094E8 /* EventLifeCycle */,
 				55289D3D2579EFB300E094E8 /* PagingLifeCycle */,
 			);
@@ -577,8 +579,9 @@
 		55CCE3E4258B04AD00E2F565 /* Dao */ = {
 			isa = PBXGroup;
 			children = (
-				55CCE3E5258B04E000E2F565 /* DataBinder.js */,
+				55CCE3E5258B04E000E2F565 /* DataProxy.js */,
 				55CCE3EA258B04F700E2F565 /* DataBindingHandler.swift */,
+				55CF3893258DED4400B18DC6 /* DataBinderHandlerManager.swift */,
 			);
 			path = Dao;
 			sourceTree = "<group>";
@@ -859,7 +862,7 @@
 				5568B55E2584FD83002A941C /* callFunctionEventPoster.js in Resources */,
 				55FBB0682564F29F00A9F12E /* LaunchScreen.storyboard in Resources */,
 				55E572EF2578CF59002B13BA /* index.js in Resources */,
-				55CCE3E6258B04E000E2F565 /* DataBinder.js in Resources */,
+				55CCE3E6258B04E000E2F565 /* DataProxy.js in Resources */,
 				5568B52F2580BC0B002A941C /* AppLifeCycle.js in Resources */,
 				55FBB0652564F29F00A9F12E /* Assets.xcassets in Resources */,
 				55FBB0632564F29B00A9F12E /* Main.storyboard in Resources */,
@@ -921,7 +924,7 @@
 				554791B5256F8D2000A293DC /* PackagingTestViewController.swift in Sources */,
 				55FBB05E2564F29B00A9F12E /* SceneDelegate.swift in Sources */,
 				55736E87256BA42000F8FBE5 /* JKOJSWorker.swift in Sources */,
-				5568B53E25821270002A941C /* PageLifeCycleHandler.swift in Sources */,
+				5568B53E25821270002A941C /* JKMAPageWorker.swift in Sources */,
 				55CCE3C9258618EC00E2F565 /* JKOMiniAppLogicHandler+LifeCycle.swift in Sources */,
 				5568B54625835CCE002A941C /* JKOMiniAppRenderer.swift in Sources */,
 				552DE9802584FF0000F66F9C /* JKOMiniAppRenderer+UpdateDoms.swift in Sources */,
@@ -929,6 +932,7 @@
 				55479199256DFA3D00A293DC /* JKOJSBridge.swift in Sources */,
 				55E572DC2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift in Sources */,
 				55736E8F256BC19D00F8FBE5 /* AnyExport.swift in Sources */,
+				55CF3894258DED4400B18DC6 /* DataBinderHandlerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,9 +10,14 @@ import Foundation
 public protocol miniAppDataBindingObserver:NSObject {
     func updateData(_ data:Any?)
 }
+
 public class DataBindingHandler : NSObject {
+    var appID : String
     var observers : Dictionary<String,[miniAppDataBindingObserver]> = [:]
 
+    init(appID : String) {
+        self.appID = appID
+    }
     func addObserver(_ observer : miniAppDataBindingObserver, with key:String) {
         defer { objc_sync_exit(self) }
         objc_sync_enter(self)

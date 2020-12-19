@@ -6,30 +6,59 @@
 //
 
 import Foundation
-
-public class JKOMiniAppLifeCycleHandler : NSObject {
-    private weak var worker : JKOJSWorker?
-    private var appID : String?
-    init(worker:JKOJSWorker) {
-        super.init()
-        self.worker = worker
-        let ApplifeCycle = Bundle.main.fetchJSScript(with: "AppLifeCycle") ?? ""
-        worker.evaluateJS(ApplifeCycle)
+public class JKOMAAppWorker : JKOJSWorker {
+    override init(appID: String) {
+        super.init(appID: appID)
+        moduleHandler.launchFile("AppLifeCycle")
+        callInit()
+        bindToGlobalDataBinder()
     }
-    public func configAppID(_ appID : String) {
-        _ = worker?.callJSFunction("initialAppLifeCycle", with: [appID])
-        self.appID = appID
+    private func bindToGlobalDataBinder() {
+        let binder = DataBinderHandlerManager.dataBinder(appID: appID)
+        binder.addObserver(self, with: JKO_GlobalDataKey_20201217(appID))
+    }
+    private func callInit() {
+        _ = self.callJSFunction("initialAppLifeCycle", with: [appID])
     }
     public func callOnLaunch() {
-        _ = worker?.callJSFunction("onLaunch", with: [])
+        _ = self.callJSFunction("onLaunch", with: [])
     }
     public func callOnShow() {
-        _ = worker?.callJSFunction("onShow", with: [])
+        _ = self.callJSFunction("onShow", with: [])
     }
     public func callOnHide() {
-        _ = worker?.callJSFunction("onHide", with: [])
+        _ = self.callJSFunction("onHide", with: [])
     }
     public func callOnError() {
-        _ = worker?.callJSFunction("onError", with: [])
+        _ = self.callJSFunction("onError", with: [])
     }
+    
 }
+//public class JKOMiniAppLifeCycleHandler : NSObject {
+//    private weak var worker : JKOJSWorker?
+//    private var appID : String?
+//    init(worker:JKOJSWorker) {
+//        super.init()
+//        self.worker = worker
+//        let ApplifeCycle = Bundle.main.fetchJSScript(with: "AppLifeCycle") ?? ""
+//        worker.evaluateJS(ApplifeCycle)
+//    }
+//    public func config() {
+//        guard let _appID = worker?.appID else {return}
+//        self.appID = _appID
+//        _ = worker?.callJSFunction("initialAppLifeCycle", with: [_appID])
+//
+//    }
+//    public func callOnLaunch() {
+//        _ = worker?.callJSFunction("onLaunch", with: [])
+//    }
+//    public func callOnShow() {
+//        _ = worker?.callJSFunction("onShow", with: [])
+//    }
+//    public func callOnHide() {
+//        _ = worker?.callJSFunction("onHide", with: [])
+//    }
+//    public func callOnError() {
+//        _ = worker?.callJSFunction("onError", with: [])
+//    }
+//}

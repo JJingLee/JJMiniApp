@@ -8,9 +8,9 @@
 import Foundation
 extension JKOMiniAppLogicHandler : JKOUserSourceLoaderLogicHandlerProtocol {
     public func appLoadJS(_ js : String) {
-        appWorker.evaluateJS(js)
+        appWorker.moduleHandler.launchCode(js)
     }
     public func pageLoadJS(_ js : String) {
-        pageWorker.evaluateJS(js)
+        pageWorker.moduleHandler.launchCode(js)
     }
 }

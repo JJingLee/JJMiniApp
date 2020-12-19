@@ -1,3 +1,5 @@
+#import AppLifeCycle
+
 class PagelifeCycle {
     constructor(appid, pageid) {
         this.appId = appid
@@ -57,6 +59,7 @@ var Page;
 
 function JKInitialPageLifeCycle(appID,pageId) {
     Page = new PagelifeCycle(appID,pageId);
+//    initialAppLifeCycle(appID)
 }
 
 function JKPageOnLoad() {

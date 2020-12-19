@@ -6,5 +6,12 @@
 //
 
 import Foundation
-
-let JKO_GlobalDataKey_20201217 = "JKO_GlobalDataKey_20201217"
+let JKOMAFirstPageName = "index"
+func JKO_GlobalDataKey_20201217(_ appID : String)->String { return "JKO_GlobalDataKey_20201217_\(appID)" }//Key for data binding GlobalData
+let JKONativeFrameWorks : [JKBNativeFrameworkProtocol] = [
+    JKBAccount(),
+    JKBJSBridgeFramework(),
+    JKBMonitorFramework(),
+    JKBRouterFramework(),
+    JKBStorageFramework(),
+]

@@ -25,14 +25,13 @@ public class JKOMiniAppPageRouter: NSObject {
         guard let logicHandler = _logicHandler else {return}
         guard let renderer = _renderer else { return }
 
-        let firstRoute = "index"
+        let firstRoute = JKOMAFirstPageName
         sourceProvider?.loadUserPage(firstRoute,to:renderer)
         sourceProvider?.loadUserPageJS(firstRoute,to:logicHandler)
         //keep stack
         stackManager.pushPage(JKOMiniAppStackPageStruct(pageRoute: firstRoute))
 
         logicHandler.pageOnLoad()
-        logicHandler.pageOnShow()
     }
     //newPage
     public func navigateTo(_ route : String) {

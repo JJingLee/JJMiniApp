@@ -16,20 +16,11 @@ onError
  */
 
 public class JKOMiniAppContainerViewController: UIViewController {
-    var dataBinder : DataBindingHandler = DataBindingHandler()
     var renderer = JKOMiniAppRenderer()
     var dispatcher : JKBDispatcher =  JKBDispatcher()
     var logicHandler = JKOMiniAppLogicHandler()
-    var nativeFrameworks : [JKBNativeFrameworkProtocol] = [
-        JKBAccount(),
-        JKBJSBridgeFramework(),
-        JKBMonitorFramework(),
-        JKBRouterFramework(),
-        JKBStorageFramework(),
-    ]
     let sourceProvider : JKOUserSourceLoader = JKOUserSourceLoader()
     var appID : String?
-    let firstPageID = "index"
 
     var launcher : miniAppLauncher?
     lazy var pageRouter = JKOMiniAppPageRouter(renderer, logicHandler, sourceProvider)
@@ -38,29 +29,30 @@ public class JKOMiniAppContainerViewController: UIViewController {
         super.viewDidLoad()
 
         launcher = miniAppLauncher(appID: appID ?? "",
-                                   firstPageID: firstPageID,
                                    container: self,
                                    logicHandler: logicHandler,
-                                   dataBinder: dataBinder,
                                    dispatcher: dispatcher,
-                                   renderer: renderer,
-                                   nativeFrameworks: nativeFrameworks)
+                                   renderer: renderer)
         launcher?.launch()
 
         sourceProvider.loadUserAppJS(to:logicHandler)
         logicHandler.appOnLaunch()
 
         pageRouter.initialize()
-
     }
 
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         JKOMiniAppContainerManager.shared.currentActiveMiniApp = self
+    }
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         logicHandler.appOnShow()
+        logicHandler.pageOnShow()
     }
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        logicHandler.pageOnHide()
         logicHandler.appOnHide()
     }
 

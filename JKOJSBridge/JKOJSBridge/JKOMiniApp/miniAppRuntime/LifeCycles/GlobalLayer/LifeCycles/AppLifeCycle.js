@@ -1,43 +1,9 @@
-//TODO:import dataProxy
-class DataProxy {
-  constructor() {
-    this.dataObserver = {
-      set: function(target, key, value) {
-//          console.log(`The property ${key} has been updated with ${value}`);
-          if (typeof this.obj === 'undefined') {
-            this.obj = {}
-          }
-          if (key === "getAll") {
-            return true;
-          }
-          if (key === "setAll") {
-              this.obj = value
-              return true
-          }
-          this.obj[key] = value
-          JKBStorage.setGlobalData(this.appId,this.obj)
-          return true;
-      },
-      get:function(target, prop) {
-        if (prop === "getAll") {
-          return this.obj
-        }
-        return this.obj[prop]; // 非私有變數，那就回傳原物件的原屬性值
-      },
-      has: function(target, prop) {
-        return prop in this.obj;
-      }
-    };
-  }
-//  forceUpdate(newValue) {
-//      JKMonitor.log("forceUpdate1 : "+newValue.name)
-//    this.obj = newValue;
-//      JKMonitor.log("forceUpdate2 : "+this.obj.name)
-//  }
-}
+#import NativeFrameWork
+#import DataProxy
 
 class ApplifeCycle {
     constructor(id) {
+//        JKMonitor.log("Init ApplifeCycle with :  "+id)
         this.appId = id
         this.dataProxy = new DataProxy()
         this.dataProxy.appId = id
@@ -61,15 +27,9 @@ class ApplifeCycle {
         return this;
     }
     globalData(gloabelDataClosure) {
-        JKMonitor.log("globalData1")
         if (typeof gloabelDataClosure === 'function'){
-            JKMonitor.log("globalData2")
             if(typeof gloabelDataClosure() === 'object') {
-                JKMonitor.log("globalData3")
-                JKMonitor.log(gloabelDataClosure().name)
-                this._globalData.setAll = gloabelDataClosure()//dataProxy.forceUpdate(gloabelDataClosure());
-                JKMonitor.log("globalData4")
-                JKMonitor.log(this._globalData.name)
+                this._globalData.setAll = gloabelDataClosure()
             }
         }
         return this;
@@ -100,7 +60,7 @@ class ApplifeCycle {
 
 };
 
-var miniapp;// = new ApplifeCycle("\(appID)");
+var miniapp;
 
 function initialAppLifeCycle(appID) {
     miniapp = new ApplifeCycle(appID);

@@ -12,7 +12,7 @@ import Foundation
 }
 @objc public class JKBStorage : NSObject,JKBStorageProtocol {
     public static func setGlobalData(_ appID: String, _ object: Any) {
-        JKOMiniAppContainerManager.shared.miniApp(by: appID)?.dataBinder.update(object, with: JKO_GlobalDataKey_20201217)
+        DataBinderHandlerManager.dataBinder(appID: appID).update(object, with: JKO_GlobalDataKey_20201217(appID))
     }
 
     public static func getGlobalData(_ appID: String) -> Any? {
