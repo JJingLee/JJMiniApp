@@ -8,22 +8,18 @@
 import Foundation
 
 public class miniAppLauncher : NSObject {
-    var appID : String?
 //    var firstPageID : String?
     private weak var logicHandler : JKOMiniAppLogicHandler?
     private weak var dispatcher : JKBDispatcher?
     private weak var renderer : JKOMiniAppRenderer?
     private weak var container : JKOMiniAppContainerViewController?
     
-    init(appID : String,
-         container : JKOMiniAppContainerViewController,
-         logicHandler : JKOMiniAppLogicHandler,
+    init(container : JKOMiniAppContainerViewController,
+         logicHandler : JKOMiniAppLogicHandler?,
          dispatcher : JKBDispatcher,
          renderer : JKOMiniAppRenderer) {
         super.init()
-        self.appID = appID
         self.container = container
-        logicHandler.appID = appID
         self.logicHandler = logicHandler
         self.dispatcher = dispatcher
         self.renderer = renderer

@@ -18,27 +18,38 @@ onError
 public class JKOMiniAppContainerViewController: UIViewController {
     var renderer = JKOMiniAppRenderer()
     var dispatcher : JKBDispatcher =  JKBDispatcher()
-    var logicHandler = JKOMiniAppLogicHandler()
+    var logicHandler : JKOMiniAppLogicHandler?
     let sourceProvider : JKOUserSourceLoader = JKOUserSourceLoader()
-    var appID : String?
+    var appID : String? {
+        didSet {
+            guard let _appID = appID else {return}
+            if logicHandler == nil {
+                logicHandler = JKOMiniAppLogicHandler(appID:_appID)
+            }
+            logicHandler?.appID = _appID
+            if let _logicHandler = logicHandler {
+                pageRouter = JKOMiniAppPageRouter(renderer, _logicHandler, sourceProvider)
+            }
+        }
+    }
 
     var launcher : miniAppLauncher?
-    lazy var pageRouter = JKOMiniAppPageRouter(renderer, logicHandler, sourceProvider)
+    var pageRouter : JKOMiniAppPageRouter?
 
     public override func viewDidLoad() {
         super.viewDidLoad()
 
-        launcher = miniAppLauncher(appID: appID ?? "",
-                                   container: self,
+        launcher = miniAppLauncher(container: self,
                                    logicHandler: logicHandler,
                                    dispatcher: dispatcher,
                                    renderer: renderer)
         launcher?.launch()
 
-        sourceProvider.loadUserAppJS(to:logicHandler)
-        logicHandler.appOnLaunch()
-
-        pageRouter.initialize()
+        if let _logicHandler = logicHandler {
+            sourceProvider.loadUserAppJS(to:_logicHandler)
+        }
+        logicHandler?.appOnLaunch()
+        pageRouter?.initialize()
     }
 
     public override func viewWillAppear(_ animated: Bool) {
@@ -47,13 +58,13 @@ public class JKOMiniAppContainerViewController: UIViewController {
     }
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        logicHandler.appOnShow()
-        logicHandler.pageOnShow()
+        logicHandler?.appOnShow()
+        logicHandler?.pageOnShow()
     }
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        logicHandler.pageOnHide()
-        logicHandler.appOnHide()
+        logicHandler?.pageOnHide()
+        logicHandler?.appOnHide()
     }
 
 }

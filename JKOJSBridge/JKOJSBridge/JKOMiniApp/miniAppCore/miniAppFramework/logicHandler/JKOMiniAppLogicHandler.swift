@@ -10,15 +10,16 @@ public class JKOMiniAppLogicHandler : NSObject {
 
     public var appID : String = ""
     //MARK: Workers
-    public lazy var appWorker = JKOMAAppWorker(appID: appID)  //app layer jscore
-    public lazy var pageWorker : JKMAPageWorker = {
-        let worker = JKMAPageWorker(appID: appID, pageID: JKOMAFirstPageName)  //page layer jscore
-        syncGlobalData(from: appWorker, to: worker)
-        return worker
-    }()
+    public var appWorker : JKOMAAppWorker
+    public var pageWorker : JKMAPageWorker
 
-    private var pageWorkerFrameworks : [JKBNativeFrameworkProtocol] = []
-
+    init(appID:String) {
+        self.appID = appID
+        self.appWorker = JKOMAAppWorker(appID: appID)
+        self.pageWorker = JKMAPageWorker(appID: appID, pageID: JKOMAFirstPageName)  //page layer jscore
+        super.init()
+        syncGlobalData(from: appWorker, to: pageWorker)
+    }
     public func refreshPageWorker(with appID : String, pageID:String) {
         self.appID = appID
         pageWorker = JKMAPageWorker(appID: appID,pageID: pageID)
@@ -32,5 +33,8 @@ public class JKOMiniAppLogicHandler : NSObject {
     //MARK: - data binder
     public func getGlobalData()->Any? {
         return appWorker.getGlobalData()
+    }
+    public func rebootGlobalData() {
+        appWorker.rebootGlobalData()
     }
 }

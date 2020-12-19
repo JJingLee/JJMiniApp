@@ -16,7 +16,7 @@ import Foundation
     }
 
     public static func getGlobalData(_ appID: String) -> Any? {
-        return JKOMiniAppContainerManager.shared.miniApp(by: appID)?.logicHandler.getGlobalData()
+        return JKOMiniAppContainerManager.shared.miniAppPage(with: appID).logicHandler?.getGlobalData()
     }
 
 }

@@ -48,6 +48,7 @@
 		55CCE3E6258B04E000E2F565 /* DataProxy.js in Resources */ = {isa = PBXBuildFile; fileRef = 55CCE3E5258B04E000E2F565 /* DataProxy.js */; };
 		55CCE3EB258B04F700E2F565 /* DataBindingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE3EA258B04F700E2F565 /* DataBindingHandler.swift */; };
 		55CF3894258DED4400B18DC6 /* DataBinderHandlerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CF3893258DED4400B18DC6 /* DataBinderHandlerManager.swift */; };
+		55CF389F258E4E6D00B18DC6 /* JKOMiniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CF389E258E4E6D00B18DC6 /* JKOMiniApp.swift */; };
 		55E572D2257665C4002B13BA /* JKBMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E572D1257665C4002B13BA /* JKBMonitor.swift */; };
 		55E572DC2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E572DB2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift */; };
 		55E572E12578B918002B13BA /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = 55E572E02578B918002B13BA /* app.js */; };
@@ -146,6 +147,7 @@
 		55CCE3E5258B04E000E2F565 /* DataProxy.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = DataProxy.js; sourceTree = "<group>"; };
 		55CCE3EA258B04F700E2F565 /* DataBindingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBindingHandler.swift; sourceTree = "<group>"; };
 		55CF3893258DED4400B18DC6 /* DataBinderHandlerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBinderHandlerManager.swift; sourceTree = "<group>"; };
+		55CF389E258E4E6D00B18DC6 /* JKOMiniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOMiniApp.swift; sourceTree = "<group>"; };
 		55E572D1257665C4002B13BA /* JKBMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBMonitor.swift; sourceTree = "<group>"; };
 		55E572DB2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOMiniAppLifeCycleHandler.swift; sourceTree = "<group>"; };
 		55E572E02578B918002B13BA /* app.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				55FBB08E2564F2BF00A9F12E /* miniAppCore */,
 				5568B5522583878B002A941C /* JKOMiniAppContainerManager.swift */,
 				55CCE3DF258AEEF300E2F565 /* constants.swift */,
+				55CF389E258E4E6D00B18DC6 /* JKOMiniApp.swift */,
 			);
 			path = JKOMiniApp;
 			sourceTree = "<group>";
@@ -915,6 +918,7 @@
 				552DE97B2584FEA300F66F9C /* JKOMiniAppRenderer+CallFunction.swift in Sources */,
 				5568B5342580BC57002A941C /* FileFetcher.swift in Sources */,
 				55736E62256B6EE300F8FBE5 /* JKOJSFunctionObserver.swift in Sources */,
+				55CF389F258E4E6D00B18DC6 /* JKOMiniApp.swift in Sources */,
 				5568B5532583878B002A941C /* JKOMiniAppContainerManager.swift in Sources */,
 				55736EAA256CF50500F8FBE5 /* JKOJSWorker+NativeFrameworks.swift in Sources */,
 				55EA06BA258C453300260607 /* JKBCodeModuleHandler.swift in Sources */,

@@ -27,6 +27,7 @@ class ApplifeCycle {
         return this;
     }
     globalData(gloabelDataClosure) {
+        this.initialGloabelData = gloabelDataClosure
         if (typeof gloabelDataClosure === 'function'){
             if(typeof gloabelDataClosure() === 'object') {
                 this._globalData.setAll = gloabelDataClosure()
@@ -56,6 +57,13 @@ class ApplifeCycle {
     }
     getGlobalData() {
         return this._globalData.getAll
+    }
+    rebootGlobalData() {
+        if (typeof this.initialGloabelData === 'function'){
+            if(typeof this.initialGloabelData() === 'object') {
+                this._globalData.setAll = this.initialGloabelData()
+            }
+        }
     }
 
 };
