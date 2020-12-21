@@ -8,35 +8,33 @@
 import Foundation
 public class JKOMiniAppLogicHandler : NSObject {
 
-    public private(set) var appID : String = ""
+    public var appID : String = ""
+    //MARK: Workers
+    public var appWorker : JKOMAAppWorker
+    public var pageWorker : JKMAPageWorker
 
-    //MARK: Runtime
-    lazy var appLifeCycleHandler : JKOMiniAppLifeCycleHandler = JKOMiniAppLifeCycleHandler(worker: appWorker)
-    lazy var pageLifeCycleHandler : PageLifeCycleHandler = PageLifeCycleHandler(worker: pageWorker)
-    public var appWorker = JKOJSWorker()  //app layer jscore
-    public var pageWorker = JKOJSWorker()  //page layer jscore
-
-    private var pageWorkerFrameworks : [JKBNativeFrameworkProtocol] = []
-    public func activeAppWorker(with appID : String) {
+    init(appID:String) {
         self.appID = appID
-        appLifeCycleHandler.configAppID(appID)
-    }
-    public func activePageWorker(with appID : String, pageID:String) {
-        pageLifeCycleHandler.configAppID(appID, pageID)
-    }
-    public func pageLoadFrameworks(_ frameworks : [JKBNativeFrameworkProtocol]) {
-        pageWorker.importNativeFrameworks(frameworks)
-    }
-    public func appLoadFrameworks(_ frameworks : [JKBNativeFrameworkProtocol]) {
-        JKB_log("miniapp launching native frameworks...")
-        appWorker.importNativeFrameworks(frameworks)
-        pageWorkerFrameworks = frameworks
-        JKB_log("miniapp native frameworks launch done")
+        self.appWorker = JKOMAAppWorker(appID: appID)
+        self.pageWorker = JKMAPageWorker(appID: appID, pageID: JKOMAFirstPageName)  //page layer jscore
+        super.init()
+        syncGlobalData(from: appWorker, to: pageWorker)
     }
     public func refreshPageWorker(with appID : String, pageID:String) {
-        pageWorker = JKOJSWorker()
-        pageLoadFrameworks(pageWorkerFrameworks)
-        pageLifeCycleHandler = PageLifeCycleHandler(worker: pageWorker)
-        activePageWorker(with: appID, pageID: pageID)
+        self.appID = appID
+        pageWorker = JKMAPageWorker(appID: appID,pageID: pageID)
+        syncGlobalData(from: appWorker, to: pageWorker)
+    }
+    public func syncGlobalData(from appworker : JKOMAAppWorker, to pageworker : JKMAPageWorker) {
+        if let currentGlobalData = appworker.getGlobalData() {
+            pageworker.updateGlobalData(currentGlobalData)
+        }
+    }
+    //MARK: - data binder
+    public func getGlobalData()->Any? {
+        return appWorker.getGlobalData()
+    }
+    public func rebootGlobalData() {
+        appWorker.rebootGlobalData()
     }
 }

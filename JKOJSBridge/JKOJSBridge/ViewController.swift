@@ -15,7 +15,6 @@ class ViewController: UIViewController {
         btn.addTarget(self, action: #selector(self.gotoMiniApp), for: .touchUpInside)
         return btn
     }()
-    var miniappContainer = JKOMiniAppContainerViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
         configMiniAppButton()
@@ -28,8 +27,7 @@ class ViewController: UIViewController {
         self.view.addSubview(button)
     }
     @objc func gotoMiniApp() {
-        miniappContainer = JKOMiniAppContainerViewController()
-        miniappContainer.appID = "appID"
+        let miniappContainer = JKOMiniApp.miniAppPage(with:"0x001")
         self.navigationController?.pushViewController(miniappContainer, animated: true)
     }
 

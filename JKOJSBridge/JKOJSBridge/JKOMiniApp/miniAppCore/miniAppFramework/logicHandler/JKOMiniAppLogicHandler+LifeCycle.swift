@@ -16,16 +16,16 @@ public protocol AppLifeCycleProtocol : NSObject {
 
 extension JKOMiniAppLogicHandler : AppLifeCycleProtocol {
     public func appOnLaunch() {
-        appLifeCycleHandler.callOnLaunch()
+        appWorker.callOnLaunch()
     }
     public func appOnShow() {
-        appLifeCycleHandler.callOnShow()
+        appWorker.callOnShow()
     }
     public func appOnHide() {
-        appLifeCycleHandler.callOnHide()
+        appWorker.callOnHide()
     }
     public func appOnError() {
-        appLifeCycleHandler.callOnError()
+        appWorker.callOnError()
     }
 }
 
@@ -39,22 +39,22 @@ public protocol PageLifeCycleProtocol : NSObject {
 
 extension JKOMiniAppLogicHandler : PageLifeCycleProtocol {
     public func pageOnLoad() {
-        pageLifeCycleHandler.callOnLoad()
+        pageWorker.callOnLoad()
     }
 
     public func pageOnShow() {
-        pageLifeCycleHandler.callOnShow()
+        pageWorker.callOnShow()
     }
 
     public func pageOnReady() {
-        pageLifeCycleHandler.callOnReady()
+        pageWorker.callOnReady()
     }
 
     public func pageOnHide() {
-        pageLifeCycleHandler.callOnHide()
+        pageWorker.callOnHide()
     }
 
     public func pageOnError() {
-        pageLifeCycleHandler.callOnError()
+        pageWorker.callOnError()
     }
 }

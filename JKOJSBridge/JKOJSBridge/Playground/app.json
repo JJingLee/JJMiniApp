@@ -1,5 +1,6 @@
 {
     "title" : "miniApp",
+    "data" : [],
     "tabBar": {
         "color": "#CCCCCC",
         "selectedColor": "#1296db",

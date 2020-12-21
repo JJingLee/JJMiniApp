@@ -8,7 +8,7 @@
 import Foundation
 
 public class JKOMiniAppPageRouter: NSObject {
-    let sourceProvider : JKOUserSourceLoader = JKOUserSourceLoader() //TODO : SourceLoader should bind appid
+    private weak var sourceProvider : JKOUserSourceLoader? //TODO : SourceLoader should bind appid
     private weak var _renderer : JKOMiniAppRenderer?
     private weak var _logicHandler : JKOMiniAppLogicHandler?
     private var _jkTabBar: JKTabBarProtocol?
@@ -24,10 +24,12 @@ public class JKOMiniAppPageRouter: NSObject {
 
     init(_ renderer : JKOMiniAppRenderer,
          _ logicHandler : JKOMiniAppLogicHandler,
+         _ sourceProvider : JKOUserSourceLoader,
          _ jkTabBar: JKTabBarProtocol?) {
         super.init()
         _renderer = renderer
         _logicHandler = logicHandler
+        self.sourceProvider = sourceProvider
         _jkTabBar = jkTabBar
         _jkTabBar?.customDelegate = self
     }
@@ -36,16 +38,14 @@ public class JKOMiniAppPageRouter: NSObject {
     public func initialize() {
         guard let logicHandler = _logicHandler else {return}
         guard let renderer = _renderer else { return }
-        sourceProvider.loadUserAppJS(to:logicHandler)
 
-        let firstRoute = _jkTabBar?.getRouteWithIndex(0) ?? "index"
+        let firstRoute = _jkTabBar?.getRouteWithIndex(0) ?? JKOMAFirstPageName
         _jkTabBar?.setSelectedPage(firstRoute)
 
         sourceProvider.loadUserPage(firstRoute,to:renderer)
         sourceProvider.loadUserPageJS(firstRoute,to:logicHandler)
 
         logicHandler.pageOnLoad()
-        logicHandler.pageOnShow()
     }
     //newPage
     public func navigateTo(_ route : String) {
@@ -61,8 +61,8 @@ public class JKOMiniAppPageRouter: NSObject {
         logicHandler.refreshPageWorker(with:logicHandler.appID,pageID: route)
 
         //renderer open new page
-        sourceProvider.loadUserPage(route,to:renderer)
-        sourceProvider.loadUserPageJS(route,to:logicHandler)
+        sourceProvider?.loadUserPage(route,to:renderer)
+        sourceProvider?.loadUserPageJS(route,to:logicHandler)
 
         //renderer notify newPage onShow
         logicHandler.pageOnLoad()
@@ -89,8 +89,8 @@ public class JKOMiniAppPageRouter: NSObject {
         logicHandler.refreshPageWorker(with:logicHandler.appID,pageID: lastRouteName)
 
         //renderer open new page
-        sourceProvider.loadUserPage(lastRouteName,to:renderer)
-        sourceProvider.loadUserPageJS(lastRouteName,to:logicHandler)
+        sourceProvider?.loadUserPage(lastRouteName,to:renderer)
+        sourceProvider?.loadUserPageJS(lastRouteName,to:logicHandler)
 
         //render notify newPage onShow
         logicHandler.pageOnShow()

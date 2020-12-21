@@ -9,30 +9,22 @@ import Foundation
 import UIKit
 
 public class miniAppLauncher : NSObject {
-    var appID : String?
-    var firstPageID : String?
+//    var firstPageID : String?
     private weak var logicHandler : JKOMiniAppLogicHandler?
     private weak var dispatcher : JKBDispatcher?
     private weak var renderer : JKOMiniAppRenderer?
     private weak var container : JKOMiniAppContainerViewController?
-    private var nativeFrameworks : [JKBNativeFrameworkProtocol]?
     private var jkTabBar: UITabBar?
     
-    init(appID : String,
-         firstPageID : String,
-         container : JKOMiniAppContainerViewController,
-         logicHandler : JKOMiniAppLogicHandler,
+    init(container : JKOMiniAppContainerViewController,
+         logicHandler : JKOMiniAppLogicHandler?,
          dispatcher : JKBDispatcher,
          renderer : JKOMiniAppRenderer,
-         nativeFrameworks : [JKBNativeFrameworkProtocol],
          jkTabBar: UITabBar?) {
         super.init()
-        self.appID = appID
-        self.firstPageID = firstPageID
         self.container = container
         self.logicHandler = logicHandler
         self.dispatcher = dispatcher
-        self.nativeFrameworks = nativeFrameworks
         self.renderer = renderer
         self.jkTabBar = jkTabBar
     }
@@ -40,11 +32,6 @@ public class miniAppLauncher : NSObject {
         JKB_log("start launching frameworks...")
         configRenderer()
         dataDispatchBinding()
-        activeAppLifeCycle()
-        activePageLifeCycle()
-
-        appLoadNativeFramework()
-        pageLoadNativeFramework()
     }
 
     private func configRenderer() {
@@ -82,15 +69,6 @@ public class miniAppLauncher : NSObject {
             stackView.addArrangedSubview(safeAreaView)
         }
     }
-    private func activeAppLifeCycle() {
-        guard let _appID = appID else {return}
-        logicHandler?.activeAppWorker(with: _appID)
-    }
-    private func activePageLifeCycle() {
-        guard let _appID = appID else {return}
-        guard let firstPageID = firstPageID else {return}
-        logicHandler?.activePageWorker(with: _appID, pageID: firstPageID)
-    }
 
     private func dataDispatchBinding() {
         guard let _dispatcher = dispatcher else { return }
@@ -100,37 +78,4 @@ public class miniAppLauncher : NSObject {
         _dispatcher.bindCallFunctionHandler(_logicHandler)
     }
 
-    private func appLoadNativeFramework() {
-        guard let _nativeFrameworks = nativeFrameworks else { return }
-        logicHandler?.appLoadFrameworks(_nativeFrameworks)
-    }
-    private func pageLoadNativeFramework() {
-        guard let _nativeFrameworks = nativeFrameworks else { return }
-        logicHandler?.pageLoadFrameworks(_nativeFrameworks)
-    }
-
-//    public func launchMiniAppFrameworks() {
-//        JKB_log("start launching frameworks...")
-//        importJKBDispatcher()
-//        importNativeFrameworks()
-//    }
-//    public func importJKBDispatcher() {
-//        JKB_log("launching dispatcher...")
-////        guard let _logicHandler = self.logicHandler else {
-////            JKB_log("<!> dispatcher launch failed")
-////            return
-////        }
-////        _logicHandler.dispatcher = JKBDispatcher(webview:_logicHandler.webView, worker:_logicHandler.appWorker)
-////        _logicHandler.dispatcher?.importCallFunctionAbility()
-//        JKB_log("dispatcher launch done")
-//    }
-//    private func importNativeFrameworks() {
-//        JKB_log("launching native frameworks...")
-//        logicHandler?.appWorker.importNativeFrameworks([
-//            self.jkbAccount,
-//            self.jkbJsBridge,
-//            self.jkbMonitor,
-//        ])
-//        JKB_log("native frameworks launch done")
-//    }
 }

@@ -7,17 +7,23 @@
 import Foundation
 import JavaScriptCore
 
-public class JKOJSWorker {
-//    static let `default` = JKOJSWorker()
+public class JKOJSWorker : NSObject {
+    public var appID : String
     public let jsVM = JSVirtualMachine()
+    public lazy var moduleHandler : JKBCodeModuleHandler = {
+        return JKBCodeModuleHandler(worker: self)
+    }()
+    
     lazy var context : JSContext? = {
         let contxt = JSContext(virtualMachine: jsVM)
         return contxt
     }()
+    init(appID : String) {
+        self.appID = appID
+    }
     public func evaluateJS(_ javaScriptStr : String) {
         context?.evaluateScript(javaScriptStr)
     }
-
     //Export
     func importFramework(_ classType:AnyClass, keyedSubscript:String) {
         guard let _context = context else {return}

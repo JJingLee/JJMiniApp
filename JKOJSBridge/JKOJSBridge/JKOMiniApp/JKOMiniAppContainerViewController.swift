@@ -18,18 +18,23 @@ onError
 public class JKOMiniAppContainerViewController: UIViewController {
     var renderer = JKOMiniAppRenderer()
     var dispatcher : JKBDispatcher =  JKBDispatcher()
-    var logicHandler = JKOMiniAppLogicHandler()
-    var nativeFrameworks : [JKBNativeFrameworkProtocol] = [
-        JKBAccount(),
-        JKBJSBridgeFramework(),
-        JKBMonitorFramework(),
-        JKBRouterFramework()
-    ]
-    var appID : String?
-    let firstPageID = "index"
+    var logicHandler : JKOMiniAppLogicHandler?
+    let sourceProvider : JKOUserSourceLoader = JKOUserSourceLoader()
+    var appID : String? {
+        didSet {
+            guard let _appID = appID else {return}
+            if logicHandler == nil {
+                logicHandler = JKOMiniAppLogicHandler(appID:_appID)
+            }
+            logicHandler?.appID = _appID
+            if let _logicHandler = logicHandler {
+                pageRouter = JKOMiniAppPageRouter(renderer, _logicHandler, sourceProvider, jkTabBar)
+            }
+        }
+    }
 
     var launcher : miniAppLauncher?
-    lazy var pageRouter = JKOMiniAppPageRouter(renderer, logicHandler, jkTabBar)
+    var pageRouter : JKOMiniAppPageRouter?
 
     let sourceProvider : JKOUserSourceLoader = JKOUserSourceLoader()
     lazy var jkTabBar: (UITabBar & JKTabBarProtocol)? = JKContainer.createTabBar(sourceProvider.globalAppJSON())
@@ -37,29 +42,33 @@ public class JKOMiniAppContainerViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
 
-        launcher = miniAppLauncher(appID: appID ?? "",
-                                   firstPageID: firstPageID,
-                                   container: self,
+        launcher = miniAppLauncher(container: self,
                                    logicHandler: logicHandler,
                                    dispatcher: dispatcher,
                                    renderer: renderer,
-                                   nativeFrameworks: nativeFrameworks,
                                    jkTabBar: jkTabBar)
         launcher?.launch()
 
-        pageRouter.initialize()
-
-        logicHandler.appOnLaunch()
+        if let _logicHandler = logicHandler {
+            sourceProvider.loadUserAppJS(to:_logicHandler)
+        }
+        logicHandler?.appOnLaunch()
+        pageRouter?.initialize()
     }
 
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        JKOMiniAppContainerManager.currentActiveMiniApp = self
-        logicHandler.appOnShow()
+        JKOMiniAppContainerManager.shared.currentActiveMiniApp = self
+    }
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        logicHandler?.appOnShow()
+        logicHandler?.pageOnShow()
     }
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        logicHandler.appOnHide()
+        logicHandler?.pageOnHide()
+        logicHandler?.appOnHide()
     }
 
 }
