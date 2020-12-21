@@ -29,7 +29,10 @@ public class JKOMiniAppContainerViewController: UIViewController {
     let firstPageID = "index"
 
     var launcher : miniAppLauncher?
-    lazy var pageRouter = JKOMiniAppPageRouter(renderer, logicHandler)
+    lazy var pageRouter = JKOMiniAppPageRouter(renderer, logicHandler, jkTabBar)
+
+    let sourceProvider : JKOUserSourceLoader = JKOUserSourceLoader()
+    lazy var jkTabBar: (UITabBar & JKTabBarProtocol)? = JKContainer.createTabBar(sourceProvider.globalAppJSON())
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +43,8 @@ public class JKOMiniAppContainerViewController: UIViewController {
                                    logicHandler: logicHandler,
                                    dispatcher: dispatcher,
                                    renderer: renderer,
-                                   nativeFrameworks: nativeFrameworks)
+                                   nativeFrameworks: nativeFrameworks,
+                                   jkTabBar: jkTabBar)
         launcher?.launch()
 
         pageRouter.initialize()

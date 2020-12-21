@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0485284325888C6500D54961 /* JKContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485284225888C6500D54961 /* JKContainer.swift */; };
+		0485284925888CAB00D54961 /* JKMiniTabBarHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485284825888CAB00D54961 /* JKMiniTabBarHandler.swift */; };
+		048528522588921300D54961 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048528512588921300D54961 /* UIColor+Extension.swift */; };
+		04852858258894C100D54961 /* JKTabBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04852857258894C100D54961 /* JKTabBarProtocol.swift */; };
 		55289D2B2579EE7C00E094E8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 55289D2A2579EE7C00E094E8 /* README.md */; };
 		552DE97B2584FEA300F66F9C /* JKOMiniAppRenderer+CallFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552DE97A2584FEA300F66F9C /* JKOMiniAppRenderer+CallFunction.swift */; };
 		552DE9802584FF0000F66F9C /* JKOMiniAppRenderer+UpdateDoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552DE97F2584FF0000F66F9C /* JKOMiniAppRenderer+UpdateDoms.swift */; };
@@ -79,6 +83,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0485284225888C6500D54961 /* JKContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKContainer.swift; sourceTree = "<group>"; };
+		0485284825888CAB00D54961 /* JKMiniTabBarHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKMiniTabBarHandler.swift; sourceTree = "<group>"; };
+		048528512588921300D54961 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		04852857258894C100D54961 /* JKTabBarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKTabBarProtocol.swift; sourceTree = "<group>"; };
 		55289D2A2579EE7C00E094E8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		55289D362579EF0900E094E8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		55289D422579F46000E094E8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -184,6 +192,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0485284125888C4500D54961 /* JKContainer */ = {
+			isa = PBXGroup;
+			children = (
+				0485284225888C6500D54961 /* JKContainer.swift */,
+				0485284725888C8000D54961 /* TabBar */,
+			);
+			path = JKContainer;
+			sourceTree = "<group>";
+		};
+		0485284725888C8000D54961 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				04852856258894B000D54961 /* Protocol */,
+				0485284825888CAB00D54961 /* JKMiniTabBarHandler.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		048528502588920700D54961 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				048528512588921300D54961 /* UIColor+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		04852856258894B000D54961 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				04852857258894C100D54961 /* JKTabBarProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		55289D082578FF9800E094E8 /* JKOMiniApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,6 +593,7 @@
 			children = (
 				5568B5332580BC57002A941C /* FileFetcher.swift */,
 				5568B55725838B14002A941C /* JKOUserSourceLoader.swift */,
+				048528502588920700D54961 /* Extension */,
 			);
 			path = "Resource Manager";
 			sourceTree = "<group>";
@@ -625,6 +668,7 @@
 		55E573112578F1F3002B13BA /* miniAppApplication */ = {
 			isa = PBXGroup;
 			children = (
+				0485284125888C4500D54961 /* JKContainer */,
 				55CCE3CD258649B500E2F565 /* JKBRouter */,
 				55E572D02576659D002B13BA /* JKBMonitor */,
 				55479197256DF93900A293DC /* JKBDom */,
@@ -853,7 +897,9 @@
 			files = (
 				55FBB0602564F29B00A9F12E /* ViewController.swift in Sources */,
 				55736ECC256D100900F8FBE5 /* JKBDispatcher.swift in Sources */,
+				04852858258894C100D54961 /* JKTabBarProtocol.swift in Sources */,
 				55736E94256CB2F100F8FBE5 /* JKOBridgeConsoler.swift in Sources */,
+				0485284325888C6500D54961 /* JKContainer.swift in Sources */,
 				552DE99E258518ED00F66F9C /* JKOMiniAppLogicHandler+UserSourceLoader.swift in Sources */,
 				55736EC4256D026700F8FBE5 /* JKBNativeFrameworkProtocol.swift in Sources */,
 				55736E77256B708800F8FBE5 /* JKOJSBridgeWebViewDSL.swift in Sources */,
@@ -882,6 +928,8 @@
 				5568B54625835CCE002A941C /* JKOMiniAppRenderer.swift in Sources */,
 				552DE9802584FF0000F66F9C /* JKOMiniAppRenderer+UpdateDoms.swift in Sources */,
 				55CCE3CF25864D5700E2F565 /* JKBRouter.swift in Sources */,
+				048528522588921300D54961 /* UIColor+Extension.swift in Sources */,
+				0485284925888CAB00D54961 /* JKMiniTabBarHandler.swift in Sources */,
 				55479199256DFA3D00A293DC /* JKOJSBridge.swift in Sources */,
 				55E572DC2576805B002B13BA /* JKOMiniAppLifeCycleHandler.swift in Sources */,
 				55736E8F256BC19D00F8FBE5 /* AnyExport.swift in Sources */,

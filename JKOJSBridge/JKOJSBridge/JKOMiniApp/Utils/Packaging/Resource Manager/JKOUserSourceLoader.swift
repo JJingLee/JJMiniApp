@@ -20,6 +20,9 @@ public class JKOUserSourceLoader : NSObject {
     public func globalAppJS()->String? {
         return Bundle.main.fetchJSScript(with: "app")
     }
+    public func globalAppJSON() -> [String: Any]? {
+        return Bundle.main.fetchJSONDocument(with: "app")
+    }
     public func getPageHTML(with route:String)->URL? {
         return Bundle.main.fetchHTMLDocumentURL(with: route)
     }

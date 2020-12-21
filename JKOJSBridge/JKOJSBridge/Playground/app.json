@@ -1,3 +1,22 @@
 {
-    "title" : "miniApp"
+    "title" : "miniApp",
+    "tabBar": {
+        "color": "#CCCCCC",
+        "selectedColor": "#1296db",
+        "backgroundColor": "#1296db",
+        "list": [
+          {
+            "pagePath": "index",
+            "text": "首頁",
+            "iconPath": "icTabbarNear28",
+            "selectedIconPath": "icTabbarNearActive28"
+          },
+          {
+            "pagePath": "index2",
+            "text": "購物車",
+            "iconPath": "icTabbarNear28",
+            "selectedIconPath": "icTabbarNearActive28"
+          }
+        ]
+    }
 }

@@ -9,6 +9,15 @@ function readMoreClicked(id) {
   return 0;
 }
 
+function read2MoreClicked(id) {
+  if (id == "readme2") {
+    var name = JKOAccount.getName();
+      JKBRouter.switchTab("index2");
+    return 1;
+  }
+  return 0;
+}
+
 Page.onLoad(()=>{
     JKMonitor.log("index1 onload");
 }).onShow(()=>{

@@ -26,5 +26,14 @@ extension Bundle {
         let fileText = try? String(contentsOf: fileURL, encoding: .utf8)
         return fileText
     }
+    public func fetchJSONDocument(with fileName: String) -> [String: Any]? {
+        guard fileName.count > 0 else {return nil}
+        guard let filePath = fetchJSONURL(with: fileName)else { return nil }
+        guard let data = try? Data(contentsOf: URL(fileURLWithPath: filePath), options: .mappedIfSafe) else { return nil }
+        return try? JSONSerialization.jsonObject(with: data) as? [String: Any]
+    }
+    public func fetchJSONURL(with fileName: String) -> String? {
+        return path(forResource: fileName, ofType: "json")
+    }
 }
 

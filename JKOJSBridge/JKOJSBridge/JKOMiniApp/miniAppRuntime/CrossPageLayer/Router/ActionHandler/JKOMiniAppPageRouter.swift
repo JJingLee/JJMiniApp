@@ -11,11 +11,25 @@ public class JKOMiniAppPageRouter: NSObject {
     let sourceProvider : JKOUserSourceLoader = JKOUserSourceLoader() //TODO : SourceLoader should bind appid
     private weak var _renderer : JKOMiniAppRenderer?
     private weak var _logicHandler : JKOMiniAppLogicHandler?
-    private lazy var stackManager = JKOMiniAppPageStacksManager(count: 1)
+    private var _jkTabBar: JKTabBarProtocol?
+    private lazy var stackManager: JKOMiniAppPageStacksManager = {
+        let count = _jkTabBar?.getPagesCount() ?? 1
+        let stackManager = JKOMiniAppPageStacksManager(count: count)
+        for i in 0 ..< count {
+            guard let route = _jkTabBar?.getRouteWithIndex(i) else { continue }
+            stackManager.pushPage(JKOMiniAppStackPageStruct(pageRoute: route), to: i)
+        }
+        return stackManager
+    }()
+
     init(_ renderer : JKOMiniAppRenderer,
-         _ logicHandler : JKOMiniAppLogicHandler) {
+         _ logicHandler : JKOMiniAppLogicHandler,
+         _ jkTabBar: JKTabBarProtocol?) {
+        super.init()
         _renderer = renderer
         _logicHandler = logicHandler
+        _jkTabBar = jkTabBar
+        _jkTabBar?.customDelegate = self
     }
 
     //initialize
@@ -24,11 +38,11 @@ public class JKOMiniAppPageRouter: NSObject {
         guard let renderer = _renderer else { return }
         sourceProvider.loadUserAppJS(to:logicHandler)
 
-        let firstRoute = "index"
+        let firstRoute = _jkTabBar?.getRouteWithIndex(0) ?? "index"
+        _jkTabBar?.setSelectedPage(firstRoute)
+
         sourceProvider.loadUserPage(firstRoute,to:renderer)
         sourceProvider.loadUserPageJS(firstRoute,to:logicHandler)
-        //keep stack
-        stackManager.pushPage(JKOMiniAppStackPageStruct(pageRoute: firstRoute))
 
         logicHandler.pageOnLoad()
         logicHandler.pageOnShow()
@@ -82,9 +96,41 @@ public class JKOMiniAppPageRouter: NSObject {
         logicHandler.pageOnShow()
     }
     //change tab
-    public func switchTab() {}
+    public func switchTab(_ route : String) {
+        guard let logicHandler = _logicHandler else {return}
+        guard let renderer = _renderer else { return }
+        guard let index = _jkTabBar?.getIndexWithRoute(route) else { return }
+
+        // switch tab bar
+        _jkTabBar?.setSelectedPage(route)
+
+        //renderer notify page onHide
+        logicHandler.pageOnHide()
+
+        //keep stack
+        stackManager.changeTab(to: index)
+        let currentRoute = stackManager.currentPage()?.pageRoute ?? route
+
+        //renew logicHandler worker
+        logicHandler.refreshPageWorker(with:logicHandler.appID,pageID: currentRoute)
+
+        //renderer open new page
+        sourceProvider.loadUserPage(currentRoute,to:renderer)
+        sourceProvider.loadUserPageJS(currentRoute,to:logicHandler)
+
+        //renderer notify newPage onShow
+        logicHandler.pageOnLoad()
+        logicHandler.pageOnShow()
+
+    }
     //reboot
     public func reLaunch() {}
+}
+
+extension JKOMiniAppPageRouter: JKTabBarDelegate {
+    func tabBar(_ route: String) {
+        switchTab(route)
+    }
 }
 
 public struct JKOMiniAppStackPageStruct {
@@ -117,6 +163,12 @@ public class JKOMiniAppPageStacksManager : NSObject {
         defer { objc_sync_exit(self) }
         objc_sync_enter(self)
         stacks[selectingIndex].append(page)
+    }
+    public func pushPage(_ page: JKOMiniAppStackPageStruct, to index: Int) {
+        guard stacks.count > index else { return }
+        defer { objc_sync_exit(self) }
+        objc_sync_enter(self)
+        stacks[index].append(page)
     }
     public func popLastPage()->JKOMiniAppStackPageStruct? {
         defer { objc_sync_exit(self) }
