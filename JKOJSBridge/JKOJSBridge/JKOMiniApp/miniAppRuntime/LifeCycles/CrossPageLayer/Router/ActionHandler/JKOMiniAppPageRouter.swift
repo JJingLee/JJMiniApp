@@ -42,8 +42,8 @@ public class JKOMiniAppPageRouter: NSObject {
         let firstRoute = _jkTabBar?.getRouteWithIndex(0) ?? JKOMAFirstPageName
         _jkTabBar?.setSelectedPage(firstRoute)
 
-        sourceProvider.loadUserPage(firstRoute,to:renderer)
-        sourceProvider.loadUserPageJS(firstRoute,to:logicHandler)
+        sourceProvider?.loadUserPage(firstRoute,to:renderer)
+        sourceProvider?.loadUserPageJS(firstRoute,to:logicHandler)
 
         logicHandler.pageOnLoad()
     }
@@ -115,8 +115,8 @@ public class JKOMiniAppPageRouter: NSObject {
         logicHandler.refreshPageWorker(with:logicHandler.appID,pageID: currentRoute)
 
         //renderer open new page
-        sourceProvider.loadUserPage(currentRoute,to:renderer)
-        sourceProvider.loadUserPageJS(currentRoute,to:logicHandler)
+        sourceProvider?.loadUserPage(currentRoute,to:renderer)
+        sourceProvider?.loadUserPageJS(currentRoute,to:logicHandler)
 
         //renderer notify newPage onShow
         logicHandler.pageOnLoad()

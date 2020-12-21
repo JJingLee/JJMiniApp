@@ -36,7 +36,6 @@ public class JKOMiniAppContainerViewController: UIViewController {
     var launcher : miniAppLauncher?
     var pageRouter : JKOMiniAppPageRouter?
 
-    let sourceProvider : JKOUserSourceLoader = JKOUserSourceLoader()
     lazy var jkTabBar: (UITabBar & JKTabBarProtocol)? = JKContainer.createTabBar(sourceProvider.globalAppJSON())
 
     public override func viewDidLoad() {

@@ -19,7 +19,7 @@ import Foundation
         JKOMiniAppContainerManager.shared.currentActiveMiniApp?.pageRouter?.navigateBack()
     }
     public static func switchTab(_ route: String) {
-        JKOMiniAppContainerManager.currentActiveMiniApp?.pageRouter.switchTab(route)
+        JKOMiniAppContainerManager.shared.currentActiveMiniApp?.pageRouter?.switchTab(route)
     }
 }
 public class JKBRouterFramework : NSObject, JKBNativeFrameworkProtocol {
