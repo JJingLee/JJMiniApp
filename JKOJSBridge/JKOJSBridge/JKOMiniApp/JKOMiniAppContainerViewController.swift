@@ -28,7 +28,7 @@ public class JKOMiniAppContainerViewController: UIViewController {
             }
             logicHandler?.appID = _appID
             if let _logicHandler = logicHandler {
-                pageRouter = JKOMiniAppPageRouter(renderer, _logicHandler, sourceProvider, jkTabBar)
+                pageRouter = JKOMiniAppPageRouter(renderer, _logicHandler, sourceProvider, jkTabBar, jkNavigator)
             }
         }
     }
@@ -37,9 +37,17 @@ public class JKOMiniAppContainerViewController: UIViewController {
     var pageRouter : JKOMiniAppPageRouter?
 
     lazy var jkTabBar: (UITabBar & JKTabBarProtocol)? = JKContainer.createTabBar(sourceProvider.globalAppJSON())
+    lazy var jkNavigator: JKNavigatorProtocol? = {
+        return JKContainer.createNavigator(self, config: sourceProvider.globalAppJSON())
+    }()
+    
 
     public override func viewDidLoad() {
         super.viewDidLoad()
+
+        if let data = sourceProvider.globalAppJSON() {
+            jkNavigator?.setConfig(data)
+        }
 
         launcher = miniAppLauncher(container: self,
                                    logicHandler: logicHandler,

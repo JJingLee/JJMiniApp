@@ -12,6 +12,7 @@ public class JKOMiniAppPageRouter: NSObject {
     private weak var _renderer : JKOMiniAppRenderer?
     private weak var _logicHandler : JKOMiniAppLogicHandler?
     private var _jkTabBar: JKTabBarProtocol?
+    private var _jkNavigator: JKNavigatorProtocol?
     private lazy var stackManager: JKOMiniAppPageStacksManager = {
         let count = _jkTabBar?.getPagesCount() ?? 1
         let stackManager = JKOMiniAppPageStacksManager(count: count)
@@ -25,13 +26,15 @@ public class JKOMiniAppPageRouter: NSObject {
     init(_ renderer : JKOMiniAppRenderer,
          _ logicHandler : JKOMiniAppLogicHandler,
          _ sourceProvider : JKOUserSourceLoader,
-         _ jkTabBar: JKTabBarProtocol?) {
+         _ jkTabBar: JKTabBarProtocol?,
+         _ jkNavigator: JKNavigatorProtocol?) {
         super.init()
         _renderer = renderer
         _logicHandler = logicHandler
         self.sourceProvider = sourceProvider
         _jkTabBar = jkTabBar
         _jkTabBar?.customDelegate = self
+        _jkNavigator = jkNavigator
     }
 
     //initialize
@@ -67,6 +70,8 @@ public class JKOMiniAppPageRouter: NSObject {
         //renderer notify newPage onShow
         logicHandler.pageOnLoad()
         logicHandler.pageOnShow()
+
+        updateNavigatorBackButton()
     }
     //redirect
     public func redirectTo() {}
@@ -94,6 +99,8 @@ public class JKOMiniAppPageRouter: NSObject {
 
         //render notify newPage onShow
         logicHandler.pageOnShow()
+
+        updateNavigatorBackButton()
     }
     //change tab
     public func switchTab(_ route : String) {
@@ -122,9 +129,22 @@ public class JKOMiniAppPageRouter: NSObject {
         logicHandler.pageOnLoad()
         logicHandler.pageOnShow()
 
+        updateNavigatorBackButton()
     }
     //reboot
     public func reLaunch() {}
+
+    // MARK: - Private methods
+    private func updateNavigatorBackButton() {
+        if stackManager.currentStackCount() > 1 {
+            let backBehavior: () -> Void = { [weak self] in
+                self?.navigateBack()
+            }
+            _jkNavigator?.setBackBehavior(backBehavior)
+        } else {
+            _jkNavigator?.hideHomeButton()
+        }
+    }
 }
 
 extension JKOMiniAppPageRouter: JKTabBarDelegate {
@@ -179,6 +199,9 @@ public class JKOMiniAppPageStacksManager : NSObject {
         defer { objc_sync_exit(self) }
         objc_sync_enter(self)
         return stacks[selectingIndex].last
+    }
+    public func currentStackCount() -> Int {
+        return stacks[selectingIndex].count
     }
 }
 

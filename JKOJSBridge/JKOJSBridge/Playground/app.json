@@ -19,5 +19,10 @@
             "selectedIconPath": "icTabbarNearActive28"
           }
         ]
+    },
+    "window": {
+        "navigationBarBackgroundColor": "#ff0000",
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "微信接口功能演示"
     }
 }

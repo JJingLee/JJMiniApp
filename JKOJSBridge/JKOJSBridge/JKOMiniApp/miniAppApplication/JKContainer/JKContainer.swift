@@ -14,4 +14,13 @@ class JKContainer: NSObject {
         let jkTabBar = JKMiniTabBarHandler(data: config)
         return jkTabBar
     }
+
+    static public func createNavigator(_ viewController: UIViewController, config: [String : Any]?) -> JKNavigatorProtocol {
+        let jkNavigator = JKNavigatorHandler(viewController: viewController)
+        if let data = config {
+            jkNavigator.setConfig(data)
+        }
+        return jkNavigator
+
+    }
 }
