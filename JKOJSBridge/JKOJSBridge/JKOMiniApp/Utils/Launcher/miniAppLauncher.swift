@@ -14,13 +14,13 @@ public class miniAppLauncher : NSObject {
     private weak var dispatcher : JKBDispatcher?
     private weak var renderer : JKOMiniAppRenderer?
     private weak var container : JKOMiniAppContainerViewController?
-    private var jkTabBar: UITabBar?
+    private var jkTabBar: UIView?
     
     init(container : JKOMiniAppContainerViewController,
          logicHandler : JKOMiniAppLogicHandler?,
          dispatcher : JKBDispatcher,
          renderer : JKOMiniAppRenderer,
-         jkTabBar: UITabBar?) {
+         jkTabBar: UIView?) {
         super.init()
         self.container = container
         self.logicHandler = logicHandler
@@ -52,21 +52,8 @@ public class miniAppLauncher : NSObject {
 
             // Tab bar
             if let tabBar = self?.jkTabBar {
-                tabBar.translatesAutoresizingMaskIntoConstraints = false
-                tabBar.heightAnchor.constraint(equalToConstant: 49).isActive = true
                 stackView.addArrangedSubview(tabBar)
             }
-
-            // Safe area
-            let bottomPadding = UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.safeAreaInsets.bottom ?? 0
-            let safeAreaView: UIView = { [weak self] in
-                let view = UIView()
-                view.backgroundColor = self?.jkTabBar?.barTintColor
-                return view
-            }()
-            safeAreaView.translatesAutoresizingMaskIntoConstraints = false
-            safeAreaView.heightAnchor.constraint(equalToConstant: bottomPadding).isActive = true
-            stackView.addArrangedSubview(safeAreaView)
         }
     }
 

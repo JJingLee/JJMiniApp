@@ -36,7 +36,7 @@ public class JKOMiniAppContainerViewController: UIViewController {
     var launcher : miniAppLauncher?
     var pageRouter : JKOMiniAppPageRouter?
 
-    lazy var jkTabBar: (UITabBar & JKTabBarProtocol)? = JKContainer.createTabBar(sourceProvider.globalAppJSON())
+    lazy var jkTabBar: (UIView & JKTabBarProtocol)? = JKContainer.createTabBar(sourceProvider.globalAppJSON())
     lazy var jkNavigator: JKNavigatorProtocol? = {
         return JKContainer.createNavigator(self, config: sourceProvider.globalAppJSON())
     }()

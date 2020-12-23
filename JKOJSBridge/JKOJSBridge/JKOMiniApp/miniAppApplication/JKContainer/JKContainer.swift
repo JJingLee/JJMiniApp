@@ -10,7 +10,7 @@ import UIKit
 
 class JKContainer: NSObject {
 
-    static public func createTabBar(_ config: [String : Any]?) -> (UITabBar & JKTabBarProtocol)? {
+    static public func createTabBar(_ config: [String : Any]?) -> (UIView & JKTabBarProtocol)? {
         let jkTabBar = JKMiniTabBarHandler(data: config)
         return jkTabBar
     }
