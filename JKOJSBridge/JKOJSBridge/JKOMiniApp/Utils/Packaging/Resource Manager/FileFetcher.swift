@@ -17,6 +17,15 @@ extension Bundle {
         let fileText = try? String(contentsOf: fileURL, encoding: .utf8)
         return fileText
     }
+    public func fetchCSS(with fileName: String) -> String? {
+        guard fileName.count > 0 else { return nil }
+        guard let filePath = fetchCSSPath(with: fileName) else { return nil }
+        let fileText = try? String(contentsOfFile: filePath, encoding: .utf8)
+        return fileText
+    }
+    public func fetchCSSPath(with fileName: String) -> String? {
+        return path(forResource: fileName, ofType: "css")
+    }
     public func fetchHTMLDocumentURL(with fileName:String)->URL? {
         return self.url(forResource: fileName, withExtension: "html")
     }

@@ -31,6 +31,10 @@ class JKMiniTabBarHandler: UITabBar, JKTabBarProtocol {
         isTranslucent = false
 
         if let hexColor = tabBarObject["color"] as? String {
+            unselectedItemTintColor = UIColor.hexStringToUIColor(hex: hexColor)
+        }
+
+        if let hexColor = tabBarObject["backgroundColor"] as? String {
             barTintColor = UIColor.hexStringToUIColor(hex: hexColor)
         }
 
@@ -63,6 +67,7 @@ class JKMiniTabBarHandler: UITabBar, JKTabBarProtocol {
 
     func setTabBarStyle(_ color: String, selectedColor: String, backgroundColor: String, borderStyle: String) {
         // TODO: color
+        unselectedItemTintColor = UIColor.hexStringToUIColor(hex: color)
         tintColor = UIColor.hexStringToUIColor(hex: selectedColor)
         barTintColor = UIColor.hexStringToUIColor(hex: backgroundColor)
     }
@@ -70,8 +75,8 @@ class JKMiniTabBarHandler: UITabBar, JKTabBarProtocol {
     func setTabBarItem(_ index: Int, text: String, iconPath: String, selectedIconPath: String) {
         guard let tabBarItem = getTabBarItem(index) else { return }
         tabBarItem.title = text
-        tabBarItem.image = UIImage(named: iconPath)
-        tabBarItem.selectedImage = UIImage(named: selectedIconPath)
+        tabBarItem.image = UIImage(named: iconPath)?.withRenderingMode(.alwaysOriginal)
+        tabBarItem.selectedImage = UIImage(named: selectedIconPath)?.withRenderingMode(.alwaysOriginal)
     }
 
     func setTabBarBadge(_ index: Int, text: String) {
@@ -121,9 +126,9 @@ class JKMiniTabBarHandler: UITabBar, JKTabBarProtocol {
     private func createTabBarItem(object: [String: Any]) -> UITabBarItem {
         let title = object["text"] as? String
         let iconName = object["iconPath"] as? String
-        let image = UIImage(named: iconName ?? "")
+        let image = UIImage(named: iconName ?? "")?.withRenderingMode(.alwaysOriginal)
         let selectedIconName = object["selectedIconPath"] as? String
-        let selectedImage = UIImage(named: selectedIconName ?? "")
+        let selectedImage = UIImage(named: selectedIconName ?? "")?.withRenderingMode(.alwaysOriginal)
         return UITabBarItem(title: title, image: image, selectedImage: selectedImage)
     }
 

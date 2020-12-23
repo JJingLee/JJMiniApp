@@ -2,27 +2,27 @@
     "title" : "miniApp",
     "data" : [],
     "tabBar": {
-        "color": "#CCCCCC",
-        "selectedColor": "#1296db",
-        "backgroundColor": "#1296db",
+        "color": "#b8b8b",
+        "selectedColor": "#c9191d",
+        "backgroundColor": "#cccccc",
         "list": [
           {
             "pagePath": "index",
             "text": "首頁",
-            "iconPath": "icTabbarNear28",
-            "selectedIconPath": "icTabbarNearActive28"
+            "iconPath": "iconTabbarHome_normal",
+            "selectedIconPath": "iconTabbarHome_selected"
           },
           {
             "pagePath": "index2",
-            "text": "購物車",
-            "iconPath": "icTabbarNear28",
-            "selectedIconPath": "icTabbarNearActive28"
+            "text": "測試",
+            "iconPath": "iconTabbarMe_normal",
+            "selectedIconPath": "iconTabbarMe_selected"
           }
         ]
     },
     "window": {
         "navigationBarBackgroundColor": "#ff0000",
         "navigationBarTextStyle": "white",
-        "navigationBarTitleText": "微信接口功能演示"
+        "navigationBarTitleText": "街口功能演示"
     }
 }
