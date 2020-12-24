@@ -8,6 +8,7 @@
 import Foundation
 
 @objc public protocol JKBInterfaceProtocol : JKOJSExport {
+    // MARK: - JKTabBar
     static func showTabBarRedDot(_ index: Int)
     static func showTabBar(_ animation: Bool)
     static func setTabBarStyle(_ color: String, _ selectedColor: String, _ backgroundColor: String, _ borderStyle: String)
@@ -16,8 +17,15 @@ import Foundation
     static func removeTabBarBadge(_ index: Int)
     static func hideTabBarRedDot(_ index: Int)
     static func hideTabBar(_ animation: Bool)
+
+    // MARK: - JKNavigator
+    static func setNavigationBarTitle(_ title: String)
+    static func setNavigationBarColor(_ backgroundColor: String)
+    static func hideHomeButton()
 }
 @objc public class JKBInterface : NSObject,JKBInterfaceProtocol {
+
+    // MARK: - JKTabBar
     public static func showTabBarRedDot(_ index: Int) {
         JKOMiniAppContainerManager.shared.currentActiveMiniApp?.jkTabBar?.showTabBarRedDot(index)
     }
@@ -48,6 +56,19 @@ import Foundation
 
     public static func hideTabBar(_ animation: Bool) {
         JKOMiniAppContainerManager.shared.currentActiveMiniApp?.jkTabBar?.hideTabBar(animation)
+    }
+
+    // MARK: - JKNavigator
+    public static func setNavigationBarTitle(_ title: String) {
+        JKOMiniAppContainerManager.shared.currentActiveMiniApp?.jkNavigator?.setNavigationBarTitle(title)
+    }
+
+    public static func setNavigationBarColor(_ backgroundColor: String) {
+        JKOMiniAppContainerManager.shared.currentActiveMiniApp?.jkNavigator?.setNavigationBarColor(backgroundColor)
+    }
+
+    public static func hideHomeButton() {
+        JKOMiniAppContainerManager.shared.currentActiveMiniApp?.jkNavigator?.hideHomeButton()
     }
 }
 public class JKBInterfaceFramework : NSObject, JKBNativeFrameworkProtocol {

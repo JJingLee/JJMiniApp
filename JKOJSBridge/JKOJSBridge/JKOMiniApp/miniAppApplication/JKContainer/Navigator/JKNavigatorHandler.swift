@@ -77,7 +77,7 @@ class JKNavigatorHandler: JKNavigatorProtocol {
 
     func updateBackButtom() {
         if backCompletion != nil {
-            let leftItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(handleBackTapped))
+            let leftItem = UIBarButtonItem(image: UIImage(named: "icons8-back-24")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleBackTapped))
             viewController?.navigationItem.leftBarButtonItem = leftItem
         } else {
             hideHomeButton()

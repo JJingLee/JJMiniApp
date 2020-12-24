@@ -21,6 +21,7 @@ function read2MoreClicked(id) {
 Page.onLoad(()=>{
     JKMonitor.log("index1 onload");
     JKMonitor.log("index1 data :"+miniapp._globalData.name);
+    JKBInterface.setNavigationBarTitle("街口功能演示");
 }).onShow(()=>{
     JKMonitor.log("index1 onShow");
     JKMonitor.log("index1 data :"+miniapp._globalData.name);

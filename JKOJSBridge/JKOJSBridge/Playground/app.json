@@ -21,7 +21,7 @@
         ]
     },
     "window": {
-        "navigationBarBackgroundColor": "#ff0000",
+        "navigationBarBackgroundColor": "#c9191d",
         "navigationBarTextStyle": "white",
         "navigationBarTitleText": "街口功能演示"
     }

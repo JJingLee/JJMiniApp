@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04670B8A2593154200C0FB69 /* index3.html in Resources */ = {isa = PBXBuildFile; fileRef = 04670B892593154200C0FB69 /* index3.html */; };
+		04670B8F2593156700C0FB69 /* index3.css in Resources */ = {isa = PBXBuildFile; fileRef = 04670B8E2593156700C0FB69 /* index3.css */; };
+		04670B942593174800C0FB69 /* index3.js in Resources */ = {isa = PBXBuildFile; fileRef = 04670B932593174800C0FB69 /* index3.js */; };
+		04670BA125931CFC00C0FB69 /* icons8-back-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 04670BA025931CFC00C0FB69 /* icons8-back-24.png */; };
 		047F853825909653004F5073 /* JKNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F853725909653004F5073 /* JKNavigatorProtocol.swift */; };
 		047F85402590A018004F5073 /* JKNavigatorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F853F2590A018004F5073 /* JKNavigatorHandler.swift */; };
 		0485284325888C6500D54961 /* JKContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485284225888C6500D54961 /* JKContainer.swift */; };
@@ -101,6 +105,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04670B892593154200C0FB69 /* index3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index3.html; sourceTree = "<group>"; };
+		04670B8E2593156700C0FB69 /* index3.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = index3.css; sourceTree = "<group>"; };
+		04670B932593174800C0FB69 /* index3.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index3.js; sourceTree = "<group>"; };
+		04670BA025931CFC00C0FB69 /* icons8-back-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-back-24.png"; sourceTree = "<group>"; };
 		047F853725909653004F5073 /* JKNavigatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKNavigatorProtocol.swift; sourceTree = "<group>"; };
 		047F853F2590A018004F5073 /* JKNavigatorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKNavigatorHandler.swift; sourceTree = "<group>"; };
 		0485284225888C6500D54961 /* JKContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKContainer.swift; sourceTree = "<group>"; };
@@ -228,6 +236,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04670B882593151A00C0FB69 /* iconPage2 */ = {
+			isa = PBXGroup;
+			children = (
+				04670B892593154200C0FB69 /* index3.html */,
+				04670B8E2593156700C0FB69 /* index3.css */,
+				04670B932593174800C0FB69 /* index3.js */,
+			);
+			path = iconPage2;
+			sourceTree = "<group>";
+		};
 		047F853525909621004F5073 /* Navigator */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +309,7 @@
 		04EDBE8A259204C100055783 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				04670BA025931CFC00C0FB69 /* icons8-back-24.png */,
 				04EDBEA22592095900055783 /* iconTabbarMe_normal.png */,
 				04EDBEA32592095A00055783 /* iconTabbarMe_selected.png */,
 				04EDBE9D2592090A00055783 /* iconTabbarHome_normal.png */,
@@ -738,6 +757,7 @@
 		55E572E92578CDC3002B13BA /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				04670B882593151A00C0FB69 /* iconPage2 */,
 				552DE98C2585134B00F66F9C /* iconPage */,
 				55E572EA2578CDE3002B13BA /* MainPage */,
 			);
@@ -975,18 +995,22 @@
 				04EDBE9E2592090A00055783 /* iconTabbarHome_normal.png in Resources */,
 				5568B5392580C846002A941C /* PageLifeCycle.js in Resources */,
 				5568B55E2584FD83002A941C /* callFunctionEventPoster.js in Resources */,
+				04670BA125931CFC00C0FB69 /* icons8-back-24.png in Resources */,
 				04EDBEA52592095A00055783 /* iconTabbarMe_selected.png in Resources */,
 				55FBB0682564F29F00A9F12E /* LaunchScreen.storyboard in Resources */,
 				55E572EF2578CF59002B13BA /* index.js in Resources */,
 				55CCE3E6258B04E000E2F565 /* DataProxy.js in Resources */,
 				5568B52F2580BC0B002A941C /* AppLifeCycle.js in Resources */,
 				04EDBE7D2591E67E00055783 /* index2.css in Resources */,
+				04670B8F2593156700C0FB69 /* index3.css in Resources */,
+				04670B942593174800C0FB69 /* index3.js in Resources */,
 				55FBB0652564F29F00A9F12E /* Assets.xcassets in Resources */,
 				55FBB0632564F29B00A9F12E /* Main.storyboard in Resources */,
 				04EDBEAB25920B5B00055783 /* iconTabbarFriend_normal.png in Resources */,
 				55E572FF2578E6B3002B13BA /* app.css in Resources */,
 				55E573042578EC58002B13BA /* index.css in Resources */,
 				04EDBEA42592095A00055783 /* iconTabbarMe_normal.png in Resources */,
+				04670B8A2593154200C0FB69 /* index3.html in Resources */,
 				552DE993258513B000F66F9C /* index2.js in Resources */,
 				552DE98E2585137500F66F9C /* index2.html in Resources */,
 			);

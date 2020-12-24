@@ -1,14 +1,15 @@
+
 Page.onLoad(()=>{
-    JKMonitor.log("index2 onload");
-    JKMonitor.log("index2 old data :"+miniapp._globalData.name);
+    JKMonitor.log("index3 onload");
+    JKMonitor.log("index3 old data :"+miniapp._globalData.name);
     miniapp._globalData.name = "JJ.Lee"
-    JKMonitor.log("index2 change data to :"+miniapp._globalData.name);
+    JKMonitor.log("index3 change data to :"+miniapp._globalData.name);
 }).onShow(()=>{
-    JKBInterface.setNavigationBarTitle("元件演示");
-    JKMonitor.log("index2 onShow");
+    JKBInterface.setNavigationBarTitle("元件演示2");
+    JKMonitor.log("index3 onShow");
     JKMonitor.log("myData : "+JKBStorage.getStorage(miniapp.appId,"myData"))
 }).onHide(()=>{
-    JKMonitor.log("index2 onHide");
+    JKMonitor.log("index3 onHide");
 });
 
 function backToHome() {
@@ -108,14 +109,6 @@ function setNavigationBarColor(id) {
 function hideHomeButton(id) {
   if (id == "hideHomeButton") {
       JKBInterface.hideHomeButton();
-      return 1;
-  }
-  return 0;
-}
-
-function navigatorToIndex3(id) {
-  if (id == "navigatorToIndex3") {
-      JKBRouter.navigateTo("index3");
       return 1;
   }
   return 0;
