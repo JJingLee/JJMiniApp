@@ -4,6 +4,32 @@ class PagelifeCycle {
     constructor(appid, pageid) {
         this.appId = appid
         this.pageId = pageid
+        this.pageData = new Proxy({}, {
+            set: function(target, key, value) {
+                if (typeof this.obj === 'undefined') {
+                  this.obj = {}
+                }
+                if (key === "getAll") {
+                  return true;
+                }
+                if (key === "setAll") {
+                    this.obj = value
+                    return true
+                }
+                this.obj[key] = value
+                Private_JKBStorage.updatePageData(Page.appId,Page.pageId, key,this.obj)
+                return true;
+            },
+            get:function(target, prop) {
+              if (prop === "getAll") {
+                return this.obj
+              }
+              return this.obj[prop]; // 非私有變數，那就回傳原物件的原屬性值
+            },
+            has: function(target, prop) {
+              return prop in this.obj;
+            }
+          })
     }
 
     onLoad(onLoadClosure) {
@@ -26,7 +52,21 @@ class PagelifeCycle {
         this.onError = onErrorClosure;
         return this;
     }
-
+    onPageData(dataClosure) {
+        this.dataClosure = dataClosure
+        if (typeof dataClosure === 'function'){
+            if(typeof dataClosure() === 'object') {
+                this.pageData.setAll = dataClosure()
+            }
+        }
+        return this;
+    }
+    getPageData() {
+        return this.pageData.getAll
+    }
+    setPageData(newPageData) {
+        return this.pageData.setAll = newPageData
+    }
     native_onLoad() {
         if (typeof this.onLoad === 'function'){
             this.onLoad();
@@ -82,3 +122,12 @@ function JKPageOnError() {
     Page.native_onError()
 }
 
+function updatePageData(data) {
+    Page.pageData.setAll = data
+}
+function getPageData() {
+    return Page.getPageData()
+}
+function setPageData(newPageData) {
+    return Page.setPageData(newPageData)
+}

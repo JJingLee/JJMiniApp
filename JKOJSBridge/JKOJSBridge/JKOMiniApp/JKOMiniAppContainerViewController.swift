@@ -18,38 +18,43 @@ onError
 public class JKOMiniAppContainerViewController: UIViewController {
     var renderer = JKOMiniAppRenderer()
     var dispatcher : JKBDispatcher =  JKBDispatcher()
-    var logicHandler : JKOMiniAppLogicHandler?
+
+    var appID : String
+    var logicHandler : JKOMiniAppLogicHandler
+    var pageRouter : JKOMiniAppPageRouter
+
     let sourceProvider : JKOUserSourceLoader = JKOUserSourceLoader()
-    var appID : String? {
-        didSet {
-            guard let _appID = appID else {return}
-            if logicHandler == nil {
-                logicHandler = JKOMiniAppLogicHandler(appID:_appID)
-            }
-            logicHandler?.appID = _appID
-            if let _logicHandler = logicHandler {
-                pageRouter = JKOMiniAppPageRouter(renderer, _logicHandler, sourceProvider)
-            }
-        }
+    lazy var launcher : miniAppLauncher = {
+        let _launcher = miniAppLauncher(container: self,
+                                   logicHandler: logicHandler,
+                                   dispatcher: dispatcher,
+                                   renderer: renderer,
+                                   sourceProvider: sourceProvider)
+        return _launcher
+    }()
+
+
+    init(appID : String) {
+        self.appID = appID
+        logicHandler = JKOMiniAppLogicHandler(appID:appID)
+        pageRouter = JKOMiniAppPageRouter(renderer, logicHandler, sourceProvider)
+        super.init(nibName: nil, bundle: nil)
+        initial()
     }
 
-    var launcher : miniAppLauncher?
-    var pageRouter : JKOMiniAppPageRouter?
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     public override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
-        launcher = miniAppLauncher(container: self,
-                                   logicHandler: logicHandler,
-                                   dispatcher: dispatcher,
-                                   renderer: renderer)
-        launcher?.launch()
+    private func initial() {
+        launcher.launch()
 
-        if let _logicHandler = logicHandler {
-            sourceProvider.loadUserAppJS(to:_logicHandler)
-        }
-        logicHandler?.appOnLaunch()
-        pageRouter?.initialize()
+        logicHandler.appOnLaunch()
+        pageRouter.initialize()
     }
 
     public override func viewWillAppear(_ animated: Bool) {
@@ -58,13 +63,13 @@ public class JKOMiniAppContainerViewController: UIViewController {
     }
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        logicHandler?.appOnShow()
-        logicHandler?.pageOnShow()
+        logicHandler.appOnShow()
+        logicHandler.pageOnShow()
     }
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        logicHandler?.pageOnHide()
-        logicHandler?.appOnHide()
+        logicHandler.pageOnHide()
+        logicHandler.appOnHide()
     }
 
 }

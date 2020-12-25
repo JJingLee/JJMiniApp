@@ -26,8 +26,8 @@ public class JKOMiniAppPageRouter: NSObject {
         guard let renderer = _renderer else { return }
 
         let firstRoute = JKOMAFirstPageName
-        sourceProvider?.loadUserPage(firstRoute,to:renderer)
         sourceProvider?.loadUserPageJS(firstRoute,to:logicHandler)
+        sourceProvider?.loadUserPage(firstRoute,to:renderer,sourceWorker: logicHandler.pageWorker)
         //keep stack
         stackManager.pushPage(JKOMiniAppStackPageStruct(pageRoute: firstRoute))
 
@@ -41,14 +41,15 @@ public class JKOMiniAppPageRouter: NSObject {
         logicHandler.pageOnHide()
 
         //keep stack
-        stackManager.pushPage(JKOMiniAppStackPageStruct(pageRoute: route))
+        let pageData = logicHandler.getPageData(route) ?? [:]
+        stackManager.pushPage(JKOMiniAppStackPageStruct(pageRoute: route, pageData: pageData))
 
         //renew logicHandler worker
         logicHandler.refreshPageWorker(with:logicHandler.appID,pageID: route)
 
         //renderer open new page
-        sourceProvider?.loadUserPage(route,to:renderer)
         sourceProvider?.loadUserPageJS(route,to:logicHandler)
+        sourceProvider?.loadUserPage(route,to:renderer,sourceWorker: logicHandler.pageWorker)
 
         //renderer notify newPage onShow
         logicHandler.pageOnLoad()
@@ -64,7 +65,7 @@ public class JKOMiniAppPageRouter: NSObject {
         logicHandler.pageOnHide()
 
         //get page from stack
-        guard let _ = stackManager.popLastPage(), let currentPage = stackManager.currentPage() else {
+        guard let pageInfo = stackManager.popLastPage(), let currentPage = stackManager.currentPage() else {
             //TODO : root page handles
             JKB_log("already back to root!")
             return
@@ -75,8 +76,9 @@ public class JKOMiniAppPageRouter: NSObject {
         logicHandler.refreshPageWorker(with:logicHandler.appID,pageID: lastRouteName)
 
         //renderer open new page
-        sourceProvider?.loadUserPage(lastRouteName,to:renderer)
         sourceProvider?.loadUserPageJS(lastRouteName,to:logicHandler)
+        logicHandler.setPageData(pageInfo.pageRoute, pageData: pageInfo.pageData)
+        sourceProvider?.loadUserPage(lastRouteName,to:renderer,sourceWorker: logicHandler.pageWorker)
 
         //render notify newPage onShow
         logicHandler.pageOnShow()
@@ -89,8 +91,10 @@ public class JKOMiniAppPageRouter: NSObject {
 
 public struct JKOMiniAppStackPageStruct {
     public var pageRoute : String
-    public init(pageRoute : String) {
+    public var pageData : [String:Any]
+    public init(pageRoute : String, pageData : [String:Any]=[:]) {
         self.pageRoute = pageRoute
+        self.pageData = pageData
     }
 }
 

@@ -9,6 +9,10 @@ function readMoreClicked(id) {
   return 0;
 }
 
+function onChangeTitle(title) {
+    Page.pageData.readmeName = "that's hurt~"
+}
+
 Page.onLoad(()=>{
     JKMonitor.log("index1 onload");
     JKMonitor.log("index1 data :"+miniapp._globalData.name);
@@ -19,4 +23,8 @@ Page.onLoad(()=>{
     JKBStorage.setStorage(miniapp.appId,"myData","good2")
 }).onHide(()=>{
     JKMonitor.log("index1 onHide");
+}).onPageData(()=>{
+    return {
+        "readmeName" : "click me!"
+    }
 });

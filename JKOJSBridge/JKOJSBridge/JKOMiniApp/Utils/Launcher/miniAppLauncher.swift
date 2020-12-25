@@ -8,26 +8,30 @@
 import Foundation
 
 public class miniAppLauncher : NSObject {
-//    var firstPageID : String?
     private weak var logicHandler : JKOMiniAppLogicHandler?
     private weak var dispatcher : JKBDispatcher?
     private weak var renderer : JKOMiniAppRenderer?
     private weak var container : JKOMiniAppContainerViewController?
+    private weak var sourceProvider : JKOUserSourceLoader?
     
     init(container : JKOMiniAppContainerViewController,
          logicHandler : JKOMiniAppLogicHandler?,
          dispatcher : JKBDispatcher,
-         renderer : JKOMiniAppRenderer) {
+         renderer : JKOMiniAppRenderer,
+         sourceProvider : JKOUserSourceLoader) {
         super.init()
         self.container = container
         self.logicHandler = logicHandler
         self.dispatcher = dispatcher
         self.renderer = renderer
+        self.sourceProvider = sourceProvider
     }
     public func launch() {
         JKB_log("start launching frameworks...")
         configRenderer()
         dataDispatchBinding()
+        configPageBinder()
+        initSourceProvider()
     }
 
     private func configRenderer() {
@@ -50,6 +54,19 @@ public class miniAppLauncher : NSObject {
         guard let _renderer = renderer else { return }
         _dispatcher.bindRenderer(_renderer)
         _dispatcher.bindCallFunctionHandler(_logicHandler)
+    }
+
+    private func initSourceProvider() {
+        if let _logicHandler = logicHandler {
+            sourceProvider?.loadUserAppJS(to:_logicHandler)
+        }
+    }
+
+    private func configPageBinder() {
+        logicHandler?.pageWorker.pageSimpleDataBinder.domSetter = {
+            [weak self]domID,content in
+            self?.dispatcher?.updateComponentValue(componentKey: domID, context: content)
+        }
     }
 
 }

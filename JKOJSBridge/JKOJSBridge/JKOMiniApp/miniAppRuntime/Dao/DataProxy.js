@@ -15,7 +15,7 @@ class DataProxy {
               return true
           }
           this.obj[key] = value
-          JKBStorage.setGlobalData(miniapp.appId,this.obj)
+          Private_JKBStorage.setGlobalData(miniapp.appId,this.obj)
           return true;
       },
       get:function(target, prop) {

@@ -12,4 +12,10 @@ extension JKOMiniAppRenderer : JKOUserSourceLoaderRendererProtocol {
         let request = URLRequest(url: htmlURL)
         webView.load(request)
     }
+    public func renderByString(_ htmlString : String) {
+        webView.loadHTMLString(htmlString, baseURL: nil)
+//        webView.loadFileURL(htmlURL, allowingReadAccessTo: htmlURL)
+//        let request = URLRequest(url: htmlURL)
+//        webView.load(request)
+    }
 }

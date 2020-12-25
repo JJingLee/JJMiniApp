@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol miniAppDataBindingObserver:NSObject {
-    func updateData(_ data:Any?)
+    func updateData(_ key:String, _ data:Any?)
 }
 
 public class DataBindingHandler : NSObject {
@@ -34,7 +34,7 @@ public class DataBindingHandler : NSObject {
         objc_sync_enter(self)
         guard let keyObservers = observers[key] else {return}
         for observer in keyObservers {
-            observer.updateData(data)
+            observer.updateData(key,data)
         }
     }
 
