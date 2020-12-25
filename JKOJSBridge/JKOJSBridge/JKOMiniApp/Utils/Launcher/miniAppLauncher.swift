@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 public class miniAppLauncher : NSObject {
 //    var firstPageID : String?
@@ -13,16 +14,19 @@ public class miniAppLauncher : NSObject {
     private weak var dispatcher : JKBDispatcher?
     private weak var renderer : JKOMiniAppRenderer?
     private weak var container : JKOMiniAppContainerViewController?
+    private var jkTabBar: UIView?
     
     init(container : JKOMiniAppContainerViewController,
          logicHandler : JKOMiniAppLogicHandler?,
          dispatcher : JKBDispatcher,
-         renderer : JKOMiniAppRenderer) {
+         renderer : JKOMiniAppRenderer,
+         jkTabBar: UIView?) {
         super.init()
         self.container = container
         self.logicHandler = logicHandler
         self.dispatcher = dispatcher
         self.renderer = renderer
+        self.jkTabBar = jkTabBar
     }
     public func launch() {
         JKB_log("start launching frameworks...")
@@ -33,14 +37,23 @@ public class miniAppLauncher : NSObject {
     private func configRenderer() {
         renderer?.toggleRenderer { [weak self](renderView) in
             guard let _container = self?.container else {return}
-            _container.view.addSubview(renderView)
-            renderView.translatesAutoresizingMaskIntoConstraints = false
+
+            // renderView
+            let stackView = UIStackView(arrangedSubviews: [renderView])
+            stackView.axis = .vertical
+            _container.view.addSubview(stackView)
+            stackView.translatesAutoresizingMaskIntoConstraints = false
             _container.view.addConstraints([
-                renderView.leftAnchor.constraint(equalTo: _container.view.leftAnchor),
-                renderView.rightAnchor.constraint(equalTo: _container.view.rightAnchor),
-                renderView.topAnchor.constraint(equalTo: _container.view.topAnchor),
-                renderView.bottomAnchor.constraint(equalTo: _container.view.bottomAnchor),
+                stackView.leftAnchor.constraint(equalTo: _container.view.leftAnchor),
+                stackView.rightAnchor.constraint(equalTo: _container.view.rightAnchor),
+                stackView.topAnchor.constraint(equalTo: _container.view.topAnchor),
+                stackView.bottomAnchor.constraint(equalTo: _container.view.bottomAnchor),
             ])
+
+            // Tab bar
+            if let tabBar = self?.jkTabBar {
+                stackView.addArrangedSubview(tabBar)
+            }
         }
     }
 

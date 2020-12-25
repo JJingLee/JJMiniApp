@@ -1,4 +1,28 @@
 {
-    "title" : "miniApp"
-    "data" : []
+    "title" : "miniApp",
+    "data" : [],
+    "tabBar": {
+        "color": "#b8b8b",
+        "selectedColor": "#c9191d",
+        "backgroundColor": "#cccccc",
+        "list": [
+          {
+            "pagePath": "index",
+            "text": "首頁",
+            "iconPath": "iconTabbarHome_normal",
+            "selectedIconPath": "iconTabbarHome_selected"
+          },
+          {
+            "pagePath": "index2",
+            "text": "測試",
+            "iconPath": "iconTabbarMe_normal",
+            "selectedIconPath": "iconTabbarMe_selected"
+          }
+        ]
+    },
+    "window": {
+        "navigationBarBackgroundColor": "#c9191d",
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "街口功能演示"
+    }
 }
