@@ -12,10 +12,19 @@ function readMoreClicked(id) {
 function onChangeTitle(title) {
     Page.pageData.readmeName = "that's hurt~"
 }
+function read2MoreClicked(id) {
+  if (id == "readme2") {
+    var name = JKOAccount.getName();
+      JKBRouter.switchTab("index2");
+    return 1;
+  }
+  return 0;
+}
 
 Page.onLoad(()=>{
     JKMonitor.log("index1 onload");
     JKMonitor.log("index1 data :"+miniapp._globalData.name);
+    JKBInterface.setNavigationBarTitle("街口功能演示");
 }).onShow(()=>{
     JKMonitor.log("index1 onShow");
     JKMonitor.log("index1 data :"+miniapp._globalData.name);

@@ -41,6 +41,6 @@ public class JKOMiniAppLogicHandler : NSObject {
         self.pageWorker.setPageData(pageData)
     }
     public func getPageData(_ pageRoute : String)->[String:Any]? {
-        return self.pageWorker.getPageData() as? [String:Any]
+        return self.pageWorker.getPageData()
     }
 }

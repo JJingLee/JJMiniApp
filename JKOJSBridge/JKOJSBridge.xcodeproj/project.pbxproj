@@ -10,6 +10,24 @@
 		030EF82300691F684CF9F0FD /* Pods_JKOJSBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2AB437BBA9FA8E647F4888 /* Pods_JKOJSBridge.framework */; };
 		5519D1E625934AEF0034443A /* JKBStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519D1E525934AEF0034443A /* JKBStorage.swift */; };
 		5519D1EB259371A50034443A /* PageSimpleDataBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519D1EA259371A50034443A /* PageSimpleDataBinder.swift */; };
+		04670B8A2593154200C0FB69 /* index3.html in Resources */ = {isa = PBXBuildFile; fileRef = 04670B892593154200C0FB69 /* index3.html */; };
+		04670B8F2593156700C0FB69 /* index3.css in Resources */ = {isa = PBXBuildFile; fileRef = 04670B8E2593156700C0FB69 /* index3.css */; };
+		04670B942593174800C0FB69 /* index3.js in Resources */ = {isa = PBXBuildFile; fileRef = 04670B932593174800C0FB69 /* index3.js */; };
+		04670BA125931CFC00C0FB69 /* icons8-back-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 04670BA025931CFC00C0FB69 /* icons8-back-24.png */; };
+		047F853825909653004F5073 /* JKNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F853725909653004F5073 /* JKNavigatorProtocol.swift */; };
+		047F85402590A018004F5073 /* JKNavigatorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F853F2590A018004F5073 /* JKNavigatorHandler.swift */; };
+		0485284325888C6500D54961 /* JKContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485284225888C6500D54961 /* JKContainer.swift */; };
+		0485284925888CAB00D54961 /* JKMiniTabBarHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485284825888CAB00D54961 /* JKMiniTabBarHandler.swift */; };
+		048528522588921300D54961 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048528512588921300D54961 /* UIColor+Extension.swift */; };
+		04852858258894C100D54961 /* JKTabBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04852857258894C100D54961 /* JKTabBarProtocol.swift */; };
+		04EDBE7D2591E67E00055783 /* index2.css in Resources */ = {isa = PBXBuildFile; fileRef = 04EDBE7C2591E67E00055783 /* index2.css */; };
+		04EDBE832591EAB300055783 /* JKBInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EDBE822591EAB300055783 /* JKBInterface.swift */; };
+		04EDBE96259208A500055783 /* iconTabbarHome_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EDBE95259208A500055783 /* iconTabbarHome_selected.png */; };
+		04EDBE9E2592090A00055783 /* iconTabbarHome_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EDBE9D2592090A00055783 /* iconTabbarHome_normal.png */; };
+		04EDBEA42592095A00055783 /* iconTabbarMe_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EDBEA22592095900055783 /* iconTabbarMe_normal.png */; };
+		04EDBEA52592095A00055783 /* iconTabbarMe_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EDBEA32592095A00055783 /* iconTabbarMe_selected.png */; };
+		04EDBEAB25920B5B00055783 /* iconTabbarFriend_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EDBEA925920B5B00055783 /* iconTabbarFriend_normal.png */; };
+		04EDBEAC25920B5B00055783 /* iconTabbarFriend_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EDBEAA25920B5B00055783 /* iconTabbarFriend_selected.png */; };
 		55289D2B2579EE7C00E094E8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 55289D2A2579EE7C00E094E8 /* README.md */; };
 		552DE97B2584FEA300F66F9C /* JKOMiniAppRenderer+CallFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552DE97A2584FEA300F66F9C /* JKOMiniAppRenderer+CallFunction.swift */; };
 		552DE9802584FF0000F66F9C /* JKOMiniAppRenderer+UpdateDoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552DE97F2584FF0000F66F9C /* JKOMiniAppRenderer+UpdateDoms.swift */; };
@@ -98,6 +116,24 @@
 		4119B9BBD569D09801D5A8AE /* Pods-JKOJSBridge-JKOJSBridgeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKOJSBridge-JKOJSBridgeUITests.debug.xcconfig"; path = "Target Support Files/Pods-JKOJSBridge-JKOJSBridgeUITests/Pods-JKOJSBridge-JKOJSBridgeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5519D1E525934AEF0034443A /* JKBStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBStorage.swift; sourceTree = "<group>"; };
 		5519D1EA259371A50034443A /* PageSimpleDataBinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSimpleDataBinder.swift; sourceTree = "<group>"; };
+		04670B892593154200C0FB69 /* index3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index3.html; sourceTree = "<group>"; };
+		04670B8E2593156700C0FB69 /* index3.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = index3.css; sourceTree = "<group>"; };
+		04670B932593174800C0FB69 /* index3.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index3.js; sourceTree = "<group>"; };
+		04670BA025931CFC00C0FB69 /* icons8-back-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-back-24.png"; sourceTree = "<group>"; };
+		047F853725909653004F5073 /* JKNavigatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKNavigatorProtocol.swift; sourceTree = "<group>"; };
+		047F853F2590A018004F5073 /* JKNavigatorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKNavigatorHandler.swift; sourceTree = "<group>"; };
+		0485284225888C6500D54961 /* JKContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKContainer.swift; sourceTree = "<group>"; };
+		0485284825888CAB00D54961 /* JKMiniTabBarHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKMiniTabBarHandler.swift; sourceTree = "<group>"; };
+		048528512588921300D54961 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		04852857258894C100D54961 /* JKTabBarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKTabBarProtocol.swift; sourceTree = "<group>"; };
+		04EDBE7C2591E67E00055783 /* index2.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = index2.css; sourceTree = "<group>"; };
+		04EDBE822591EAB300055783 /* JKBInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBInterface.swift; sourceTree = "<group>"; };
+		04EDBE95259208A500055783 /* iconTabbarHome_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconTabbarHome_selected.png; sourceTree = "<group>"; };
+		04EDBE9D2592090A00055783 /* iconTabbarHome_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconTabbarHome_normal.png; sourceTree = "<group>"; };
+		04EDBEA22592095900055783 /* iconTabbarMe_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconTabbarMe_normal.png; sourceTree = "<group>"; };
+		04EDBEA32592095A00055783 /* iconTabbarMe_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconTabbarMe_selected.png; sourceTree = "<group>"; };
+		04EDBEA925920B5B00055783 /* iconTabbarFriend_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconTabbarFriend_normal.png; sourceTree = "<group>"; };
+		04EDBEAA25920B5B00055783 /* iconTabbarFriend_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconTabbarFriend_selected.png; sourceTree = "<group>"; };
 		55289D2A2579EE7C00E094E8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		55289D362579EF0900E094E8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		55289D422579F46000E094E8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -219,6 +255,90 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04670B882593151A00C0FB69 /* iconPage2 */ = {
+			isa = PBXGroup;
+			children = (
+				04670B892593154200C0FB69 /* index3.html */,
+				04670B8E2593156700C0FB69 /* index3.css */,
+				04670B932593174800C0FB69 /* index3.js */,
+			);
+			path = iconPage2;
+			sourceTree = "<group>";
+		};
+		047F853525909621004F5073 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				047F853625909638004F5073 /* Protocol */,
+				047F853F2590A018004F5073 /* JKNavigatorHandler.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
+		047F853625909638004F5073 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				047F853725909653004F5073 /* JKNavigatorProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		0485284125888C4500D54961 /* JKContainer */ = {
+			isa = PBXGroup;
+			children = (
+				0485284225888C6500D54961 /* JKContainer.swift */,
+				0485284725888C8000D54961 /* TabBar */,
+				047F853525909621004F5073 /* Navigator */,
+			);
+			path = JKContainer;
+			sourceTree = "<group>";
+		};
+		0485284725888C8000D54961 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				04852856258894B000D54961 /* Protocol */,
+				0485284825888CAB00D54961 /* JKMiniTabBarHandler.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		048528502588920700D54961 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				048528512588921300D54961 /* UIColor+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		04852856258894B000D54961 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				04852857258894C100D54961 /* JKTabBarProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		04EDBE812591E9D000055783 /* JKBInterface */ = {
+			isa = PBXGroup;
+			children = (
+				04EDBE822591EAB300055783 /* JKBInterface.swift */,
+			);
+			path = JKBInterface;
+			sourceTree = "<group>";
+		};
+		04EDBE8A259204C100055783 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				04670BA025931CFC00C0FB69 /* icons8-back-24.png */,
+				04EDBEA22592095900055783 /* iconTabbarMe_normal.png */,
+				04EDBEA32592095A00055783 /* iconTabbarMe_selected.png */,
+				04EDBE9D2592090A00055783 /* iconTabbarHome_normal.png */,
+				04EDBE95259208A500055783 /* iconTabbarHome_selected.png */,
+				04EDBEA925920B5B00055783 /* iconTabbarFriend_normal.png */,
+				04EDBEAA25920B5B00055783 /* iconTabbarFriend_selected.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		55289D082578FF9800E094E8 /* JKOMiniApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,6 +527,7 @@
 			isa = PBXGroup;
 			children = (
 				552DE98D2585137500F66F9C /* index2.html */,
+				04EDBE7C2591E67E00055783 /* index2.css */,
 				552DE992258513B000F66F9C /* index2.js */,
 			);
 			path = iconPage;
@@ -580,6 +701,7 @@
 				55289D2A2579EE7C00E094E8 /* README.md */,
 				5568B5332580BC57002A941C /* FileFetcher.swift */,
 				5568B55725838B14002A941C /* JKOUserSourceLoader.swift */,
+				048528502588920700D54961 /* Extension */,
 			);
 			path = "Resource Manager";
 			sourceTree = "<group>";
@@ -647,6 +769,7 @@
 				55E572E02578B918002B13BA /* app.js */,
 				55E572F62578E65F002B13BA /* app.json */,
 				55E572FE2578E6B3002B13BA /* app.css */,
+				04EDBE8A259204C100055783 /* images */,
 				55E572E92578CDC3002B13BA /* Pages */,
 			);
 			path = Playground;
@@ -655,6 +778,7 @@
 		55E572E92578CDC3002B13BA /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				04670B882593151A00C0FB69 /* iconPage2 */,
 				552DE98C2585134B00F66F9C /* iconPage */,
 				55E572EA2578CDE3002B13BA /* MainPage */,
 			);
@@ -685,6 +809,8 @@
 		55E573112578F1F3002B13BA /* miniAppApplication */ = {
 			isa = PBXGroup;
 			children = (
+				04EDBE812591E9D000055783 /* JKBInterface */,
+				0485284125888C4500D54961 /* JKContainer */,
 				55CCE3D62588A09B00E2F565 /* JKBStorage */,
 				55CCE3CD258649B500E2F565 /* JKBRouter */,
 				55E572D02576659D002B13BA /* JKBMonitor */,
@@ -911,21 +1037,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04EDBE96259208A500055783 /* iconTabbarHome_selected.png in Resources */,
 				55E573092578ECCB002B13BA /* index.json in Resources */,
 				55E572F72578E65F002B13BA /* app.json in Resources */,
 				55289D2B2579EE7C00E094E8 /* README.md in Resources */,
 				55E572E12578B918002B13BA /* app.js in Resources */,
+				04EDBEAC25920B5B00055783 /* iconTabbarFriend_selected.png in Resources */,
 				55736E4C25664EDF00F8FBE5 /* index.html in Resources */,
+				04EDBE9E2592090A00055783 /* iconTabbarHome_normal.png in Resources */,
 				5568B5392580C846002A941C /* PageLifeCycle.js in Resources */,
 				5568B55E2584FD83002A941C /* callFunctionEventPoster.js in Resources */,
+				04670BA125931CFC00C0FB69 /* icons8-back-24.png in Resources */,
+				04EDBEA52592095A00055783 /* iconTabbarMe_selected.png in Resources */,
 				55FBB0682564F29F00A9F12E /* LaunchScreen.storyboard in Resources */,
 				55E572EF2578CF59002B13BA /* index.js in Resources */,
 				55CCE3E6258B04E000E2F565 /* DataProxy.js in Resources */,
 				5568B52F2580BC0B002A941C /* AppLifeCycle.js in Resources */,
+				04EDBE7D2591E67E00055783 /* index2.css in Resources */,
+				04670B8F2593156700C0FB69 /* index3.css in Resources */,
+				04670B942593174800C0FB69 /* index3.js in Resources */,
 				55FBB0652564F29F00A9F12E /* Assets.xcassets in Resources */,
 				55FBB0632564F29B00A9F12E /* Main.storyboard in Resources */,
+				04EDBEAB25920B5B00055783 /* iconTabbarFriend_normal.png in Resources */,
 				55E572FF2578E6B3002B13BA /* app.css in Resources */,
 				55E573042578EC58002B13BA /* index.css in Resources */,
+				04EDBEA42592095A00055783 /* iconTabbarMe_normal.png in Resources */,
+				04670B8A2593154200C0FB69 /* index3.html in Resources */,
 				552DE993258513B000F66F9C /* index2.js in Resources */,
 				552DE98E2585137500F66F9C /* index2.html in Resources */,
 			);
@@ -1057,12 +1194,16 @@
 			files = (
 				55FBB0602564F29B00A9F12E /* ViewController.swift in Sources */,
 				55736ECC256D100900F8FBE5 /* JKBDispatcher.swift in Sources */,
+				04852858258894C100D54961 /* JKTabBarProtocol.swift in Sources */,
 				55736E94256CB2F100F8FBE5 /* JKOBridgeConsoler.swift in Sources */,
+				0485284325888C6500D54961 /* JKContainer.swift in Sources */,
+				047F85402590A018004F5073 /* JKNavigatorHandler.swift in Sources */,
 				552DE99E258518ED00F66F9C /* JKOMiniAppLogicHandler+UserSourceLoader.swift in Sources */,
 				55736EC4256D026700F8FBE5 /* JKBNativeFrameworkProtocol.swift in Sources */,
 				55736E77256B708800F8FBE5 /* JKOJSBridgeWebViewDSL.swift in Sources */,
 				552DE98825850CBB00F66F9C /* JKOMiniAppPageRouter.swift in Sources */,
 				5568B55825838B14002A941C /* JKOUserSourceLoader.swift in Sources */,
+				047F853825909653004F5073 /* JKNavigatorProtocol.swift in Sources */,
 				554791A5256E070E00A293DC /* miniAppLauncher.swift in Sources */,
 				55CCE3D82588A16000E2F565 /* Private_JKBStorage.swift in Sources */,
 				55CCE3EB258B04F700E2F565 /* DataBindingHandler.swift in Sources */,
@@ -1073,6 +1214,7 @@
 				554791B0256E58FB00A293DC /* JKOMiniAppContainerViewController.swift in Sources */,
 				55736EBC256D023C00F8FBE5 /* JSB_JKOAccount.swift in Sources */,
 				552DE9982585182300F66F9C /* JKOMiniAppRenderer+UserSourceLoader.swift in Sources */,
+				04EDBE832591EAB300055783 /* JKBInterface.swift in Sources */,
 				55736E80256B70E100F8FBE5 /* JKOJSBridgeWebExtensions.swift in Sources */,
 				55FBB05C2564F29B00A9F12E /* AppDelegate.swift in Sources */,
 				552DE97B2584FEA300F66F9C /* JKOMiniAppRenderer+CallFunction.swift in Sources */,
@@ -1094,6 +1236,8 @@
 				5568B54625835CCE002A941C /* JKOMiniAppRenderer.swift in Sources */,
 				552DE9802584FF0000F66F9C /* JKOMiniAppRenderer+UpdateDoms.swift in Sources */,
 				55CCE3CF25864D5700E2F565 /* JKBRouter.swift in Sources */,
+				048528522588921300D54961 /* UIColor+Extension.swift in Sources */,
+				0485284925888CAB00D54961 /* JKMiniTabBarHandler.swift in Sources */,
 				55479199256DFA3D00A293DC /* JKOJSBridge.swift in Sources */,
 				55E572DC2576805B002B13BA /* JKOMAAppWorker.swift in Sources */,
 				55736E8F256BC19D00F8FBE5 /* AnyExport.swift in Sources */,

@@ -10,6 +10,7 @@ import Foundation
 public protocol JKOUserSourceLoaderRendererProtocol : NSObject {
     func render(with htmlURL : URL)
     func renderByString(_ htmlString : String)
+    func render(with cssPath: String)
 }
 
 public protocol JKOUserSourceLoaderLogicHandlerProtocol : NSObject {
@@ -20,6 +21,9 @@ public protocol JKOUserSourceLoaderLogicHandlerProtocol : NSObject {
 public class JKOUserSourceLoader : NSObject {
     public func globalAppJS()->String? {
         return Bundle.main.fetchJSScript(with: "app")
+    }
+    public func globalAppJSON() -> [String: Any]? {
+        return Bundle.main.fetchJSONDocument(with: "app")
     }
     public func getPageHTML(with route:String)->URL? {
         return Bundle.main.fetchHTMLDocumentURL(with: route)
@@ -47,10 +51,17 @@ public class JKOUserSourceLoader : NSObject {
             }
             renderer.render(with:pageHTML)
         }
+        if let pageCSS = getPageCSS(with: pageRoute) {
+            renderer.render(with: pageCSS)
+        }
     }
     public func loadUserPageJS(_ pageRoute:String,to logicHandler : JKOUserSourceLoaderLogicHandlerProtocol) {
         if let pageJS = getPageJS(with: pageRoute) {
             logicHandler.pageLoadJS(pageJS)
         }
+    }
+
+    public func getPageCSS(with route: String) -> String? {
+        return Bundle.main.fetchCSS(with: route)
     }
 }

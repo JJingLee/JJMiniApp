@@ -16,4 +16,5 @@ let JKONativeFrameWorks : [JKBNativeFrameworkProtocol] = [
     JKBRouterFramework(),
     JKBStorageFramework(),
     Private_JKBStorageFramework(),
+    JKBInterfaceFramework(),
 ]

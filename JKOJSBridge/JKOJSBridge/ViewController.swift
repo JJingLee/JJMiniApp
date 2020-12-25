@@ -28,7 +28,9 @@ class ViewController: UIViewController {
     }
     @objc func gotoMiniApp() {
         let miniappContainer = JKOMiniApp.miniAppPage(with:"0x001")
-        self.navigationController?.pushViewController(miniappContainer, animated: true)
+        let nav = UINavigationController(rootViewController: miniappContainer)
+        nav.modalPresentationStyle = .fullScreen
+        present(nav, animated: true, completion: nil)
     }
 
     //TODO : 打nodejs server看抓不抓得到資料

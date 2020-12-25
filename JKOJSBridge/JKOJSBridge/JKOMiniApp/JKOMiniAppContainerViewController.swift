@@ -24,12 +24,19 @@ public class JKOMiniAppContainerViewController: UIViewController {
     var pageRouter : JKOMiniAppPageRouter
 
     let sourceProvider : JKOUserSourceLoader = JKOUserSourceLoader()
+
+    var jkTabBar: (UIView & JKTabBarProtocol)?
+    lazy var jkNavigator: JKNavigatorProtocol? = {
+        return JKContainer.createNavigator(self, config: sourceProvider.globalAppJSON())
+    }()
+
     lazy var launcher : miniAppLauncher = {
         let _launcher = miniAppLauncher(container: self,
                                    logicHandler: logicHandler,
                                    dispatcher: dispatcher,
                                    renderer: renderer,
-                                   sourceProvider: sourceProvider)
+                                   sourceProvider: sourceProvider,
+                                   jkTabBar: jkTabBar)
         return _launcher
     }()
 
@@ -41,18 +48,23 @@ public class JKOMiniAppContainerViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         initial()
     }
-
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
     public override func viewDidLoad() {
         super.viewDidLoad()
     }
-
     private func initial() {
-        launcher.launch()
+        if let data = sourceProvider.globalAppJSON() {
+            if let tabData = data["tabBar"] as? [String:Any] {
+                jkTabBar = JKContainer.createTabBar(tabData)
+                pageRouter._jkTabBar = jkTabBar
+            }
+            pageRouter._jkNavigator = jkNavigator
+            jkNavigator?.setConfig(data)
+        }
 
+        launcher.launch()
         logicHandler.appOnLaunch()
         pageRouter.initialize()
     }

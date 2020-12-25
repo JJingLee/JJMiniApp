@@ -11,10 +11,26 @@ public class JKOMiniAppPageRouter: NSObject {
     private weak var sourceProvider : JKOUserSourceLoader? //TODO : SourceLoader should bind appid
     private weak var _renderer : JKOMiniAppRenderer?
     private weak var _logicHandler : JKOMiniAppLogicHandler?
-    private lazy var stackManager = JKOMiniAppPageStacksManager(count: 1)
+    weak var _jkTabBar: JKTabBarProtocol? {
+        didSet {
+            _jkTabBar?.customDelegate = self
+        }
+    }
+    weak var _jkNavigator: JKNavigatorProtocol?
+    private lazy var stackManager: JKOMiniAppPageStacksManager = {
+        let count = _jkTabBar?.getPagesCount() ?? 1
+        let stackManager = JKOMiniAppPageStacksManager(count: count)
+        for i in 0 ..< count {
+            guard let route = _jkTabBar?.getRouteWithIndex(i) else { continue }
+            stackManager.pushPage(JKOMiniAppStackPageStruct(pageRoute: route), to: i)
+        }
+        return stackManager
+    }()
+
     init(_ renderer : JKOMiniAppRenderer,
          _ logicHandler : JKOMiniAppLogicHandler,
          _ sourceProvider : JKOUserSourceLoader) {
+        super.init()
         _renderer = renderer
         _logicHandler = logicHandler
         self.sourceProvider = sourceProvider
@@ -25,7 +41,8 @@ public class JKOMiniAppPageRouter: NSObject {
         guard let logicHandler = _logicHandler else {return}
         guard let renderer = _renderer else { return }
 
-        let firstRoute = JKOMAFirstPageName
+        let firstRoute = _jkTabBar?.getRouteWithIndex(0) ?? JKOMAFirstPageName
+        _jkTabBar?.setSelectedPage(firstRoute)
         sourceProvider?.loadUserPageJS(firstRoute,to:logicHandler)
         sourceProvider?.loadUserPage(firstRoute,to:renderer,sourceWorker: logicHandler.pageWorker)
         //keep stack
@@ -54,6 +71,8 @@ public class JKOMiniAppPageRouter: NSObject {
         //renderer notify newPage onShow
         logicHandler.pageOnLoad()
         logicHandler.pageOnShow()
+
+        updateNavigatorBackButton()
     }
     //redirect
     public func redirectTo() {}
@@ -82,11 +101,63 @@ public class JKOMiniAppPageRouter: NSObject {
 
         //render notify newPage onShow
         logicHandler.pageOnShow()
+
+        updateNavigatorBackButton()
     }
     //change tab
-    public func switchTab() {}
+    public func switchTab(_ route : String) {
+        //TODO : havn't keep data
+        guard let logicHandler = _logicHandler else {return}
+        guard let renderer = _renderer else { return }
+        guard let index = _jkTabBar?.getIndexWithRoute(route) else { return }
+
+        // switch tab bar
+        _jkTabBar?.setSelectedPage(route)
+
+        //renderer notify page onHide
+        logicHandler.pageOnHide()
+
+        //keep stack
+        stackManager.changeTab(to: index)
+
+        let currentRoute = stackManager.currentPage()?.pageRoute ?? route
+
+        //renew logicHandler worker
+        logicHandler.refreshPageWorker(with:logicHandler.appID,pageID: currentRoute)
+
+        //renderer open new page
+        sourceProvider?.loadUserPage(currentRoute,to:renderer, sourceWorker: logicHandler.pageWorker)
+        if let pageInfo = stackManager.currentPage() {
+            logicHandler.setPageData(pageInfo.pageRoute, pageData: pageInfo.pageData)
+        }
+        sourceProvider?.loadUserPageJS(currentRoute,to:logicHandler)
+
+        //renderer notify newPage onShow
+        logicHandler.pageOnLoad()
+        logicHandler.pageOnShow()
+
+        updateNavigatorBackButton()
+    }
     //reboot
     public func reLaunch() {}
+
+    // MARK: - Private methods
+    private func updateNavigatorBackButton() {
+        if stackManager.currentStackCount() > 1 {
+            let backBehavior: () -> Void = { [weak self] in
+                self?.navigateBack()
+            }
+            _jkNavigator?.setBackBehavior(backBehavior)
+        } else {
+            _jkNavigator?.hideHomeButton()
+        }
+    }
+}
+
+extension JKOMiniAppPageRouter: JKTabBarDelegate {
+    func tabBar(_ route: String) {
+        switchTab(route)
+    }
 }
 
 public struct JKOMiniAppStackPageStruct {
@@ -122,6 +193,12 @@ public class JKOMiniAppPageStacksManager : NSObject {
         objc_sync_enter(self)
         stacks[selectingIndex].append(page)
     }
+    public func pushPage(_ page: JKOMiniAppStackPageStruct, to index: Int) {
+        guard stacks.count > index else { return }
+        defer { objc_sync_exit(self) }
+        objc_sync_enter(self)
+        stacks[index].append(page)
+    }
     public func popLastPage()->JKOMiniAppStackPageStruct? {
         defer { objc_sync_exit(self) }
         objc_sync_enter(self)
@@ -131,6 +208,9 @@ public class JKOMiniAppPageStacksManager : NSObject {
         defer { objc_sync_exit(self) }
         objc_sync_enter(self)
         return stacks[selectingIndex].last
+    }
+    public func currentStackCount() -> Int {
+        return stacks[selectingIndex].count
     }
 }
 

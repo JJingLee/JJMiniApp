@@ -17,6 +17,15 @@ extension Bundle {
         let fileText = try? String(contentsOf: fileURL, encoding: .utf8)
         return fileText
     }
+    public func fetchCSS(with fileName: String) -> String? {
+        guard fileName.count > 0 else { return nil }
+        guard let filePath = fetchCSSPath(with: fileName) else { return nil }
+        let fileText = try? String(contentsOfFile: filePath, encoding: .utf8)
+        return fileText
+    }
+    public func fetchCSSPath(with fileName: String) -> String? {
+        return path(forResource: fileName, ofType: "css")
+    }
     public func fetchHTMLDocumentURL(with fileName:String)->URL? {
         return self.url(forResource: fileName, withExtension: "html")
     }
@@ -25,6 +34,15 @@ extension Bundle {
         guard let fileURL = fetchHTMLDocumentURL(with: fileName) else {return nil}
         let fileText = try? String(contentsOf: fileURL, encoding: .utf8)
         return fileText
+    }
+    public func fetchJSONDocument(with fileName: String) -> [String: Any]? {
+        guard fileName.count > 0 else {return nil}
+        guard let filePath = fetchJSONURL(with: fileName)else { return nil }
+        guard let data = try? Data(contentsOf: URL(fileURLWithPath: filePath), options: .mappedIfSafe) else { return nil }
+        return try? JSONSerialization.jsonObject(with: data) as? [String: Any]
+    }
+    public func fetchJSONURL(with fileName: String) -> String? {
+        return path(forResource: fileName, ofType: "json")
     }
 }
 
