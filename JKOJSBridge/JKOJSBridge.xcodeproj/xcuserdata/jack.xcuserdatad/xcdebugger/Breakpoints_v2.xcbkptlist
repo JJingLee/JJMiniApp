@@ -23,22 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D8ED7327-AEE1-4758-A4B2-03FCE2A4B73C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JKOJSBridge/JKOMiniApp/miniAppApplication/JKContainer/Navigator/JKNavigatorHandler.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "updateBackButtom()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "B6C90705-DCE3-4A51-8801-678A33B22373"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -55,22 +39,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C53081B6-A2AE-458D-998E-A791F7099AE1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JKOJSBridge/JKOMiniApp/miniAppApplication/JKContainer/Navigator/JKNavigatorHandler.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "setBackBehavior(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "4D3F6A0E-C14A-4768-B203-E6E9B7E3486F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -80,15 +48,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
             endingLineNumber = "87"
-            landmarkName = "webView(_:didFinish:)"
-            landmarkType = "7">
+            landmarkName = "JKOMiniAppContainerViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6CC14688-2799-433A-B417-1779B2FCD7E7"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JKOJSBridge/JKOMiniApp/miniAppApplication/JKBStorage/JKBStorage.swift"
@@ -96,8 +64,85 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
             endingLineNumber = "25"
-            landmarkName = "setStorage(_:_:_:)"
-            landmarkType = "7">
+            landmarkName = "JKBStorageFramework"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "6CC14688-2799-433A-B417-1779B2FCD7E7 - c67d015adb3ede54"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JKOJSBridge.JKBStorageFramework.keyedSubscript.getter : Swift.String"
+                  moduleName = "JKOJSBridge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jack/Documents/JKOS/%E5%B0%8F%E7%A8%8B%E5%BA%8F/JJMiniApp/JKOJSBridge/JKOJSBridge/JKOMiniApp/miniAppApplication/JKBStorage/JKBStorage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "139">
+               </Location>
+               <Location
+                  uuid = "6CC14688-2799-433A-B417-1779B2FCD7E7 - 4913edc9d3b6cd20"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JKOJSBridge.JKBStorageFramework.keyedSubscript.setter : Swift.String"
+                  moduleName = "JKOJSBridge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jack/Documents/JKOS/%E5%B0%8F%E7%A8%8B%E5%BA%8F/JJMiniApp/JKOJSBridge/JKOJSBridge/JKOMiniApp/miniAppApplication/JKBStorage/JKBStorage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "174">
+               </Location>
+               <Location
+                  uuid = "6CC14688-2799-433A-B417-1779B2FCD7E7 - d93b45993e5ce768"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JKOJSBridge.JKBStorageFramework.keyedSubscript.modify : Swift.String"
+                  moduleName = "JKOJSBridge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jack/Documents/JKOS/%E5%B0%8F%E7%A8%8B%E5%BA%8F/JJMiniApp/JKOJSBridge/JKOJSBridge/JKOMiniApp/miniAppApplication/JKBStorage/JKBStorage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "6CC14688-2799-433A-B417-1779B2FCD7E7 - 4c505a1e32e4c209"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JKOJSBridge.JKBStorageFramework.keyedSubscript.modify : Swift.String with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "JKOJSBridge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jack/Documents/JKOS/%E5%B0%8F%E7%A8%8B%E5%BA%8F/JJMiniApp/JKOJSBridge/JKOJSBridge/JKOMiniApp/miniAppApplication/JKBStorage/JKBStorage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "6CC14688-2799-433A-B417-1779B2FCD7E7 - 2a091867a9691dd9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JKOJSBridge.JKBStorageFramework.init() -&gt; JKOJSBridge.JKBStorageFramework"
+                  moduleName = "JKOJSBridge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jack/Documents/JKOS/%E5%B0%8F%E7%A8%8B%E5%BA%8F/JJMiniApp/JKOJSBridge/JKOJSBridge/JKOMiniApp/miniAppApplication/JKBStorage/JKBStorage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "355">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -111,25 +156,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "getStorage(_:_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EB920C49-7CB0-4962-B421-5AFEDD2AC71A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JKOJSBridge/JKOMiniApp/miniAppApplication/JKContainer/Navigator/JKNavigatorHandler.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "setConfig(_:)"
-            landmarkType = "7">
+            endingLineNumber = "28">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
