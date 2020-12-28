@@ -55,22 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D79745C2-F919-492B-8A7C-16BF5C076FAA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JKOJSBridge/JKOMiniApp/miniAppRuntime/LifeCycles/CrossPageLayer/Router/ActionHandler/JKOMiniAppPageRouter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C53081B6-A2AE-458D-998E-A791F7099AE1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -87,112 +71,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "26510344-873F-4C3B-8573-B1181C04E7E3"
+            uuid = "4D3F6A0E-C14A-4768-B203-E6E9B7E3486F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JKOJSBridge/JKOMiniApp/miniAppRuntime/LifeCycles/CrossPageLayer/Router/ActionHandler/JKOMiniAppPageRouter.swift"
+            filePath = "JKOJSBridge/JKOMiniApp/JKOMiniAppContainerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7F6960A1-244F-45B8-A8C0-01938DD2E250"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JKOJSBridge/JKOMiniApp/miniAppRuntime/LifeCycles/CrossPageLayer/Router/ActionHandler/JKOMiniAppPageRouter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0DCB97A9-F18D-4B52-B035-C8C8F636F05E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JKOJSBridge/JKOMiniApp/Utils/Packaging/Resource Manager/JKOUserSourceLoader.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "loadUserPage(_:to:)"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "webView(_:didFinish:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D073CAD1-418F-43BE-8D83-D1CCAC3056B5"
+            uuid = "6CC14688-2799-433A-B417-1779B2FCD7E7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JKOJSBridge/JKOMiniApp/Utils/Packaging/Resource Manager/JKOUserSourceLoader.swift"
+            filePath = "JKOJSBridge/JKOMiniApp/miniAppApplication/JKBStorage/JKBStorage.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "loadUserPage(_:to:)"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "setStorage(_:_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3B6A64BF-803F-4776-AAD1-53D1B97F075B"
+            uuid = "40261F6D-83A3-4AEB-997E-17B6033AB660"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JKOJSBridge/JKOMiniApp/Utils/Packaging/Resource Manager/JKOUserSourceLoader.swift"
+            filePath = "JKOJSBridge/JKOMiniApp/miniAppApplication/JKBStorage/JKBStorage.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "loadUserPage(_:to:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "getStorage(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C5124BE4-8473-47B7-AF52-975A1DE06F1B"
+            uuid = "EB920C49-7CB0-4962-B421-5AFEDD2AC71A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JKOJSBridge/JKOMiniApp/miniAppCore/miniAppFramework/Renderer/JKOMiniAppRenderer+UserSourceLoader.swift"
+            filePath = "JKOJSBridge/JKOMiniApp/miniAppApplication/JKContainer/Navigator/JKNavigatorHandler.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "render(with:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D6F4D661-3ACC-4C8C-97A9-426B09342487"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JKOJSBridge/JKOMiniApp/miniAppCore/miniAppFramework/Renderer/JKOMiniAppRenderer+UserSourceLoader.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "render(with:)"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "setConfig(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

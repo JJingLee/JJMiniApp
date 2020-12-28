@@ -3,7 +3,6 @@ function readMoreClicked(id) {
   if (id == "readme") {
     var name = JKOAccount.getName();
       JKBDom.updateComponent(id,name);
-      JKBRouter.navigateTo("index2");
     return 1;
   }
   return 0;
@@ -12,7 +11,7 @@ function readMoreClicked(id) {
 function read2MoreClicked(id) {
   if (id == "readme2") {
     var name = JKOAccount.getName();
-      JKBRouter.switchTab("index2");
+      JKBRouter.navigateTo("index2");
     return 1;
   }
   return 0;

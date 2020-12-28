@@ -12,13 +12,18 @@ public class JKOMiniAppPageRouter: NSObject {
     private weak var _renderer : JKOMiniAppRenderer?
     private weak var _logicHandler : JKOMiniAppLogicHandler?
     private var _jkTabBar: JKTabBarProtocol?
-    private var _jkNavigator: JKNavigatorProtocol?
+    var _jkNavigator: JKNavigatorProtocol?
     private lazy var stackManager: JKOMiniAppPageStacksManager = {
         let count = _jkTabBar?.getPagesCount() ?? 1
         let stackManager = JKOMiniAppPageStacksManager(count: count)
-        for i in 0 ..< count {
-            guard let route = _jkTabBar?.getRouteWithIndex(i) else { continue }
-            stackManager.pushPage(JKOMiniAppStackPageStruct(pageRoute: route), to: i)
+
+        if count == 1 {
+            stackManager.pushPage(JKOMiniAppStackPageStruct(pageRoute: JKOMAFirstPageName))
+        } else {
+            for i in 0 ..< count {
+                guard let route = _jkTabBar?.getRouteWithIndex(i) else { continue }
+                stackManager.pushPage(JKOMiniAppStackPageStruct(pageRoute: route), to: i)
+            }
         }
         return stackManager
     }()
@@ -42,7 +47,7 @@ public class JKOMiniAppPageRouter: NSObject {
         guard let logicHandler = _logicHandler else {return}
         guard let renderer = _renderer else { return }
 
-        let firstRoute = _jkTabBar?.getRouteWithIndex(0) ?? JKOMAFirstPageName
+        let firstRoute = stackManager.currentPage()?.pageRoute ?? JKOMAFirstPageName
         _jkTabBar?.setSelectedPage(firstRoute)
 
         sourceProvider?.loadUserPage(firstRoute,to:renderer)

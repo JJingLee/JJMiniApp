@@ -5,3 +5,11 @@ div button {
   border-radius: 10px;
   border-width: 0px;
 }
+
+#accountBtn, #dataBtn {
+  margin-right: 20px;
+}
+
+#textfield {
+  margin-bottom: 20px;
+}

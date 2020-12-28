@@ -2,7 +2,7 @@
     "title" : "miniApp",
     "data" : [],
     "tabBar": {
-        "color": "#b8b8b",
+        "color": "#b8b8b8",
         "selectedColor": "#c9191d",
         "backgroundColor": "#cccccc",
         "list": [

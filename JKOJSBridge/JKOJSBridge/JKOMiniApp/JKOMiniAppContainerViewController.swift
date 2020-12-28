@@ -79,3 +79,12 @@ public class JKOMiniAppContainerViewController: UIViewController {
     }
 
 }
+
+extension JKOMiniAppContainerViewController: WKNavigationDelegate, WKUIDelegate {
+
+    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        logicHandler?.pageOnReady()
+        print("webViewDelegater didFinish")
+    }
+
+}
