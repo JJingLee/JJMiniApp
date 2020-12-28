@@ -22,7 +22,7 @@ enum JKNavigatorTextStype: String {
     }
 }
 
-class JKNavigatorHandler: JKNavigatorProtocol {
+class JKNavigatorHandler: NSObject,JKNavigatorProtocol {
 
     var navigationController: UINavigationController? {
         return viewController?.navigationController

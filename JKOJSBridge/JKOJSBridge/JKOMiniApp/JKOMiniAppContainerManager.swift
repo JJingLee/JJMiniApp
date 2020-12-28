@@ -20,8 +20,7 @@ public class JKOMiniAppContainerManager: NSObject {
         return miniAppPage
     }
     private func createMiniAppPage(with appID:String)->JKOMiniAppContainerViewController {
-        let miniapp = JKOMiniAppContainerViewController()
-        miniapp.appID = appID
+        let miniapp = JKOMiniAppContainerViewController(appID: appID)
         return miniapp
     }
 }

@@ -11,7 +11,7 @@ protocol JKTabBarDelegate: AnyObject {
     func tabBar(_ route: String)
 }
 
-protocol JKTabBarProtocol {
+protocol JKTabBarProtocol:NSObject {
     var customDelegate: JKTabBarDelegate? { get set }
 
     func setConfig(_ tabBarObject: [String : Any])

@@ -9,6 +9,7 @@ import Foundation
 
 public protocol JKOUserSourceLoaderRendererProtocol : NSObject {
     func render(with htmlURL : URL)
+    func renderByString(_ htmlString : String)
     func render(with cssPath: String)
 }
 
@@ -27,6 +28,9 @@ public class JKOUserSourceLoader : NSObject {
     public func getPageHTML(with route:String)->URL? {
         return Bundle.main.fetchHTMLDocumentURL(with: route)
     }
+    public func getPageHTMLString(with route:String)->String? {
+        return Bundle.main.fetchHTMLDocument(with: route)
+    }
     public func getPageJS(with route:String)->String? {
         return Bundle.main.fetchJSScript(with: route)
     }
@@ -35,11 +39,16 @@ public class JKOUserSourceLoader : NSObject {
             logicHandler.appLoadJS(userAppJS)
         }
     }
-    public func getPageCSS(with route: String) -> String? {
-        return Bundle.main.fetchCSS(with: route)
-    }
-    public func loadUserPage(_ pageRoute:String,to renderer:JKOUserSourceLoaderRendererProtocol) {
+    public func loadUserPage(_ pageRoute:String,to renderer:JKOUserSourceLoaderRendererProtocol, sourceWorker : JKMAPageWorker) {
         if let pageHTML = getPageHTML(with: pageRoute) {
+            if let pageHTMLStr = getPageHTMLString(with: pageRoute) {
+                sourceWorker.renewHTMLCopy(html: pageHTMLStr)
+                sourceWorker.configPageDataListeners()
+                let sourceData = sourceWorker.getPageData() ?? [:]
+                let newHTML = sourceWorker.configHTML(with: sourceData, from: pageHTMLStr)
+                renderer.renderByString(newHTML)
+                return
+            }
             renderer.render(with:pageHTML)
         }
         if let pageCSS = getPageCSS(with: pageRoute) {
@@ -50,5 +59,9 @@ public class JKOUserSourceLoader : NSObject {
         if let pageJS = getPageJS(with: pageRoute) {
             logicHandler.pageLoadJS(pageJS)
         }
+    }
+
+    public func getPageCSS(with route: String) -> String? {
+        return Bundle.main.fetchCSS(with: route)
     }
 }

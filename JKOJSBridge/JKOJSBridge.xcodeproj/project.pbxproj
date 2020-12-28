@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030EF82300691F684CF9F0FD /* Pods_JKOJSBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2AB437BBA9FA8E647F4888 /* Pods_JKOJSBridge.framework */; };
+		5519D1E625934AEF0034443A /* JKBStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519D1E525934AEF0034443A /* JKBStorage.swift */; };
+		5519D1EB259371A50034443A /* PageSimpleDataBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519D1EA259371A50034443A /* PageSimpleDataBinder.swift */; };
 		04670B8A2593154200C0FB69 /* index3.html in Resources */ = {isa = PBXBuildFile; fileRef = 04670B892593154200C0FB69 /* index3.html */; };
 		04670B8F2593156700C0FB69 /* index3.css in Resources */ = {isa = PBXBuildFile; fileRef = 04670B8E2593156700C0FB69 /* index3.css */; };
 		04670B942593174800C0FB69 /* index3.js in Resources */ = {isa = PBXBuildFile; fileRef = 04670B932593174800C0FB69 /* index3.js */; };
@@ -52,6 +55,7 @@
 		552DE9982585182300F66F9C /* JKOMiniAppRenderer+UserSourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552DE9972585182300F66F9C /* JKOMiniAppRenderer+UserSourceLoader.swift */; };
 		552DE99E258518ED00F66F9C /* JKOMiniAppLogicHandler+UserSourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552DE99D258518ED00F66F9C /* JKOMiniAppLogicHandler+UserSourceLoader.swift */; };
 		552DE9A62585194900F66F9C /* JKOMiniAppLogicHandler+CallFunctionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552DE9A52585194900F66F9C /* JKOMiniAppLogicHandler+CallFunctionHandler.swift */; };
+		5531DD04248D767B333DAE2D /* Pods_JKOJSBridgeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD2D7DE93AC7E1AC4C599FC /* Pods_JKOJSBridgeTests.framework */; };
 		55479199256DFA3D00A293DC /* JKOJSBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55479198256DFA3D00A293DC /* JKOJSBridge.swift */; };
 		554791A5256E070E00A293DC /* miniAppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554791A4256E070E00A293DC /* miniAppLauncher.swift */; };
 		554791B0256E58FB00A293DC /* JKOMiniAppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554791AF256E58FB00A293DC /* JKOMiniAppContainerViewController.swift */; };
@@ -79,7 +83,7 @@
 		55736ECC256D100900F8FBE5 /* JKBDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55736ECB256D100900F8FBE5 /* JKBDispatcher.swift */; };
 		55CCE3C9258618EC00E2F565 /* JKOMiniAppLogicHandler+LifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE3C8258618EC00E2F565 /* JKOMiniAppLogicHandler+LifeCycle.swift */; };
 		55CCE3CF25864D5700E2F565 /* JKBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE3CE25864D5700E2F565 /* JKBRouter.swift */; };
-		55CCE3D82588A16000E2F565 /* JKBStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE3D72588A16000E2F565 /* JKBStorage.swift */; };
+		55CCE3D82588A16000E2F565 /* Private_JKBStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE3D72588A16000E2F565 /* Private_JKBStorage.swift */; };
 		55CCE3E0258AEEF400E2F565 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE3DF258AEEF300E2F565 /* constants.swift */; };
 		55CCE3E6258B04E000E2F565 /* DataProxy.js in Resources */ = {isa = PBXBuildFile; fileRef = 55CCE3E5258B04E000E2F565 /* DataProxy.js */; };
 		55CCE3EB258B04F700E2F565 /* DataBindingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE3EA258B04F700E2F565 /* DataBindingHandler.swift */; };
@@ -103,6 +107,7 @@
 		55FBB0682564F29F00A9F12E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FBB0662564F29F00A9F12E /* LaunchScreen.storyboard */; };
 		55FBB0732564F29F00A9F12E /* JKOJSBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBB0722564F29F00A9F12E /* JKOJSBridgeTests.swift */; };
 		55FBB07E2564F29F00A9F12E /* JKOJSBridgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FBB07D2564F29F00A9F12E /* JKOJSBridgeUITests.swift */; };
+		F1947913D9AEA81F7BC41917 /* Pods_JKOJSBridge_JKOJSBridgeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2768615D5BBE3ADE89D892BB /* Pods_JKOJSBridge_JKOJSBridgeUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +128,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D9A180444DEA41B84369879 /* Pods-JKOJSBridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKOJSBridge.debug.xcconfig"; path = "Target Support Files/Pods-JKOJSBridge/Pods-JKOJSBridge.debug.xcconfig"; sourceTree = "<group>"; };
+		2768615D5BBE3ADE89D892BB /* Pods_JKOJSBridge_JKOJSBridgeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKOJSBridge_JKOJSBridgeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35FC3A292B69B6AEB0060692 /* Pods-JKOJSBridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKOJSBridge.release.xcconfig"; path = "Target Support Files/Pods-JKOJSBridge/Pods-JKOJSBridge.release.xcconfig"; sourceTree = "<group>"; };
+		4119B9BBD569D09801D5A8AE /* Pods-JKOJSBridge-JKOJSBridgeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKOJSBridge-JKOJSBridgeUITests.debug.xcconfig"; path = "Target Support Files/Pods-JKOJSBridge-JKOJSBridgeUITests/Pods-JKOJSBridge-JKOJSBridgeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5519D1E525934AEF0034443A /* JKBStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBStorage.swift; sourceTree = "<group>"; };
+		5519D1EA259371A50034443A /* PageSimpleDataBinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSimpleDataBinder.swift; sourceTree = "<group>"; };
 		04670B892593154200C0FB69 /* index3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index3.html; sourceTree = "<group>"; };
 		04670B8E2593156700C0FB69 /* index3.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = index3.css; sourceTree = "<group>"; };
 		04670B932593174800C0FB69 /* index3.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index3.js; sourceTree = "<group>"; };
@@ -215,7 +226,7 @@
 		55736ECB256D100900F8FBE5 /* JKBDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBDispatcher.swift; sourceTree = "<group>"; };
 		55CCE3C8258618EC00E2F565 /* JKOMiniAppLogicHandler+LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JKOMiniAppLogicHandler+LifeCycle.swift"; sourceTree = "<group>"; };
 		55CCE3CE25864D5700E2F565 /* JKBRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBRouter.swift; sourceTree = "<group>"; };
-		55CCE3D72588A16000E2F565 /* JKBStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBStorage.swift; sourceTree = "<group>"; };
+		55CCE3D72588A16000E2F565 /* Private_JKBStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Private_JKBStorage.swift; sourceTree = "<group>"; };
 		55CCE3DF258AEEF300E2F565 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		55CCE3E5258B04E000E2F565 /* DataProxy.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = DataProxy.js; sourceTree = "<group>"; };
 		55CCE3EA258B04F700E2F565 /* DataBindingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBindingHandler.swift; sourceTree = "<group>"; };
@@ -245,6 +256,11 @@
 		55FBB0792564F29F00A9F12E /* JKOJSBridgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKOJSBridgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55FBB07D2564F29F00A9F12E /* JKOJSBridgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKOJSBridgeUITests.swift; sourceTree = "<group>"; };
 		55FBB07F2564F29F00A9F12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B727447FAC66FE6E938EF59 /* Pods-JKOJSBridgeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKOJSBridgeTests.release.xcconfig"; path = "Target Support Files/Pods-JKOJSBridgeTests/Pods-JKOJSBridgeTests.release.xcconfig"; sourceTree = "<group>"; };
+		7B4C0B54470F3F834B5CE19A /* Pods-JKOJSBridge-JKOJSBridgeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKOJSBridge-JKOJSBridgeUITests.release.xcconfig"; path = "Target Support Files/Pods-JKOJSBridge-JKOJSBridgeUITests/Pods-JKOJSBridge-JKOJSBridgeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7DD2D7DE93AC7E1AC4C599FC /* Pods_JKOJSBridgeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKOJSBridgeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		811DDD25BC3C4BF3DD0A1F22 /* Pods-JKOJSBridgeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKOJSBridgeTests.debug.xcconfig"; path = "Target Support Files/Pods-JKOJSBridgeTests/Pods-JKOJSBridgeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE2AB437BBA9FA8E647F4888 /* Pods_JKOJSBridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKOJSBridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +268,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030EF82300691F684CF9F0FD /* Pods_JKOJSBridge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +276,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5531DD04248D767B333DAE2D /* Pods_JKOJSBridgeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +284,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1947913D9AEA81F7BC41917 /* Pods_JKOJSBridge_JKOJSBridgeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,7 +813,8 @@
 		55CCE3D62588A09B00E2F565 /* JKBStorage */ = {
 			isa = PBXGroup;
 			children = (
-				55CCE3D72588A16000E2F565 /* JKBStorage.swift */,
+				55CCE3D72588A16000E2F565 /* Private_JKBStorage.swift */,
+				5519D1E525934AEF0034443A /* JKBStorage.swift */,
 			);
 			path = JKBStorage;
 			sourceTree = "<group>";
@@ -806,6 +826,7 @@
 				55CCE3EA258B04F700E2F565 /* DataBindingHandler.swift */,
 				55CF3893258DED4400B18DC6 /* DataBinderHandlerManager.swift */,
 				55CF38A6258E5E3D00B18DC6 /* JKOJSWorker+GlobalData.swift */,
+				5519D1EA259371A50034443A /* PageSimpleDataBinder.swift */,
 			);
 			path = Dao;
 			sourceTree = "<group>";
@@ -926,6 +947,8 @@
 				55FBB0712564F29F00A9F12E /* JKOJSBridgeTests */,
 				55FBB07C2564F29F00A9F12E /* JKOJSBridgeUITests */,
 				55FBB0592564F29B00A9F12E /* Products */,
+				9B8D4D8ACF4DFB02BCDCB46A /* Pods */,
+				EE00FFF883EB918F09CB5F81 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -984,6 +1007,30 @@
 			path = miniAppCore;
 			sourceTree = "<group>";
 		};
+		9B8D4D8ACF4DFB02BCDCB46A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D9A180444DEA41B84369879 /* Pods-JKOJSBridge.debug.xcconfig */,
+				35FC3A292B69B6AEB0060692 /* Pods-JKOJSBridge.release.xcconfig */,
+				4119B9BBD569D09801D5A8AE /* Pods-JKOJSBridge-JKOJSBridgeUITests.debug.xcconfig */,
+				7B4C0B54470F3F834B5CE19A /* Pods-JKOJSBridge-JKOJSBridgeUITests.release.xcconfig */,
+				811DDD25BC3C4BF3DD0A1F22 /* Pods-JKOJSBridgeTests.debug.xcconfig */,
+				5B727447FAC66FE6E938EF59 /* Pods-JKOJSBridgeTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EE00FFF883EB918F09CB5F81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE2AB437BBA9FA8E647F4888 /* Pods_JKOJSBridge.framework */,
+				2768615D5BBE3ADE89D892BB /* Pods_JKOJSBridge_JKOJSBridgeUITests.framework */,
+				7DD2D7DE93AC7E1AC4C599FC /* Pods_JKOJSBridgeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -991,9 +1038,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55FBB0822564F29F00A9F12E /* Build configuration list for PBXNativeTarget "JKOJSBridge" */;
 			buildPhases = (
+				C95EFA3303727919A6096CB6 /* [CP] Check Pods Manifest.lock */,
 				55FBB0542564F29B00A9F12E /* Sources */,
 				55FBB0552564F29B00A9F12E /* Frameworks */,
 				55FBB0562564F29B00A9F12E /* Resources */,
+				0CBE15662457B7730F2B6F1B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1008,6 +1057,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55FBB0852564F29F00A9F12E /* Build configuration list for PBXNativeTarget "JKOJSBridgeTests" */;
 			buildPhases = (
+				93743DEB11708B995D213CF5 /* [CP] Check Pods Manifest.lock */,
 				55FBB06A2564F29F00A9F12E /* Sources */,
 				55FBB06B2564F29F00A9F12E /* Frameworks */,
 				55FBB06C2564F29F00A9F12E /* Resources */,
@@ -1026,9 +1076,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55FBB0882564F29F00A9F12E /* Build configuration list for PBXNativeTarget "JKOJSBridgeUITests" */;
 			buildPhases = (
+				2FC476F21D04EB86CC5E2319 /* [CP] Check Pods Manifest.lock */,
 				55FBB0752564F29F00A9F12E /* Sources */,
 				55FBB0762564F29F00A9F12E /* Frameworks */,
 				55FBB0772564F29F00A9F12E /* Resources */,
+				63403B78487F7792B0F4924E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1152,6 +1204,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CBE15662457B7730F2B6F1B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JKOJSBridge/Pods-JKOJSBridge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JKOJSBridge/Pods-JKOJSBridge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JKOJSBridge/Pods-JKOJSBridge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FC476F21D04EB86CC5E2319 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JKOJSBridge-JKOJSBridgeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63403B78487F7792B0F4924E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JKOJSBridge-JKOJSBridgeUITests/Pods-JKOJSBridge-JKOJSBridgeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JKOJSBridge-JKOJSBridgeUITests/Pods-JKOJSBridge-JKOJSBridgeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JKOJSBridge-JKOJSBridgeUITests/Pods-JKOJSBridge-JKOJSBridgeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93743DEB11708B995D213CF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JKOJSBridgeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C95EFA3303727919A6096CB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JKOJSBridge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		55FBB0542564F29B00A9F12E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1170,10 +1325,11 @@
 				5568B55825838B14002A941C /* JKOUserSourceLoader.swift in Sources */,
 				047F853825909653004F5073 /* JKNavigatorProtocol.swift in Sources */,
 				554791A5256E070E00A293DC /* miniAppLauncher.swift in Sources */,
-				55CCE3D82588A16000E2F565 /* JKBStorage.swift in Sources */,
+				55CCE3D82588A16000E2F565 /* Private_JKBStorage.swift in Sources */,
 				55CCE3EB258B04F700E2F565 /* DataBindingHandler.swift in Sources */,
 				55E572D2257665C4002B13BA /* JKBMonitor.swift in Sources */,
 				55CCE3E0258AEEF400E2F565 /* constants.swift in Sources */,
+				5519D1EB259371A50034443A /* PageSimpleDataBinder.swift in Sources */,
 				55CF38A7258E5E3D00B18DC6 /* JKOJSWorker+GlobalData.swift in Sources */,
 				554791B0256E58FB00A293DC /* JKOMiniAppContainerViewController.swift in Sources */,
 				55736EBC256D023C00F8FBE5 /* JSB_JKOAccount.swift in Sources */,
@@ -1185,6 +1341,7 @@
 				5568B5342580BC57002A941C /* FileFetcher.swift in Sources */,
 				55736E62256B6EE300F8FBE5 /* JKOJSFunctionObserver.swift in Sources */,
 				55CF389F258E4E6D00B18DC6 /* JKOMiniApp.swift in Sources */,
+				5519D1E625934AEF0034443A /* JKBStorage.swift in Sources */,
 				5568B5532583878B002A941C /* JKOMiniAppContainerManager.swift in Sources */,
 				55736EAA256CF50500F8FBE5 /* JKOJSWorker+NativeFrameworks.swift in Sources */,
 				55EA06BA258C453300260607 /* JKBCodeModuleHandler.swift in Sources */,
@@ -1377,6 +1534,7 @@
 		};
 		55FBB0832564F29F00A9F12E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D9A180444DEA41B84369879 /* Pods-JKOJSBridge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1396,6 +1554,7 @@
 		};
 		55FBB0842564F29F00A9F12E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35FC3A292B69B6AEB0060692 /* Pods-JKOJSBridge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1415,6 +1574,7 @@
 		};
 		55FBB0862564F29F00A9F12E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 811DDD25BC3C4BF3DD0A1F22 /* Pods-JKOJSBridgeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1437,6 +1597,7 @@
 		};
 		55FBB0872564F29F00A9F12E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B727447FAC66FE6E938EF59 /* Pods-JKOJSBridgeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1459,6 +1620,7 @@
 		};
 		55FBB0892564F29F00A9F12E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4119B9BBD569D09801D5A8AE /* Pods-JKOJSBridge-JKOJSBridgeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1479,6 +1641,7 @@
 		};
 		55FBB08A2564F29F00A9F12E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B4C0B54470F3F834B5CE19A /* Pods-JKOJSBridge-JKOJSBridgeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

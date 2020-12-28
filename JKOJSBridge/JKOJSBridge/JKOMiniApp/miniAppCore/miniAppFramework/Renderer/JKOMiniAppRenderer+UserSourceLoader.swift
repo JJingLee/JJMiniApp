@@ -13,6 +13,12 @@ extension JKOMiniAppRenderer : JKOUserSourceLoaderRendererProtocol {
         let request = URLRequest(url: htmlURL)
         webView.load(request)
     }
+    public func renderByString(_ htmlString : String) {
+        webView.loadHTMLString(htmlString, baseURL: nil)
+//        webView.loadFileURL(htmlURL, allowingReadAccessTo: htmlURL)
+//        let request = URLRequest(url: htmlURL)
+//        webView.load(request)
+    }
 
     public func render(with cssPath: String) {
         let cssStyle = """
@@ -28,7 +34,7 @@ extension JKOMiniAppRenderer : JKOUserSourceLoaderRendererProtocol {
     }
 
     private func encodeStringTo64(fromString: String) -> String? {
-            let plainData = fromString.data(using: .utf8)
-            return plainData?.base64EncodedString(options: [])
-        }
+        let plainData = fromString.data(using: .utf8)
+        return plainData?.base64EncodedString(options: [])
+    }
 }

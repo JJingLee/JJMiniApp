@@ -1,0 +1,6 @@
+framework module Pods_JKOJSBridge_JKOJSBridgeUITests {
+  umbrella header "Pods-JKOJSBridge-JKOJSBridgeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_JKOJSBridge {
+  umbrella header "Pods-JKOJSBridge-umbrella.h"
+
+  export *
+  module * { export * }
+}

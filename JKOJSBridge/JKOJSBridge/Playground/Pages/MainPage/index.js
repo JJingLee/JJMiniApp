@@ -8,6 +8,9 @@ function readMoreClicked(id) {
   return 0;
 }
 
+function onChangeTitle(title) {
+    Page.pageData.readmeName = "that's hurt~"
+}
 function read2MoreClicked(id) {
   if (id == "readme2") {
     var name = JKOAccount.getName();
@@ -28,4 +31,8 @@ Page.onLoad(()=>{
     JKBStorage.setStorage(miniapp.appId,"myData","good2")
 }).onHide(()=>{
     JKMonitor.log("index1 onHide");
+}).onPageData(()=>{
+    return {
+        "readmeName" : "click me!"
+    }
 });

@@ -19,7 +19,7 @@ public class DataBinderHandlerManager : NSObject {
         }
         return dataBinder
     }
-    //Not requied actually, swift array is imp by struct, only for remind
+    /**Not requied actually, swift array is imp by struct, only for remind*/
     public func releaseDataBinder(appID : String) {
         defer { objc_sync_exit(self) }
         objc_sync_enter(self)

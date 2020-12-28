@@ -18,10 +18,10 @@ class JKMiniTabBarHandler: UIView, JKTabBarProtocol {
     weak var customDelegate: JKTabBarDelegate?
 
     // MARK: - Initializer
-    init?(data: [String : Any]?) {
+    init(data: [String : Any]) {
         super.init(frame: .zero)
         initLayout()
-        guard let tabBarObject = data?["tabBar"] as? [String: Any] else { return nil }
+        let tabBarObject = data//["tabBar"]
         setConfig(tabBarObject)
         tabBar.delegate = self
     }

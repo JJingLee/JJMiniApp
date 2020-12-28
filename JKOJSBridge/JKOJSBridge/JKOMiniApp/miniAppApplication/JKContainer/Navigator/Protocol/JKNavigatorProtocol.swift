@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol JKNavigatorProtocol {
+protocol JKNavigatorProtocol:NSObject {
 
     func setConfig(_ data: [String : Any])
 

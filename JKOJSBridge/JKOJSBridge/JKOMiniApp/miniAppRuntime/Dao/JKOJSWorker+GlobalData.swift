@@ -29,9 +29,9 @@ extension JKOJSWorker : miniAppDataBindingObserver {
         _ = self.callJSFunction("initialAppLifeCycle", with: [appID])
     }
     public func updateGlobalData(_ data:Any?) {
-        updateData(data)
+        updateData(JKO_GlobalDataKey_20201217(appID),data)
     }
-    public func updateData(_ data: Any?) {
+    public func updateData(_ key:String, _ data: Any?) {
         guard let _data = data else {return}
         _ = self.callJSFunction("updateGlobalData", with: [_data])
     }

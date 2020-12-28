@@ -37,4 +37,10 @@ public class JKOMiniAppLogicHandler : NSObject {
     public func rebootGlobalData() {
         appWorker.rebootGlobalData()
     }
+    public func setPageData(_ pageRouter : String, pageData : [String:Any]) {
+        self.pageWorker.setPageData(pageData)
+    }
+    public func getPageData(_ pageRoute : String)->[String:Any]? {
+        return self.pageWorker.getPageData()
+    }
 }
