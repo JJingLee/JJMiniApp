@@ -1,0 +1,16 @@
+
+body {
+  margin-left: 10px;
+}
+
+#textfield {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px;
+  background-color: #c9191d;
+  color: white;
+  border-radius: 10px;
+  border-width: 0px;
+}

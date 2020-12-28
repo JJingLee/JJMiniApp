@@ -2,7 +2,7 @@
     "title" : "miniApp",
     "data" : [],
     "tabBar": {
-        "color": "#b8b8b",
+        "color": "#b8b8b8",
         "selectedColor": "#c9191d",
         "backgroundColor": "#cccccc",
         "list": [
@@ -17,7 +17,13 @@
             "text": "測試",
             "iconPath": "iconTabbarMe_normal",
             "selectedIconPath": "iconTabbarMe_selected"
-          }
+          },
+          {
+            "pagePath": "DemoLaunchPage",
+            "text": "Demo",
+            "iconPath": "iconTabbarMe_normal",
+            "selectedIconPath": "iconTabbarMe_selected"
+          },
         ]
     },
     "window": {

@@ -46,13 +46,13 @@ public class JKOMiniAppContainerViewController: UIViewController {
         logicHandler = JKOMiniAppLogicHandler(appID:appID)
         pageRouter = JKOMiniAppPageRouter(renderer, logicHandler, sourceProvider)
         super.init(nibName: nil, bundle: nil)
-        initial()
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     public override func viewDidLoad() {
         super.viewDidLoad()
+        initial()
     }
     private func initial() {
         if let data = sourceProvider.globalAppJSON() {
@@ -82,6 +82,15 @@ public class JKOMiniAppContainerViewController: UIViewController {
         super.viewWillDisappear(animated)
         logicHandler.pageOnHide()
         logicHandler.appOnHide()
+    }
+
+}
+
+extension JKOMiniAppContainerViewController: WKNavigationDelegate, WKUIDelegate {
+
+    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        logicHandler.pageOnReady()
+        print("webViewDelegater didFinish")
     }
 
 }

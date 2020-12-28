@@ -47,9 +47,9 @@ public class JKOUserSourceLoader : NSObject {
                 let sourceData = sourceWorker.getPageData() ?? [:]
                 let newHTML = sourceWorker.configHTML(with: sourceData, from: pageHTMLStr)
                 renderer.renderByString(newHTML)
-                return
+            } else {
+                renderer.render(with:pageHTML)
             }
-            renderer.render(with:pageHTML)
         }
         if let pageCSS = getPageCSS(with: pageRoute) {
             renderer.render(with: pageCSS)

@@ -1,15 +1,13 @@
-div button {
+
+body {
+  margin-left: 10px;
+}
+
+button {
   padding: 10px;
   background-color: #c9191d;
   color: white;
   border-radius: 10px;
   border-width: 0px;
-}
-
-#accountBtn, #dataBtn {
-  margin-right: 20px;
-}
-
-#textfield {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }

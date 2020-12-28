@@ -18,6 +18,11 @@ public class JKOMiniAppRenderer : NSObject  {
         toggle(webView)
     }
 
+    public func setRenderDelegate(navigationDelegate: WKNavigationDelegate?) {
+        guard let _navigationDelegate = navigationDelegate else { return }
+        webView.navigationDelegate = _navigationDelegate
+    }
+
     weak var callFunctionListener : JKOMiniAppRendererCallFuncListener?
     public func startListensCallFunction() {
         registCallFuncInterfaceInWebView()

@@ -59,6 +59,7 @@ public class miniAppLauncher : NSObject {
                 stackView.addArrangedSubview(tabBar)
             }
         }
+        renderer?.setRenderDelegate(navigationDelegate: container)
     }
 
     private func dataDispatchBinding() {
