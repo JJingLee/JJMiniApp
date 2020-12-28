@@ -52,8 +52,6 @@ public class JKOMiniAppPageRouter: NSObject {
         _jkTabBar?.setSelectedPage(firstRoute)
         sourceProvider?.loadUserPageJS(firstRoute,to:logicHandler)
         sourceProvider?.loadUserPage(firstRoute,to:renderer,sourceWorker: logicHandler.pageWorker)
-        //keep stack
-        stackManager.pushPage(JKOMiniAppStackPageStruct(pageRoute: firstRoute))
 
         logicHandler.pageOnLoad()
     }
