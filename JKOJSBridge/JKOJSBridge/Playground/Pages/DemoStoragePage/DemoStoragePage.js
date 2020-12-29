@@ -4,19 +4,24 @@ Page.onLoad(()=>{
 }).onShow(()=>{
 
 }).onHide(()=>{
-    
+
 }).onPageData(()=>{
     return {
-        "pet": miniapp._globalData.pet
+        "gData": "GlobalData",
+        "sData": "StorageData"
     }
 });
 
 function setMiniAppGlobalData() {
-    miniapp._globalData.pet = "bird"
+    miniapp._globalData.gData = "bird"
 }
 
 function getMiniAppGlobalData() {
-    Page.pageData.pet = miniapp._globalData.pet
+    if (!miniapp._globalData.gData) {
+        Page.pageData.gData = "undefined"
+    } else {
+        Page.pageData.gData = miniapp._globalData.gData
+    }
 }
 
 function setMiniAppStorageData() {
@@ -24,5 +29,9 @@ function setMiniAppStorageData() {
 }
 
 function getMiniAppStorageData() {
-    JKBDom.updateComponent("storageData",JKBStorage.getStorage(miniapp.appId,"fruit"));
+    if (!JKBStorage.getStorage(miniapp.appId,"fruit")) {
+        Page.pageData.sData = "undefined"
+    } else {
+        Page.pageData.sData = JKBStorage.getStorage(miniapp.appId,"fruit")
+    }
 }

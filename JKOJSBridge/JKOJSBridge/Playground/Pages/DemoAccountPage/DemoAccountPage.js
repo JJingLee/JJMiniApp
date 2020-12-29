@@ -1,18 +1,25 @@
 
-function getName(id) {
-    if (id == "nameId") {
-        var name = JKOAccount.getName();
-        JKBDom.updateComponent(id,name);
-        return 1;
+Page.onLoad(()=>{
+
+}).onShow(()=>{
+
+}).onHide(()=>{
+
+}).onPageData(()=>{
+    return {
+        "nameId": "NameId",
+        "accountID": "AccountID"
     }
-    return 0;
+});
+
+function getName() {
+    var name = JKOAccount.getName();
+    Page.pageData.nameId = name
+    return 1;
 }
 
-function getAccountId(id) {
-    if (id == "accountID") {
-        var accountID = JKOAccount.getAccountID();
-        JKBDom.updateComponent(id,accountID);
-        return 1;
-    }
-    return 0;
+function getAccountId() {
+    var accountID = JKOAccount.getAccountID();
+    Page.pageData.accountID = accountID
+    return 1;
 }
