@@ -100,5 +100,117 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8AD2D6F1-97ED-4FB7-8E15-F50C05C47F54"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JKOJSBridge/JKOMiniApp/miniAppRuntime/LifeCycles/PageLayer/LIfeCycle/PagingLifeCycle/PageLifeCycle.js"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "constructor"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "03603D69-3F45-4C63-9756-628570D3D1A0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JKOJSBridge/JKOMiniApp/miniAppApplication/JKBStorage/Private_JKBStorage.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "updatePageData(_:_:_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E00C0155-793F-410C-B30A-8DC5D0334C1B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JKOJSBridge/JKOMiniApp/miniAppRuntime/Dao/PageSimpleDataBinder.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "update(key:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08794868-83AA-427F-A0B4-3EB704C1EBF3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JKOJSBridge/JKOMiniApp/Utils/Launcher/miniAppLauncher.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "configPageBinder()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5415932F-CFD2-49B1-AA58-357CEAF21343"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JKOJSBridge/JKOMiniApp/Utils/Launcher/miniAppLauncher.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "configPageBinder()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5415932F-CFD2-49B1-AA58-357CEAF21343 - ae7c8cbaf49dceba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JKOJSBridge.miniAppLauncher.(configPageBinder in _99B3985A5CEA13B87C7C954388794EDC)() -&gt; ()"
+                  moduleName = "JKOJSBridge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chiehchun.lee/Desktop/projects/miniapp/JJMiniApp/JKOJSBridge/JKOJSBridge/JKOMiniApp/Utils/Launcher/miniAppLauncher.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "41">
+               </Location>
+               <Location
+                  uuid = "5415932F-CFD2-49B1-AA58-357CEAF21343 - a6d406bbcdc7e194"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String, Swift.String) -&gt; () in JKOJSBridge.miniAppLauncher.(configPageBinder in _99B3985A5CEA13B87C7C954388794EDC)() -&gt; ()"
+                  moduleName = "JKOJSBridge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chiehchun.lee/Desktop/projects/miniapp/JJMiniApp/JKOJSBridge/JKOJSBridge/JKOMiniApp/Utils/Launcher/miniAppLauncher.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "167">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

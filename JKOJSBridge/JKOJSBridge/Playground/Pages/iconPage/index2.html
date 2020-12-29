@@ -11,50 +11,11 @@
 <body>
 
   <div class="w3-container">
-    <h1>Mini app2</h1>
-
-    <h2>JKAccount -></h2>
-    <button id="accountBtn" onclick="return callFunc(this,'getName','nameId')" type="button">getName</button>
-    <h4 id="nameId">Name</h4>
-
-    <button id="accountBtn" onclick="return callFunc(this,'getAccountId','accountID')" type="button">AccountID</button>
-    <h4 id="accountID">AccountID</h4>
-
-    <h2>JKStorage -></h2>
-    <input id="textfield" type="text" id="fname" name="fname">
-    <br>
-    <button id="dataBtn" onclick="return callFunc(this,'setGlobalData')" type="button">setGlobalData</button>
-    <button id="dataBtn" onclick="return callFunc(this,'getGlobalData')" type="button">getGlobalData</button>
-    <h4 id="globalData">GlobalData</h4>
-
-    <input id="textfield" type="text" id="fname" name="fname">
-    <br>
-    <button id="dataBtn" onclick="return callFunc(this,'setStorageData')" type="button">setStorageData</button>
-    <button id="dataBtn" onclick="return callFunc(this,'getStorageData')" type="button">getStorageData</button>
-    <h4 id="storageData">StorageData</h4>
-
-    <h2>Tab Bar</h2>
-    <button id="switchTab" onclick="return callFunc(this,'switchTab',this.id)" type="button">switchToTabOne</button>
+    <h1>Index2</h1>
+    <label id="showingLabel">{{_name}}</label>
     <br><br>
-    <button id="showTabBarRedDot" onclick="return callFunc(this,'showTabBarRedDot',this.id)" type="button">showTabBarRedDot</button>
-    <button id="hideTabBarRedDot" onclick="return callFunc(this,'hideTabBarRedDot',this.id)" type="button">hideTabBarRedDot</button>
+    <button id="showTabBarRedDot" onclick="return callFunc(this,'changeGlobalName')" type="button">update Global data</button>
     <br><br>
-    <button id="setTabBarItem" onclick="return callFunc(this,'setTabBarItem',this.id)" type="button">setTabBarItem</button>
-    <br><br>
-    <button id="setTabBarBadge" onclick="return callFunc(this,'setTabBarBadge',this.id)" type="button">setTabBarBadge</button>
-    <button id="removeTabBarBadge" onclick="return callFunc(this,'removeTabBarBadge',this.id)" type="button">removeTabBarBadge</button>
-    <br><br>
-    <button id="hideTabBar" onclick="return callFunc(this,'hideTabBar',this.id)" type="button">hideTabBar</button>
-    <button id="showTabBar" onclick="return callFunc(this,'showTabBar',this.id)" type="button">showTabBar</button>
-    <br><br>
-    <button id="setTabBarStyle" onclick="return callFunc(this,'setTabBarStyle',this.id)" type="button">setTabBarStyle</button>
-    <br><br>
-    <h2>Navigator</h2>
-    <button id="setNavigationBarTitle" onclick="return callFunc(this,'setNavigationBarTitle',this.id)" type="button">setNavigationBarTitle</button>
-    <br><br>
-    <button id="setNavigationBarColor" onclick="return callFunc(this,'setNavigationBarColor',this.id)" type="button">setNavigationBarColor</button>
-    <br><br>
-    <button id="hideHomeButton" onclick="return callFunc(this,'hideHomeButton',this.id)" type="button">hideHomeButton</button>
   </div>
 
 </body>

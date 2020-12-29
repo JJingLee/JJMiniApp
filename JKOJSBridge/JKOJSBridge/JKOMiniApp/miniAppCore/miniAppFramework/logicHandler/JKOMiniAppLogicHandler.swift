@@ -22,7 +22,9 @@ public class JKOMiniAppLogicHandler : NSObject {
     }
     public func refreshPageWorker(with appID : String, pageID:String) {
         self.appID = appID
+        let _domSetter : (String, String)->Void = pageWorker.pageSimpleDataBinder.domSetter
         pageWorker = JKMAPageWorker(appID: appID,pageID: pageID)
+        pageWorker.pageSimpleDataBinder.domSetter = _domSetter
         syncGlobalData(from: appWorker, to: pageWorker)
     }
     public func syncGlobalData(from appworker : JKOMAAppWorker, to pageworker : JKMAPageWorker) {
