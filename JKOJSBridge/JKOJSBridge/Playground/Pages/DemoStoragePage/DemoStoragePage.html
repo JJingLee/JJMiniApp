@@ -10,18 +10,14 @@
 <body>
   <h1>JKStorage</h1>
 
-  <input id="textfield" type="text" id="fname" name="fname">
-    <br>
-    <button id="dataBtn" onclick="return callFunc(this,'setGlobalData')" type="button">setGlobalData</button>
-    <button id="dataBtn" onclick="return callFunc(this,'getGlobalData')" type="button">getGlobalData</button>
-    <h4 id="globalData">GlobalData</h4>
+    <button id="dataBtn" onclick="return callFunc(this,'setMiniAppGlobalData')" type="button">setGlobalData</button>
+    <button id="dataBtn" onclick="return callFunc(this,'getMiniAppGlobalData')" type="button">getGlobalData</button>
+    <h4 id="globalData">{{pet}}</h4>
 
     <br><br>
 
-    <input id="textfield" type="text" id="fname" name="fname">
-    <br>
-    <button id="dataBtn" onclick="return callFunc(this,'setStorageData')" type="button">setStorageData</button>
-    <button id="dataBtn" onclick="return callFunc(this,'getStorageData')" type="button">getStorageData</button>
+    <button id="dataBtn" onclick="return callFunc(this,'setMiniAppStorageData')" type="button">setStorageData</button>
+    <button id="dataBtn" onclick="return callFunc(this,'getMiniAppStorageData')" type="button">getStorageData</button>
     <h4 id="storageData">StorageData</h4>
 
 </body>

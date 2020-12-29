@@ -4,23 +4,23 @@ function switchTab() {
 }
 
 function showTabBarRedDot() {
-    JKBInterface.showTabBarRedDot(2);
+    JKBInterface.showTabBarRedDot(1);
 }
 
 function hideTabBarRedDot() {
-    JKBInterface.hideTabBarRedDot(2);
+    JKBInterface.hideTabBarRedDot(1);
 }
 
 function setTabBarItem() {
-    JKBInterface.setTabBarItem(2, "TEST", "iconTabbarFriend_normal", "iconTabbarFriend_selected");
+    JKBInterface.setTabBarItem(1, "TEST", "iconTabbarFriend_normal", "iconTabbarFriend_selected");
 }
 
 function setTabBarBadge() {
-    JKBInterface.setTabBarBadge(2, "12");
+    JKBInterface.setTabBarBadge(1, "12");
 }
 
 function removeTabBarBadge() {
-    JKBInterface.removeTabBarBadge(2);
+    JKBInterface.removeTabBarBadge(1);
 }
 
 function hideTabBar() {

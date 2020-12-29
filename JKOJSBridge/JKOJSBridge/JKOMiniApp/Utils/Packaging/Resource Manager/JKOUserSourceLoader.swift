@@ -51,6 +51,7 @@ public class JKOUserSourceLoader : NSObject {
                 renderer.render(with:pageHTML)
             }
         }
+        // TODO: need clean old css
         if let pageCSS = getPageCSS(with: pageRoute) {
             renderer.render(with: pageCSS)
         }

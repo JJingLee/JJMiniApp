@@ -13,12 +13,6 @@
             "selectedIconPath": "iconTabbarHome_selected"
           },
           {
-            "pagePath": "index2",
-            "text": "測試",
-            "iconPath": "iconTabbarMe_normal",
-            "selectedIconPath": "iconTabbarMe_selected"
-          },
-          {
             "pagePath": "DemoLaunchPage",
             "text": "Demo",
             "iconPath": "iconTabbarMe_normal",

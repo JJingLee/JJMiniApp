@@ -9,6 +9,7 @@ miniapp.onLaunch(()=>{
     JKMonitor.log("app.js : onHide");
 }).globalData(()=>{
     return {
-        "name":"Jack"
+        "name":"Jack",
+        "pet": "Dog"
     };
 });

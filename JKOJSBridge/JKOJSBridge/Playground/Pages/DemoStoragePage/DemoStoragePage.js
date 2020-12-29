@@ -1,16 +1,28 @@
 
-function setGlobalData() {
+Page.onLoad(()=>{
+
+}).onShow(()=>{
+
+}).onHide(()=>{
+    
+}).onPageData(()=>{
+    return {
+        "pet": miniapp._globalData.pet
+    }
+});
+
+function setMiniAppGlobalData() {
     miniapp._globalData.pet = "bird"
 }
 
-function getGlobalData() {
-    JKBDom.updateComponent("globalData",miniapp._globalData.pet);
+function getMiniAppGlobalData() {
+    Page.pageData.pet = miniapp._globalData.pet
 }
 
-function setStorageData() {
-    JKBStorage.setStorage(miniapp.appId,"fruit","pineapple")
+function setMiniAppStorageData() {
+    JKBStorage.setStorage(miniapp.appId,"fruit","banana")
 }
 
-function getStorageData() {
+function getMiniAppStorageData() {
     JKBDom.updateComponent("storageData",JKBStorage.getStorage(miniapp.appId,"fruit"));
 }
