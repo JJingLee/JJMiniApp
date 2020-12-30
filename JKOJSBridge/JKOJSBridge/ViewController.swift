@@ -9,22 +9,15 @@ import UIKit
 import WebKit
 
 class ViewController: UIViewController {
-    lazy var button : UIButton = {
-        let btn = UIButton()
-        btn.setTitle("miniapp", for: .normal)
-        btn.addTarget(self, action: #selector(self.gotoMiniApp), for: .touchUpInside)
-        return btn
-    }()
+    @IBOutlet weak var entryButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         configMiniAppButton()
         configPackagingButton()
     }
     private func configMiniAppButton() {
-        button.frame = CGRect(x: 0, y: 0, width: 100, height: 50)
-        button.setTitleColor(.red, for: .normal)
-        button.center = self.view.center
-        self.view.addSubview(button)
+        entryButton.addTarget(self, action: #selector(self.gotoMiniApp), for: .touchUpInside)
     }
     @objc func gotoMiniApp() {
         let miniappContainer = JKOMiniApp.miniAppPage(with:"0x001")

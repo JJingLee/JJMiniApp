@@ -63,8 +63,12 @@ public class JKOMiniAppPageRouter: NSObject {
         logicHandler.pageOnHide()
 
         //keep stack
-        let pageData = logicHandler.getPageData(route) ?? [:]
-        stackManager.pushPage(JKOMiniAppStackPageStruct(pageRoute: route, pageData: pageData))
+        if var currentPage = stackManager.popLastPage() {
+            let pageData = logicHandler.getPageData(route) ?? [:]
+            currentPage.pageData = pageData
+            stackManager.pushPage(currentPage)
+        }
+        stackManager.pushPage(JKOMiniAppStackPageStruct(pageRoute: route, pageData: [:]))
 
         //renew logicHandler worker
         logicHandler.refreshPageWorker(with:logicHandler.appID,pageID: route)
@@ -101,7 +105,7 @@ public class JKOMiniAppPageRouter: NSObject {
 
         //renderer open new page
         sourceProvider?.loadUserPageJS(lastRouteName,to:logicHandler)
-        logicHandler.setPageData(pageInfo.pageRoute, pageData: pageInfo.pageData)
+        logicHandler.setPageData(currentPage.pageRoute, pageData: currentPage.pageData)
         sourceProvider?.loadUserPage(lastRouteName,to:renderer,sourceWorker: logicHandler.pageWorker)
 
         //render notify newPage onShow

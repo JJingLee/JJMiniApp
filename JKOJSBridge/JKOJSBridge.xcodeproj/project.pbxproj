@@ -3,13 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		030EF82300691F684CF9F0FD /* Pods_JKOJSBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2AB437BBA9FA8E647F4888 /* Pods_JKOJSBridge.framework */; };
-		5519D1E625934AEF0034443A /* JKBStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519D1E525934AEF0034443A /* JKBStorage.swift */; };
-		5519D1EB259371A50034443A /* PageSimpleDataBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519D1EA259371A50034443A /* PageSimpleDataBinder.swift */; };
 		04670B8A2593154200C0FB69 /* index3.html in Resources */ = {isa = PBXBuildFile; fileRef = 04670B892593154200C0FB69 /* index3.html */; };
 		04670B8F2593156700C0FB69 /* index3.css in Resources */ = {isa = PBXBuildFile; fileRef = 04670B8E2593156700C0FB69 /* index3.css */; };
 		04670B942593174800C0FB69 /* index3.js in Resources */ = {isa = PBXBuildFile; fileRef = 04670B932593174800C0FB69 /* index3.js */; };
@@ -46,6 +44,12 @@
 		04EDBEA52592095A00055783 /* iconTabbarMe_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EDBEA32592095A00055783 /* iconTabbarMe_selected.png */; };
 		04EDBEAB25920B5B00055783 /* iconTabbarFriend_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EDBEA925920B5B00055783 /* iconTabbarFriend_normal.png */; };
 		04EDBEAC25920B5B00055783 /* iconTabbarFriend_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EDBEAA25920B5B00055783 /* iconTabbarFriend_selected.png */; };
+		550710E8259B482200300A45 /* fakeHome.png in Resources */ = {isa = PBXBuildFile; fileRef = 550710E7259B482200300A45 /* fakeHome.png */; };
+		550710F1259B509900300A45 /* index21.html in Resources */ = {isa = PBXBuildFile; fileRef = 550710F0259B509900300A45 /* index21.html */; };
+		550710F6259B50EE00300A45 /* index21.css in Resources */ = {isa = PBXBuildFile; fileRef = 550710F5259B50EE00300A45 /* index21.css */; };
+		550710FB259B510F00300A45 /* index21.js in Resources */ = {isa = PBXBuildFile; fileRef = 550710FA259B510F00300A45 /* index21.js */; };
+		5519D1E625934AEF0034443A /* JKBStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519D1E525934AEF0034443A /* JKBStorage.swift */; };
+		5519D1EB259371A50034443A /* PageSimpleDataBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5519D1EA259371A50034443A /* PageSimpleDataBinder.swift */; };
 		55289D2B2579EE7C00E094E8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 55289D2A2579EE7C00E094E8 /* README.md */; };
 		552DE97B2584FEA300F66F9C /* JKOMiniAppRenderer+CallFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552DE97A2584FEA300F66F9C /* JKOMiniAppRenderer+CallFunction.swift */; };
 		552DE9802584FF0000F66F9C /* JKOMiniAppRenderer+UpdateDoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552DE97F2584FF0000F66F9C /* JKOMiniAppRenderer+UpdateDoms.swift */; };
@@ -128,12 +132,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D9A180444DEA41B84369879 /* Pods-JKOJSBridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKOJSBridge.debug.xcconfig"; path = "Target Support Files/Pods-JKOJSBridge/Pods-JKOJSBridge.debug.xcconfig"; sourceTree = "<group>"; };
-		2768615D5BBE3ADE89D892BB /* Pods_JKOJSBridge_JKOJSBridgeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKOJSBridge_JKOJSBridgeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		35FC3A292B69B6AEB0060692 /* Pods-JKOJSBridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKOJSBridge.release.xcconfig"; path = "Target Support Files/Pods-JKOJSBridge/Pods-JKOJSBridge.release.xcconfig"; sourceTree = "<group>"; };
-		4119B9BBD569D09801D5A8AE /* Pods-JKOJSBridge-JKOJSBridgeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKOJSBridge-JKOJSBridgeUITests.debug.xcconfig"; path = "Target Support Files/Pods-JKOJSBridge-JKOJSBridgeUITests/Pods-JKOJSBridge-JKOJSBridgeUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		5519D1E525934AEF0034443A /* JKBStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBStorage.swift; sourceTree = "<group>"; };
-		5519D1EA259371A50034443A /* PageSimpleDataBinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSimpleDataBinder.swift; sourceTree = "<group>"; };
 		04670B892593154200C0FB69 /* index3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index3.html; sourceTree = "<group>"; };
 		04670B8E2593156700C0FB69 /* index3.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = index3.css; sourceTree = "<group>"; };
 		04670B932593174800C0FB69 /* index3.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index3.js; sourceTree = "<group>"; };
@@ -170,6 +168,16 @@
 		04EDBEA32592095A00055783 /* iconTabbarMe_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconTabbarMe_selected.png; sourceTree = "<group>"; };
 		04EDBEA925920B5B00055783 /* iconTabbarFriend_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconTabbarFriend_normal.png; sourceTree = "<group>"; };
 		04EDBEAA25920B5B00055783 /* iconTabbarFriend_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconTabbarFriend_selected.png; sourceTree = "<group>"; };
+		0D9A180444DEA41B84369879 /* Pods-JKOJSBridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKOJSBridge.debug.xcconfig"; path = "Target Support Files/Pods-JKOJSBridge/Pods-JKOJSBridge.debug.xcconfig"; sourceTree = "<group>"; };
+		2768615D5BBE3ADE89D892BB /* Pods_JKOJSBridge_JKOJSBridgeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKOJSBridge_JKOJSBridgeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35FC3A292B69B6AEB0060692 /* Pods-JKOJSBridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKOJSBridge.release.xcconfig"; path = "Target Support Files/Pods-JKOJSBridge/Pods-JKOJSBridge.release.xcconfig"; sourceTree = "<group>"; };
+		4119B9BBD569D09801D5A8AE /* Pods-JKOJSBridge-JKOJSBridgeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKOJSBridge-JKOJSBridgeUITests.debug.xcconfig"; path = "Target Support Files/Pods-JKOJSBridge-JKOJSBridgeUITests/Pods-JKOJSBridge-JKOJSBridgeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		550710E7259B482200300A45 /* fakeHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fakeHome.png; sourceTree = "<group>"; };
+		550710F0259B509900300A45 /* index21.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index21.html; sourceTree = "<group>"; };
+		550710F5259B50EE00300A45 /* index21.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = index21.css; sourceTree = "<group>"; };
+		550710FA259B510F00300A45 /* index21.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index21.js; sourceTree = "<group>"; };
+		5519D1E525934AEF0034443A /* JKBStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBStorage.swift; sourceTree = "<group>"; };
+		5519D1EA259371A50034443A /* PageSimpleDataBinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSimpleDataBinder.swift; sourceTree = "<group>"; };
 		55289D2A2579EE7C00E094E8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		55289D362579EF0900E094E8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		55289D422579F46000E094E8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -433,6 +441,40 @@
 				04EDBEAA25920B5B00055783 /* iconTabbarFriend_selected.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		550710E2259B470400300A45 /* 1stTab(TODO_JJ) */ = {
+			isa = PBXGroup;
+			children = (
+				550710EF259B506D00300A45 /* thirdPage */,
+				552DE98C2585134B00F66F9C /* iconPage */,
+				55E572EA2578CDE3002B13BA /* MainPage */,
+			);
+			path = "1stTab(TODO_JJ)";
+			sourceTree = "<group>";
+		};
+		550710E3259B470D00300A45 /* 2ndTab */ = {
+			isa = PBXGroup;
+			children = (
+				0484EF6E259989A50031286C /* DemoStoragePage */,
+				0484EF5E259988530031286C /* DemoNavigationBarPage */,
+				0484EF4E259985E40031286C /* DemoTabBarPage */,
+				0484EF3E259985650031286C /* DemoInterfacePage */,
+				0484EF2E259983930031286C /* DemoAccountPage */,
+				0484EF1B259980A80031286C /* DemoLaunchPage */,
+				04670B882593151A00C0FB69 /* iconPage2 */,
+			);
+			path = 2ndTab;
+			sourceTree = "<group>";
+		};
+		550710EF259B506D00300A45 /* thirdPage */ = {
+			isa = PBXGroup;
+			children = (
+				550710F0259B509900300A45 /* index21.html */,
+				550710F5259B50EE00300A45 /* index21.css */,
+				550710FA259B510F00300A45 /* index21.js */,
+			);
+			path = thirdPage;
 			sourceTree = "<group>";
 		};
 		55289D082578FF9800E094E8 /* JKOMiniApp */ = {
@@ -874,15 +916,8 @@
 		55E572E92578CDC3002B13BA /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				0484EF6E259989A50031286C /* DemoStoragePage */,
-				0484EF5E259988530031286C /* DemoNavigationBarPage */,
-				0484EF4E259985E40031286C /* DemoTabBarPage */,
-				0484EF3E259985650031286C /* DemoInterfacePage */,
-				0484EF2E259983930031286C /* DemoAccountPage */,
-				0484EF1B259980A80031286C /* DemoLaunchPage */,
-				04670B882593151A00C0FB69 /* iconPage2 */,
-				552DE98C2585134B00F66F9C /* iconPage */,
-				55E572EA2578CDE3002B13BA /* MainPage */,
+				550710E2259B470400300A45 /* 1stTab(TODO_JJ) */,
+				550710E3259B470D00300A45 /* 2ndTab */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -970,6 +1005,7 @@
 				55FBB05F2564F29B00A9F12E /* ViewController.swift */,
 				554791B4256F8D2000A293DC /* PackagingTestViewController.swift */,
 				55FBB0612564F29B00A9F12E /* Main.storyboard */,
+				550710E7259B482200300A45 /* fakeHome.png */,
 				55E572E52578CD99002B13BA /* Playground */,
 				55289D082578FF9800E094E8 /* JKOMiniApp */,
 				55FBB0642564F29F00A9F12E /* Assets.xcassets */,
@@ -1017,7 +1053,6 @@
 				811DDD25BC3C4BF3DD0A1F22 /* Pods-JKOJSBridgeTests.debug.xcconfig */,
 				5B727447FAC66FE6E938EF59 /* Pods-JKOJSBridgeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -1149,6 +1184,7 @@
 				0484EF6A2599887C0031286C /* DemoNavigationBarPage.js in Resources */,
 				0484EF65259988760031286C /* DemoNavigationBarPage.css in Resources */,
 				0484EF55259985F80031286C /* DemoTabBarPage.css in Resources */,
+				550710FB259B510F00300A45 /* index21.js in Resources */,
 				0484EF70259989BB0031286C /* DemoStoragePage.html in Resources */,
 				04EDBEAC25920B5B00055783 /* iconTabbarFriend_selected.png in Resources */,
 				0484EF30259983AE0031286C /* DemoAccountPage.html in Resources */,
@@ -1165,6 +1201,8 @@
 				55E572EF2578CF59002B13BA /* index.js in Resources */,
 				55CCE3E6258B04E000E2F565 /* DataProxy.js in Resources */,
 				0484EF60259988700031286C /* DemoNavigationBarPage.html in Resources */,
+				550710F1259B509900300A45 /* index21.html in Resources */,
+				550710E8259B482200300A45 /* fakeHome.png in Resources */,
 				5568B52F2580BC0B002A941C /* AppLifeCycle.js in Resources */,
 				0484EF50259985F20031286C /* DemoTabBarPage.html in Resources */,
 				0484EF25259982AB0031286C /* DemoLaunchPage.css in Resources */,
@@ -1176,6 +1214,7 @@
 				55FBB0632564F29B00A9F12E /* Main.storyboard in Resources */,
 				04EDBEAB25920B5B00055783 /* iconTabbarFriend_normal.png in Resources */,
 				0484EF40259985780031286C /* DemoInterfacePage.html in Resources */,
+				550710F6259B50EE00300A45 /* index21.css in Resources */,
 				0484EF2A259983400031286C /* DemoLaunchPage.js in Resources */,
 				55E572FF2578E6B3002B13BA /* app.css in Resources */,
 				55E573042578EC58002B13BA /* index.css in Resources */,

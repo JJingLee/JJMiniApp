@@ -48,9 +48,9 @@ public class JKMAPageWorker : JKOJSWorker {
         self.pageSimpleDataBinder.renew(html: html)
     }
     public func configPageDataListeners() {
-        DispatchQueue(label: "PageBind", qos: .background, attributes: .concurrent).async{[weak self] in
-            self?.pageSimpleDataBinder.config()
-        }
+//        DispatchQueue(label: "PageBind", qos: .background, attributes: .concurrent).async{[weak self] in
+            self.pageSimpleDataBinder.config()
+//        }
         DataBinderHandlerManager.shared.dataBinder(appID: appID).addObserver(self.pageSimpleDataBinder, with: JKO_PageSimpleBindingDataKey_20201217(appID))
     }
     public func configHTML(with sourceData : [String:Any], from pageHTMLStr:String)->String {
