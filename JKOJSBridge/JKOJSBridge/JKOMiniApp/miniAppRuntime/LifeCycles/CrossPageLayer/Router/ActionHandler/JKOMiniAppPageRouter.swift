@@ -63,11 +63,7 @@ public class JKOMiniAppPageRouter: NSObject {
         logicHandler.pageOnHide()
 
         //keep stack
-        if var currentPage = stackManager.popLastPage() {
-            let pageData = logicHandler.getPageData(route) ?? [:]
-            currentPage.pageData = pageData
-            stackManager.pushPage(currentPage)
-        }
+        keepCurrentPageToStack()
         stackManager.pushPage(JKOMiniAppStackPageStruct(pageRoute: route, pageData: [:]))
 
         //renew logicHandler worker
@@ -93,7 +89,7 @@ public class JKOMiniAppPageRouter: NSObject {
         logicHandler.pageOnHide()
 
         //get page from stack
-        guard let pageInfo = stackManager.popLastPage(), let currentPage = stackManager.currentPage() else {
+        guard let _ = stackManager.popLastPage(), let currentPage = stackManager.currentPage() else {
             //TODO : root page handles
             JKB_log("already back to root!")
             return
@@ -127,6 +123,7 @@ public class JKOMiniAppPageRouter: NSObject {
         logicHandler.pageOnHide()
 
         //keep stack
+        keepCurrentPageToStack()
         stackManager.changeTab(to: index)
 
         let currentRoute = stackManager.currentPage()?.pageRoute ?? route
@@ -135,11 +132,11 @@ public class JKOMiniAppPageRouter: NSObject {
         logicHandler.refreshPageWorker(with:logicHandler.appID,pageID: currentRoute)
 
         //renderer open new page
-        sourceProvider?.loadUserPage(currentRoute,to:renderer, sourceWorker: logicHandler.pageWorker)
+        sourceProvider?.loadUserPageJS(currentRoute,to:logicHandler)
         if let pageInfo = stackManager.currentPage() {
             logicHandler.setPageData(pageInfo.pageRoute, pageData: pageInfo.pageData)
         }
-        sourceProvider?.loadUserPageJS(currentRoute,to:logicHandler)
+        sourceProvider?.loadUserPage(currentRoute,to:renderer, sourceWorker: logicHandler.pageWorker)
 
         //renderer notify newPage onShow
         logicHandler.pageOnLoad()
@@ -159,6 +156,14 @@ public class JKOMiniAppPageRouter: NSObject {
             _jkNavigator?.setBackBehavior(backBehavior)
         } else {
             _jkNavigator?.hideHomeButton()
+        }
+    }
+    private func keepCurrentPageToStack() {
+        guard let logicHandler = _logicHandler else {return}
+        if var currentPage = stackManager.popLastPage() {
+            let pageData = logicHandler.getPageData(currentPage.pageRoute) ?? [:]
+            currentPage.pageData = pageData
+            stackManager.pushPage(currentPage)
         }
     }
 }

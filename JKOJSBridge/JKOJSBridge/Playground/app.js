@@ -1,12 +1,12 @@
 miniapp.onLaunch(()=>{
-    JKMonitor.log("app onlaunch");
+    JKMonitor.log("app launch");
 }).onShow(()=>{
-    JKMonitor.log("app onShow");
+    JKMonitor.log("app show");
 }).onHide(()=>{
-    JKMonitor.log("app onHide");
+    JKMonitor.log("app hide");
 }).globalData(()=>{
     return {
-        "boss_name" : "ww"
+        "boss_name" : "世鵬"
     };
 });
 
@@ -36,17 +36,31 @@ miniapp.onLaunch(()=>{
 
 
 
-//miniapp.onLaunch(()=>{
-//    JKMonitor.log("app.js : onLaunch");
-//    JKMonitor.log("old data :"+miniapp._globalData.name);
-//    miniapp._globalData.name = "Danny"
-//    JKMonitor.log("new data :"+miniapp._globalData.name);
-//}).onShow(()=>{
-//    JKMonitor.log("app.js : onShow");
-//}).onHide(()=>{
-//    JKMonitor.log("app.js : onHide");
-//}).globalData(()=>{
-//    return {
-//        "name":"Jack"
-//    };
-//});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//JKMonitor.log("");
+//miniapp._globalData
+//Page.pageData
+//JKBRouter.navigateTo("index21");

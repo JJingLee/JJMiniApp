@@ -1,9 +1,9 @@
 Page.onLoad(()=>{
-    JKMonitor.log("page onLoad");
-}).onShow(()=>{
-    JKMonitor.log("page onShow");
+    JKMonitor.log("page load");
+}).onReady(()=>{
+    JKMonitor.log("page ready");
 }).onHide(()=>{
-    JKMonitor.log("page onHide");
+    JKMonitor.log("page hide");
 })
 //.onPageData(()=>{
 //    return {
@@ -11,8 +11,8 @@ Page.onLoad(()=>{
 //    }
 //});
 
-function gotoIndex2(title) {
-    JKMonitor.log("onclick gotoIndex2");
+function gotoindex2(domid) {
+    JKMonitor.log("onclick gotoindex2");
     JKBRouter.navigateTo("index2");
 }
 
@@ -32,25 +32,50 @@ function gotoIndex2(title) {
 
 
 
-//Page.onLoad(()=>{
-//    JKMonitor.log("index1 onload");
-//    JKMonitor.log("index1 data :"+miniapp._globalData.name);
-//}).onShow(()=>{
-//    JKMonitor.log("index1 onShow");
-//    JKMonitor.log("index1 data :"+miniapp._globalData.name);
-//    JKMonitor.log("myData : "+JKBStorage.getStorage(miniapp.appId,"myData"))
-//    JKBStorage.setStorage(miniapp.appId,"myData","good2")
-//}).onHide(()=>{
-//    JKMonitor.log("index1 onHide");
-//}).onPageData(()=>{
-//    return {
-//        "myName" : "Daniel"
-//    }
-//});
-//
-//function onUpdateMyName(title) {
-//    Page.pageData.myName = "Chieh Chun Lee"
-//}
-//function gotoNextPage(title) {
-//    JKBRouter.navigateTo("index2");
-//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//JKMonitor.log("");
+//miniapp._globalData
+//Page.pageData
+//JKBRouter.navigateTo("index21");

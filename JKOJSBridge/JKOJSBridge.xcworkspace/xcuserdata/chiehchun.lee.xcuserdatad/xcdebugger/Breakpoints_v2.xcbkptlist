@@ -103,70 +103,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "08794868-83AA-427F-A0B4-3EB704C1EBF3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JKOJSBridge/JKOMiniApp/Utils/Launcher/miniAppLauncher.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "configPageBinder()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5415932F-CFD2-49B1-AA58-357CEAF21343"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JKOJSBridge/JKOMiniApp/Utils/Launcher/miniAppLauncher.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "configPageBinder()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5415932F-CFD2-49B1-AA58-357CEAF21343 - ae7c8cbaf49dceba"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "JKOJSBridge.miniAppLauncher.(configPageBinder in _99B3985A5CEA13B87C7C954388794EDC)() -&gt; ()"
-                  moduleName = "JKOJSBridge"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chiehchun.lee/Desktop/projects/miniapp/JJMiniApp/JKOJSBridge/JKOJSBridge/JKOMiniApp/Utils/Launcher/miniAppLauncher.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "41">
-               </Location>
-               <Location
-                  uuid = "5415932F-CFD2-49B1-AA58-357CEAF21343 - a6d406bbcdc7e194"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.String, Swift.String) -&gt; () in JKOJSBridge.miniAppLauncher.(configPageBinder in _99B3985A5CEA13B87C7C954388794EDC)() -&gt; ()"
-                  moduleName = "JKOJSBridge"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chiehchun.lee/Desktop/projects/miniapp/JJMiniApp/JKOJSBridge/JKOJSBridge/JKOMiniApp/Utils/Launcher/miniAppLauncher.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "167">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "5A0C4725-4FC6-4DF7-8AFE-5D049BF293AB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -183,22 +119,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A25E6DB6-AF07-4ABE-B3DE-65562DF93895"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JKOJSBridge/JKOMiniApp/Utils/Packaging/Resource Manager/JKOUserSourceLoader.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "loadUserPage(_:to:sourceWorker:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "DD677D16-D36A-49B7-ACD8-E8560535DFE7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -206,9 +126,25 @@
             filePath = "JKOJSBridge/JKOMiniApp/miniAppRuntime/LifeCycles/CrossPageLayer/Router/ActionHandler/JKOMiniAppPageRouter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "navigateBack()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A9036EF-4603-4044-B2DF-FC614AE4DAF5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JKOJSBridge/JKOMiniApp/miniAppRuntime/LifeCycles/CrossPageLayer/Router/ActionHandler/JKOMiniAppPageRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "switchTab(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

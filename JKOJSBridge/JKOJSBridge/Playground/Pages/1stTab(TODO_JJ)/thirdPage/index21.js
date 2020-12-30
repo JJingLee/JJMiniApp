@@ -1,14 +1,88 @@
+
+
 Page.onLoad(()=>{
-}).onShow(()=>{
+}).onReady(()=>{
 }).onHide(()=>{
 }).onPageData(()=>{
     return {
-        "bossName" : miniapp._globalData.boss_name
+        "bossname" : miniapp._globalData.boss_name
     }
 });
 
 
-function updateBossName(title) {
+
+function changeName(domid) {
+    //change label boss name
+    Page.pageData.bossname = "Jack";
+    //change global data bossname
     miniapp._globalData.boss_name = "Jack";
-    Page.pageData.bossName = miniapp._globalData.boss_name;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//JKMonitor.log("");
+//miniapp._globalData
+//Page.pageData
+//JKBRouter.navigateTo("index21");
